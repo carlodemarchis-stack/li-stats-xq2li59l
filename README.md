@@ -40,16 +40,21 @@ Item kinds:
 |---|---|
 | `raw/activity-page-2026-10-16.html.gz` | the page as copied from the browser (HTML flavour of the clipboard), 22 MB uncompressed |
 | `raw/activity-page-2026-10-16.txt` | the same, plain-text flavour |
-| `parse_linkedin.py` | parser: HTML -> `posts.json` + `posts.sqlite` |
+| `parse_linkedin.py` | parser: one HTML capture -> `captures/<date>.json` |
+| `captures/*.json` | one file per capture, the merge input |
+| `build_store.py` | merges all captures -> `posts.json` + `posts.sqlite` (with `history`) |
+| `refresh.sh` | clipboard -> parse -> merge -> export -> commit -> push |
 | `posts.json` | one record per item, nested (mentions, hashtags, attachments, quoted post) |
 | `posts.sqlite` | the same, normalised into tables |
 | `export_analytics.py` | `posts.json` -> `analytics-data.js` (compact rows for the dashboard) |
 | `index.html` + `analytics-data.js` | the local analytics dashboard |
 
-Rebuild everything with:
+Rebuild everything from the raw captures with:
 
 ```bash
-python3 parse_linkedin.py raw/activity-page-2026-10-16.html.gz
+python3 parse_linkedin.py raw/activity-page-2026-10-16.html.gz   # one capture -> captures/<date>.json
+python3 build_store.py                                           # all captures -> posts.json + posts.sqlite
+python3 export_analytics.py                                      # posts.json -> analytics-data.js
 ```
 
 To add a newer capture: open the All activity page, scroll until the oldest post you want is
@@ -61,6 +66,27 @@ osascript -e 'the clipboard as «class HTML»' | sed 's/^«data HTML//; s/»$//'
 
 and run the parser on it. Posts are keyed by `activity_id`, so two captures can be merged
 and deduplicated on that column.
+
+## Published page
+
+Live at https://carlodemarchis-stack.github.io/li-stats-xq2li59l/ (public GitHub Pages, unlisted URL, `noindex`; repo `carlodemarchis-stack/li-stats-xq2li59l`).
+
+### Refreshing
+
+1. Open https://www.linkedin.com/in/carlodemarchis/recent-activity/all/ in the browser,
+   scroll down past the last post already in the store (older posts are kept from earlier
+   captures, so a short scroll is enough), then Select All and Copy.
+2. Run:
+
+```bash
+./refresh.sh
+```
+
+It reads the HTML flavour of the clipboard into `raw/activity-page-<today>.html.gz`, parses it
+into `captures/<today>.json`, merges every capture into `posts.json` / `posts.sqlite`
+(`build_store.py`: union of all captures keyed by `activity_id`, freshest counts win, every
+capture's counts kept in `history`), regenerates `analytics-data.js`, commits and pushes. The
+page updates about a minute later.
 
 ## Analytics page
 
@@ -101,6 +127,7 @@ python3 export_analytics.py
 | `hashtags[]` | lower case, without `#` |
 | `external_links[]`, `lnkd_links[]` | links in the body: decoded `linkedin.com/safety/go` targets, and bare lnkd.in short links |
 | `attachments[]` | `article` (newsletter card: title + pulse URL), `link` (external card: title, url, domain), `document` (title + pages) |
+| `first_captured`, `last_captured`, `history[]` | which captures contained the post; counts per capture |
 | `quoted_post` | `{author, author_url, age_label, url, text}` for quote reposts |
 | `reactions`, `comments`, `reposts`, `impressions` | counts shown on the page; impressions null on reposts |
 | `boost_label`, `was_boosted` | "Boost" / "Boost again" / "Manage boost"; the last two mean the post was boosted |
