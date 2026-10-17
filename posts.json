@@ -16,7 +16,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7516763986231726080",
-   "impressions": 499,
+   "impressions": 500,
    "reactions": 7,
    "comments": 1,
    "reposts": 1,
@@ -100,7 +100,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 499,
+     "impressions": 500,
      "reactions": 7,
      "comments": 1,
      "reposts": 1
@@ -316,7 +316,7 @@
    "boost_label": "Manage boost",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7516040872270983168",
-   "impressions": 9172,
+   "impressions": 9180,
    "reactions": 28,
    "comments": 3,
    "reposts": 4,
@@ -430,7 +430,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 9172,
+     "impressions": 9180,
      "reactions": 28,
      "comments": 3,
      "reposts": 4
@@ -1016,7 +1016,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7513500226935189505",
-   "impressions": 177,
+   "impressions": 178,
    "reactions": 5,
    "comments": 4,
    "reposts": 0,
@@ -1075,7 +1075,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 177,
+     "impressions": 178,
      "reactions": 5,
      "comments": 4,
      "reposts": 0
@@ -1780,7 +1780,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7510944004629463040",
-   "impressions": 3333,
+   "impressions": 3334,
    "reactions": 38,
    "comments": 5,
    "reposts": 1,
@@ -1940,7 +1940,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 3333,
+     "impressions": 3334,
      "reactions": 38,
      "comments": 5,
      "reposts": 1
@@ -2769,7 +2769,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7508709812201881601",
-   "impressions": 279,
+   "impressions": 280,
    "reactions": 7,
    "comments": 4,
    "reposts": 1,
@@ -2828,7 +2828,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 279,
+     "impressions": 280,
      "reactions": 7,
      "comments": 4,
      "reposts": 1
@@ -3432,7 +3432,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7506251259167830017",
-   "impressions": 2021,
+   "impressions": 2025,
    "reactions": 32,
    "comments": 2,
    "reposts": 2,
@@ -3498,7 +3498,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 2021,
+     "impressions": 2025,
      "reactions": 32,
      "comments": 2,
      "reposts": 2
@@ -3517,7 +3517,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7505964662958534656",
-   "impressions": 742,
+   "impressions": 746,
    "reactions": 11,
    "comments": 3,
    "reposts": 4,
@@ -3613,7 +3613,7 @@
     },
     {
      "captured": "2026-10-17",
-     "impressions": 742,
+     "impressions": 746,
      "reactions": 11,
      "comments": 3,
      "reposts": 4
@@ -3677,10 +3677,14 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
    "image_count": 0,
-   "media_type": "text",
+   "media_type": "video",
    "series": [],
    "sponsors": [],
    "disclosures": [],
@@ -4215,10 +4219,14 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
    "image_count": 0,
-   "media_type": "text",
+   "media_type": "video",
    "series": [],
    "sponsors": [
     {
@@ -4469,7 +4477,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7501897610648043520",
-   "impressions": 810,
+   "impressions": 811,
    "reactions": 10,
    "comments": 9,
    "reposts": 2,
@@ -4562,9 +4570,16 @@
      "reactions": 10,
      "comments": 9,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 811,
+     "reactions": 10,
+     "comments": 9,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7501897611679883264"
   },
   {
@@ -4623,9 +4638,16 @@
      "reactions": 3,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 119,
+     "reactions": 3,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7501218579888091136"
   },
   {
@@ -4721,9 +4743,16 @@
      "reactions": 30,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 30,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:ede40959bed1d86d"
   },
   {
@@ -4736,7 +4765,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7500821271895539712",
-   "impressions": 6827,
+   "impressions": 6828,
    "reactions": 28,
    "comments": 3,
    "reposts": 2,
@@ -4798,9 +4827,16 @@
      "reactions": 28,
      "comments": 3,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 6828,
+     "reactions": 28,
+     "comments": 3,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7500821272503750656"
   },
   {
@@ -4933,9 +4969,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 440,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7500471053421453312"
   },
   {
@@ -4992,9 +5035,16 @@
      "reactions": 2,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 313,
+     "reactions": 2,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7500163051917234176"
   },
   {
@@ -5007,7 +5057,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7500134873123344384",
-   "impressions": 3888,
+   "impressions": 3889,
    "reactions": 31,
    "comments": 9,
    "reposts": 3,
@@ -5087,9 +5137,16 @@
      "reactions": 31,
      "comments": 9,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3889,
+     "reactions": 31,
+     "comments": 9,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7500134873576177665"
   },
   {
@@ -5167,9 +5224,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 679,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7499371469223772160"
   },
   {
@@ -5250,9 +5314,16 @@
      "reactions": 7,
      "comments": 3,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 250,
+     "reactions": 7,
+     "comments": 3,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7498999466985762816"
   },
   {
@@ -5264,7 +5335,7 @@
    "posted_date": "2026-08-27",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 200,
+   "impressions": 201,
    "reactions": 4,
    "comments": 0,
    "reposts": 0,
@@ -5320,9 +5391,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 201,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7498644302512689152"
   },
   {
@@ -5335,7 +5413,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7498643759061184514",
-   "impressions": 508,
+   "impressions": 509,
    "reactions": 12,
    "comments": 0,
    "reposts": 2,
@@ -5433,9 +5511,16 @@
      "reactions": 12,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 509,
+     "reactions": 12,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7498643759845437442"
   },
   {
@@ -5529,9 +5614,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 655,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7496803524266225664"
   },
   {
@@ -5601,9 +5693,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 271,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7496478345241710592"
   },
   {
@@ -5667,9 +5766,16 @@
      "reactions": 3,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 218,
+     "reactions": 3,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7496237241271287809"
   },
   {
@@ -5735,9 +5841,16 @@
      "reactions": 4,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 360,
+     "reactions": 4,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7496087399341563905"
   },
   {
@@ -5810,9 +5923,16 @@
      "reactions": 4,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 176,
+     "reactions": 4,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7495724508780265472"
   },
   {
@@ -5868,9 +5988,16 @@
      "reactions": 19,
      "comments": 8,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1010,
+     "reactions": 19,
+     "comments": 8,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7495719686085730304"
   },
   {
@@ -5928,9 +6055,16 @@
      "reactions": 8,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 450,
+     "reactions": 8,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7494381700500692993"
   },
   {
@@ -6032,9 +6166,16 @@
      "reactions": 2,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 444,
+     "reactions": 2,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7494264980939309056"
   },
   {
@@ -6099,9 +6240,16 @@
      "reactions": 2,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 176,
+     "reactions": 2,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7493914255617044480"
   },
   {
@@ -6114,7 +6262,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7493718828615598080",
-   "impressions": 286,
+   "impressions": 287,
    "reactions": 7,
    "comments": 2,
    "reposts": 0,
@@ -6169,9 +6317,16 @@
      "reactions": 7,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 287,
+     "reactions": 7,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7493718831807496192"
   },
   {
@@ -6230,9 +6385,16 @@
      "reactions": 11,
      "comments": 9,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 4194,
+     "reactions": 11,
+     "comments": 9,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7493553560421539840"
   },
   {
@@ -6306,9 +6468,16 @@
      "reactions": 16,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1149,
+     "reactions": 16,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7493213402790699008"
   },
   {
@@ -6370,9 +6539,16 @@
      "reactions": 1,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 310,
+     "reactions": 1,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7492326947872636928"
   },
   {
@@ -6385,7 +6561,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7492097750159790081",
-   "impressions": 1281,
+   "impressions": 1282,
    "reactions": 11,
    "comments": 5,
    "reposts": 2,
@@ -6442,9 +6618,16 @@
      "reactions": 11,
      "comments": 5,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1282,
+     "reactions": 11,
+     "comments": 5,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7492097750717612032"
   },
   {
@@ -6533,9 +6716,16 @@
      "reactions": 13,
      "comments": 3,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1033,
+     "reactions": 13,
+     "comments": 3,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7491068557586251776"
   },
   {
@@ -6594,9 +6784,16 @@
      "reactions": 1,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 106,
+     "reactions": 1,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7490794467009155072"
   },
   {
@@ -6697,9 +6894,16 @@
      "reactions": 14,
      "comments": 0,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 528,
+     "reactions": 14,
+     "comments": 0,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7490675341850705920"
   },
   {
@@ -6786,9 +6990,16 @@
      "reactions": 9,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 612,
+     "reactions": 9,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7490347184639451137"
   },
   {
@@ -6801,7 +7012,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7489964925906362369",
-   "impressions": 1962,
+   "impressions": 1963,
    "reactions": 8,
    "comments": 2,
    "reposts": 0,
@@ -6842,9 +7053,16 @@
      "reactions": 8,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1963,
+     "reactions": 8,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7489964926325792768"
   },
   {
@@ -6856,7 +7074,7 @@
    "posted_date": "2026-08-02",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 677,
+   "impressions": 678,
    "reactions": 7,
    "comments": 2,
    "reposts": 0,
@@ -6885,7 +7103,7 @@
     }
    ],
    "has_article": false,
-   "image_count": 0,
+   "image_count": 1,
    "media_type": "document",
    "series": [],
    "sponsors": [],
@@ -6900,9 +7118,16 @@
      "reactions": 7,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 678,
+     "reactions": 7,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7489595553203294208"
   },
   {
@@ -6977,9 +7202,16 @@
      "reactions": 13,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 814,
+     "reactions": 13,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7488848977820336128"
   },
   {
@@ -7060,9 +7292,16 @@
      "reactions": 4,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 93,
+     "reactions": 4,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7488472582929743873"
   },
   {
@@ -7124,9 +7363,16 @@
      "reactions": 2,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 264,
+     "reactions": 2,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7488254416060321793"
   },
   {
@@ -7209,9 +7455,16 @@
      "reactions": 7,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 503,
+     "reactions": 7,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7488162417118658561"
   },
   {
@@ -7224,7 +7477,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7487848145121505282",
-   "impressions": 1233,
+   "impressions": 1234,
    "reactions": 7,
    "comments": 1,
    "reposts": 0,
@@ -7283,9 +7536,16 @@
      "reactions": 7,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1234,
+     "reactions": 7,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7487848146635575296"
   },
   {
@@ -7360,9 +7620,16 @@
      "reactions": 3,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 212,
+     "reactions": 3,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7487786943498326017"
   },
   {
@@ -7421,9 +7688,16 @@
      "reactions": 2,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 387,
+     "reactions": 2,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7487422450595651584"
   },
   {
@@ -7503,9 +7777,16 @@
      "reactions": 8,
      "comments": 3,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 849,
+     "reactions": 8,
+     "comments": 3,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7487422235637510144"
   },
   {
@@ -7572,9 +7853,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 165,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7487038938059100162"
   },
   {
@@ -7636,9 +7924,16 @@
      "reactions": 1,
      "comments": 3,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 297,
+     "reactions": 1,
+     "comments": 3,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7486676659702722561"
   },
   {
@@ -7686,9 +7981,16 @@
      "reactions": 2,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1134,
+     "reactions": 2,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7486674792247468032"
   },
   {
@@ -7747,9 +8049,16 @@
      "reactions": 65,
      "comments": 19,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 7936,
+     "reactions": 65,
+     "comments": 19,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7486345717301833728"
   },
   {
@@ -7825,9 +8134,16 @@
      "reactions": 10,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 345,
+     "reactions": 10,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7485603185961664513"
   },
   {
@@ -7892,9 +8208,16 @@
      "reactions": 14,
      "comments": 4,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1342,
+     "reactions": 14,
+     "comments": 4,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7484871573435342849"
   },
   {
@@ -7976,9 +8299,16 @@
      "reactions": 17,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1108,
+     "reactions": 17,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7484500037335609344"
   },
   {
@@ -8038,9 +8368,16 @@
      "reactions": 8,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 729,
+     "reactions": 8,
+     "comments": 1,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7483808337114017793"
   },
   {
@@ -8122,9 +8459,16 @@
      "reactions": 20,
      "comments": 4,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 999,
+     "reactions": 20,
+     "comments": 4,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7483060206428495872"
   },
   {
@@ -8136,7 +8480,7 @@
    "posted_date": "2026-07-14",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 555,
+   "impressions": 556,
    "reactions": 4,
    "comments": 0,
    "reposts": 0,
@@ -8185,9 +8529,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 556,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7482670495608258560"
   },
   {
@@ -8200,7 +8551,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7482670265831723008",
-   "impressions": 1351,
+   "impressions": 1352,
    "reactions": 19,
    "comments": 2,
    "reposts": 5,
@@ -8299,9 +8650,16 @@
      "reactions": 19,
      "comments": 2,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1352,
+     "reactions": 19,
+     "comments": 2,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7482670266590941184"
   },
   {
@@ -8373,9 +8731,16 @@
      "reactions": 9,
      "comments": 3,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3599,
+     "reactions": 9,
+     "comments": 3,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7482116562825625600"
   },
   {
@@ -8438,9 +8803,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 249,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7482059482944946176"
   },
   {
@@ -8494,9 +8866,16 @@
      "reactions": 18,
      "comments": 14,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 13549,
+     "reactions": 18,
+     "comments": 14,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7481995267240529920"
   },
   {
@@ -8573,9 +8952,16 @@
      "reactions": 5,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 5,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:e8441a63ac864e42"
   },
   {
@@ -8634,9 +9020,16 @@
      "reactions": 2,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 223,
+     "reactions": 2,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7481242043474894848"
   },
   {
@@ -8725,9 +9118,16 @@
      "reactions": 24,
      "comments": 7,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2214,
+     "reactions": 24,
+     "comments": 7,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7480903591961116672"
   },
   {
@@ -8814,9 +9214,16 @@
      "reactions": 12,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 13472,
+     "reactions": 12,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7479849309748981760"
   },
   {
@@ -8921,9 +9328,16 @@
      "reactions": 13,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2174,
+     "reactions": 13,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7479824079542226945"
   },
   {
@@ -8996,9 +9410,16 @@
      "reactions": 5,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 402,
+     "reactions": 5,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7479437873893572608"
   },
   {
@@ -9067,9 +9488,16 @@
      "reactions": 67,
      "comments": 1,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 67,
+     "comments": 1,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:fc8985fdddc5f255"
   },
   {
@@ -9150,9 +9578,16 @@
      "reactions": 19,
      "comments": 4,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1221,
+     "reactions": 19,
+     "comments": 4,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7479066238170718208"
   },
   {
@@ -9206,9 +9641,16 @@
      "reactions": 17,
      "comments": 3,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3734,
+     "reactions": 17,
+     "comments": 3,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7478747827368632321"
   },
   {
@@ -9269,9 +9711,23 @@
      "reactions": 28,
      "comments": 0,
      "reposts": 6
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 28,
+     "comments": 0,
+     "reposts": 6
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 28,
+     "comments": 0,
+     "reposts": 6
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:f724fc03fcc46a92"
   },
   {
@@ -9338,9 +9794,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 594,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7478449607887351808"
   },
   {
@@ -9408,9 +9871,16 @@
      "reactions": 0,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 743,
+     "reactions": 0,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7478131340627021824"
   },
   {
@@ -9501,9 +9971,16 @@
      "reactions": 16,
      "comments": 13,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2222,
+     "reactions": 16,
+     "comments": 13,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7478069103438532609"
   },
   {
@@ -9608,9 +10085,16 @@
      "reactions": 15,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2406,
+     "reactions": 15,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7477699103200559104"
   },
   {
@@ -9673,9 +10157,16 @@
      "reactions": 24,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 679,
+     "reactions": 24,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7477402148566269952"
   },
   {
@@ -9688,7 +10179,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7475856584649199616",
-   "impressions": 7529,
+   "impressions": 7530,
    "reactions": 37,
    "comments": 9,
    "reposts": 5,
@@ -9753,9 +10244,16 @@
      "reactions": 37,
      "comments": 9,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 7530,
+     "reactions": 37,
+     "comments": 9,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7475856585106296832"
   },
   {
@@ -9809,9 +10307,16 @@
      "reactions": 9,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 735,
+     "reactions": 9,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7475493764275277824"
   },
   {
@@ -9958,9 +10463,16 @@
      "reactions": 16,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1172,
+     "reactions": 16,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7475063473157128192"
   },
   {
@@ -10014,9 +10526,16 @@
      "reactions": 8,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 729,
+     "reactions": 8,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7472924321427009537"
   },
   {
@@ -10087,9 +10606,16 @@
      "reactions": 5,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 715,
+     "reactions": 5,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7472578116645781504"
   },
   {
@@ -10190,9 +10716,16 @@
      "reactions": 14,
      "comments": 4,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1438,
+     "reactions": 14,
+     "comments": 4,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7472552810295984128"
   },
   {
@@ -10268,9 +10801,16 @@
      "reactions": 1,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 290,
+     "reactions": 1,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7472185128702824448"
   },
   {
@@ -10329,9 +10869,16 @@
      "reactions": 22,
      "comments": 4,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3501,
+     "reactions": 22,
+     "comments": 4,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7471838548858392576"
   },
   {
@@ -10385,9 +10932,16 @@
      "reactions": 2,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 261,
+     "reactions": 2,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7471499432723660800"
   },
   {
@@ -10456,9 +11010,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 430,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7471468271066771457"
   },
   {
@@ -10471,7 +11032,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7471101102097354752",
-   "impressions": 633,
+   "impressions": 635,
    "reactions": 10,
    "comments": 0,
    "reposts": 2,
@@ -10555,9 +11116,16 @@
      "reactions": 10,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 635,
+     "reactions": 10,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7471101102718078977"
   },
   {
@@ -10637,9 +11205,16 @@
      "reactions": 9,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 591,
+     "reactions": 9,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7470836270399680512"
   },
   {
@@ -10715,9 +11290,16 @@
      "reactions": 12,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 717,
+     "reactions": 12,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7470357287929348097"
   },
   {
@@ -10775,9 +11357,16 @@
      "reactions": 0,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 386,
+     "reactions": 0,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7470207092847529984"
   },
   {
@@ -10867,9 +11456,16 @@
      "reactions": 14,
      "comments": 1,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1473,
+     "reactions": 14,
+     "comments": 1,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7470032625169125377"
   },
   {
@@ -11032,9 +11628,16 @@
      "reactions": 40,
      "comments": 2,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2097,
+     "reactions": 40,
+     "comments": 2,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7469654978102456320"
   },
   {
@@ -11115,9 +11718,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 273,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7468894368758718464"
   },
   {
@@ -11226,9 +11836,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 587,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7468557827482017793"
   },
   {
@@ -11240,7 +11857,7 @@
    "posted_date": "2026-06-04",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 1315,
+   "impressions": 1316,
    "reactions": 7,
    "comments": 2,
    "reposts": 1,
@@ -11281,9 +11898,16 @@
      "reactions": 7,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1316,
+     "reactions": 7,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7468318657098543104"
   },
   {
@@ -11295,7 +11919,7 @@
    "posted_date": "2026-06-04",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 407,
+   "impressions": 408,
    "reactions": 3,
    "comments": 1,
    "reposts": 1,
@@ -11337,7 +11961,7 @@
     }
    ],
    "has_article": false,
-   "image_count": 0,
+   "image_count": 1,
    "media_type": "document",
    "series": [],
    "sponsors": [],
@@ -11352,9 +11976,16 @@
      "reactions": 3,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 408,
+     "reactions": 3,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7468300839024033792"
   },
   {
@@ -11418,9 +12049,16 @@
      "reactions": 69,
      "comments": 1,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 69,
+     "comments": 1,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:3c47c1a73d173c95"
   },
   {
@@ -11487,7 +12125,7 @@
     {
      "name": "Deportivo Alavés",
      "type": "company",
-     "url": "https://www.linkedin.com/company/deportivo-alav%C3%A9s/"
+     "url": "https://www.linkedin.com/company/deportivo-alavés/"
     },
     {
      "name": "RCD Mallorca",
@@ -11564,9 +12202,16 @@
      "reactions": 12,
      "comments": 4,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1135,
+     "reactions": 12,
+     "comments": 4,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7467813853024948225"
   },
   {
@@ -11660,9 +12305,16 @@
      "reactions": 38,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 38,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:bc5f5e34474eebe2"
   },
   {
@@ -11729,9 +12381,16 @@
      "reactions": 14,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 14,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:b873c6f9a82701e2"
   },
   {
@@ -11783,9 +12442,16 @@
      "reactions": 11,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 520,
+     "reactions": 11,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7467206198417743872"
   },
   {
@@ -11856,9 +12522,16 @@
      "reactions": 1,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 230,
+     "reactions": 1,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7466830698654601216"
   },
   {
@@ -11962,9 +12635,16 @@
      "reactions": 12,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1706,
+     "reactions": 12,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7466100573893914625"
   },
   {
@@ -12073,9 +12753,16 @@
      "reactions": 23,
      "comments": 1,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2472,
+     "reactions": 23,
+     "comments": 1,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7465679203418652672"
   },
   {
@@ -12177,9 +12864,16 @@
      "reactions": 14,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 779,
+     "reactions": 14,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7465330041632210946"
   },
   {
@@ -12232,9 +12926,16 @@
      "reactions": 4,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 356,
+     "reactions": 4,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7465010109870526465"
   },
   {
@@ -12246,7 +12947,7 @@
    "posted_date": "2026-05-26",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 593,
+   "impressions": 594,
    "reactions": 9,
    "comments": 2,
    "reposts": 1,
@@ -12288,7 +12989,7 @@
     }
    ],
    "has_article": false,
-   "image_count": 0,
+   "image_count": 1,
    "media_type": "document",
    "series": [],
    "sponsors": [],
@@ -12303,9 +13004,16 @@
      "reactions": 9,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 594,
+     "reactions": 9,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7465007517836902400"
   },
   {
@@ -12318,7 +13026,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7464597965282635778",
-   "impressions": 3252,
+   "impressions": 3253,
    "reactions": 21,
    "comments": 6,
    "reposts": 1,
@@ -12365,9 +13073,16 @@
      "reactions": 21,
      "comments": 6,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3253,
+     "reactions": 21,
+     "comments": 6,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7464597965999910915"
   },
   {
@@ -12473,9 +13188,16 @@
      "reactions": 34,
      "comments": 14,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2990,
+     "reactions": 34,
+     "comments": 14,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7464252167441342464"
   },
   {
@@ -12576,9 +13298,16 @@
      "reactions": 7,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 306,
+     "reactions": 7,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7464251090365022208"
   },
   {
@@ -12679,9 +13408,16 @@
      "reactions": 2,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 276,
+     "reactions": 2,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7463960270462197760"
   },
   {
@@ -12782,9 +13518,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 153,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7463957794950606848"
   },
   {
@@ -12885,9 +13628,16 @@
      "reactions": 15,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 906,
+     "reactions": 15,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7463932163097296896"
   },
   {
@@ -12971,9 +13721,16 @@
      "reactions": 7,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1445,
+     "reactions": 7,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7463504279186845696"
   },
   {
@@ -13068,9 +13825,16 @@
      "reactions": 31,
      "comments": 10,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2151,
+     "reactions": 31,
+     "comments": 10,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7463133950744473600"
   },
   {
@@ -13151,9 +13915,16 @@
      "reactions": 7,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1070,
+     "reactions": 7,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7462880769967812608"
   },
   {
@@ -13166,7 +13937,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7462326501397618688",
-   "impressions": 472,
+   "impressions": 473,
    "reactions": 11,
    "comments": 2,
    "reposts": 0,
@@ -13302,9 +14073,16 @@
      "reactions": 11,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 473,
+     "reactions": 11,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7462370226144366592"
   },
   {
@@ -13317,7 +14095,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7461648484362825728",
-   "impressions": 933,
+   "impressions": 934,
    "reactions": 9,
    "comments": 1,
    "reposts": 0,
@@ -13390,9 +14168,16 @@
      "reactions": 9,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 934,
+     "reactions": 9,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7461648484857937920"
   },
   {
@@ -13405,7 +14190,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7461338974171746304",
-   "impressions": 2969,
+   "impressions": 2971,
    "reactions": 23,
    "comments": 5,
    "reposts": 0,
@@ -13446,9 +14231,16 @@
      "reactions": 23,
      "comments": 5,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2971,
+     "reactions": 23,
+     "comments": 5,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7461338974675066881"
   },
   {
@@ -13528,9 +14320,16 @@
      "reactions": 5,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 472,
+     "reactions": 5,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7460965949668732928"
   },
   {
@@ -13679,9 +14478,16 @@
      "reactions": 22,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 879,
+     "reactions": 22,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7460626137900142592"
   },
   {
@@ -13758,9 +14564,16 @@
      "reactions": 11,
      "comments": 3,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 967,
+     "reactions": 11,
+     "comments": 3,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7459568108291244032"
   },
   {
@@ -13824,9 +14637,16 @@
      "reactions": 9,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 801,
+     "reactions": 9,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7458420646918635520"
   },
   {
@@ -13998,9 +14818,16 @@
      "reactions": 12,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 879,
+     "reactions": 12,
+     "comments": 1,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7458061352146763776"
   },
   {
@@ -14163,9 +14990,16 @@
      "reactions": 30,
      "comments": 6,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1826,
+     "reactions": 30,
+     "comments": 6,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7457705397194428416"
   },
   {
@@ -14337,9 +15171,16 @@
      "reactions": 21,
      "comments": 1,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1190,
+     "reactions": 21,
+     "comments": 1,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7457357533738037248"
   },
   {
@@ -14352,7 +15193,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7455890696722407424",
-   "impressions": 5477,
+   "impressions": 5478,
    "reactions": 72,
    "comments": 15,
    "reposts": 2,
@@ -14518,9 +15359,16 @@
      "reactions": 72,
      "comments": 15,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 5478,
+     "reactions": 72,
+     "comments": 15,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7455890697682915328"
   },
   {
@@ -14532,7 +15380,7 @@
    "posted_date": "2026-04-30",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 380,
+   "impressions": 381,
    "reactions": 5,
    "comments": 1,
    "reposts": 1,
@@ -14573,9 +15421,16 @@
      "reactions": 5,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 381,
+     "reactions": 5,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7455658801921318913"
   },
   {
@@ -14588,7 +15443,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7455499263192649729",
-   "impressions": 2449,
+   "impressions": 2450,
    "reactions": 45,
    "comments": 6,
    "reposts": 4,
@@ -14726,9 +15581,16 @@
      "reactions": 45,
      "comments": 6,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2450,
+     "reactions": 45,
+     "comments": 6,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7455499264111116288"
   },
   {
@@ -14842,9 +15704,16 @@
      "reactions": 25,
      "comments": 12,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2055,
+     "reactions": 25,
+     "comments": 12,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7455146751704924160"
   },
   {
@@ -14904,9 +15773,16 @@
      "reactions": 2,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 218,
+     "reactions": 2,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7454851447743221760"
   },
   {
@@ -15007,9 +15883,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 767,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7452991759153844224"
   },
   {
@@ -15121,9 +16004,16 @@
      "reactions": 19,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1390,
+     "reactions": 19,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7452633497669705728"
   },
   {
@@ -15255,9 +16145,16 @@
      "reactions": 46,
      "comments": 9,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3296,
+     "reactions": 46,
+     "comments": 9,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7452253717933961216"
   },
   {
@@ -15347,9 +16244,16 @@
      "reactions": 11,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 597,
+     "reactions": 11,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7451876355828498432"
   },
   {
@@ -15428,9 +16332,16 @@
      "reactions": 19,
      "comments": 3,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1566,
+     "reactions": 19,
+     "comments": 3,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7450843865818742784"
   },
   {
@@ -15443,7 +16354,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7450453360744296448",
-   "impressions": 1387,
+   "impressions": 1388,
    "reactions": 26,
    "comments": 2,
    "reposts": 6,
@@ -15546,9 +16457,16 @@
      "reactions": 26,
      "comments": 2,
      "reposts": 6
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1388,
+     "reactions": 26,
+     "comments": 2,
+     "reposts": 6
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7450453361541193728"
   },
   {
@@ -15561,7 +16479,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7449358693965496320",
-   "impressions": 678,
+   "impressions": 679,
    "reactions": 12,
    "comments": 0,
    "reposts": 2,
@@ -15618,9 +16536,16 @@
      "reactions": 12,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 679,
+     "reactions": 12,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7449358695018340352"
   },
   {
@@ -15742,9 +16667,16 @@
      "reactions": 14,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1697,
+     "reactions": 14,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7448295681771085824"
   },
   {
@@ -15845,9 +16777,16 @@
      "reactions": 24,
      "comments": 1,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1247,
+     "reactions": 24,
+     "comments": 1,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7447950737185161217"
   },
   {
@@ -15860,7 +16799,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7446076817901305856",
-   "impressions": 1807,
+   "impressions": 1808,
    "reactions": 14,
    "comments": 3,
    "reposts": 1,
@@ -15966,9 +16905,16 @@
      "reactions": 14,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1808,
+     "reactions": 14,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7446076818681446400"
   },
   {
@@ -16039,9 +16985,16 @@
      "reactions": 12,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1079,
+     "reactions": 12,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7445782824256827392"
   },
   {
@@ -16198,9 +17151,16 @@
      "reactions": 40,
      "comments": 7,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1970,
+     "reactions": 40,
+     "comments": 7,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7444658833907539969"
   },
   {
@@ -16304,9 +17264,16 @@
      "reactions": 23,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1926,
+     "reactions": 23,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7444288519197315072"
   },
   {
@@ -16367,9 +17334,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 292,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7443983161740599297"
   },
   {
@@ -16471,9 +17445,16 @@
      "reactions": 12,
      "comments": 0,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 686,
+     "reactions": 12,
+     "comments": 0,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7443194997681676288"
   },
   {
@@ -16486,7 +17467,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7442870573283815424",
-   "impressions": 1638,
+   "impressions": 1639,
    "reactions": 19,
    "comments": 15,
    "reposts": 1,
@@ -16565,9 +17546,16 @@
      "reactions": 19,
      "comments": 15,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1639,
+     "reactions": 19,
+     "comments": 15,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7442870573761785856"
   },
   {
@@ -16628,9 +17616,16 @@
      "reactions": 14,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1069,
+     "reactions": 14,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7442708025636798464"
   },
   {
@@ -16729,9 +17724,16 @@
      "reactions": 13,
      "comments": 2,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 777,
+     "reactions": 13,
+     "comments": 2,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7442495812003315712"
   },
   {
@@ -16830,9 +17832,16 @@
      "reactions": 14,
      "comments": 4,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 943,
+     "reactions": 14,
+     "comments": 4,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7442128400183623680"
   },
   {
@@ -16845,7 +17854,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7441847995655991296",
-   "impressions": 1390,
+   "impressions": 1391,
    "reactions": 10,
    "comments": 1,
    "reposts": 2,
@@ -16926,9 +17935,16 @@
      "reactions": 10,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1391,
+     "reactions": 10,
+     "comments": 1,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7441847996096618496"
   },
   {
@@ -16997,9 +18013,16 @@
      "reactions": 14,
      "comments": 11,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 800,
+     "reactions": 14,
+     "comments": 11,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7440720448658714624"
   },
   {
@@ -17079,9 +18102,16 @@
      "reactions": 11,
      "comments": 5,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1367,
+     "reactions": 11,
+     "comments": 5,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7440325519188959235"
   },
   {
@@ -17180,9 +18210,16 @@
      "reactions": 21,
      "comments": 6,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3107,
+     "reactions": 21,
+     "comments": 6,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7439958961497411585"
   },
   {
@@ -17263,9 +18300,16 @@
      "reactions": 10,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 691,
+     "reactions": 10,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7439229371963547649"
   },
   {
@@ -17277,7 +18321,7 @@
    "posted_date": "2026-03-14",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 434,
+   "impressions": 435,
    "reactions": 6,
    "comments": 2,
    "reposts": 0,
@@ -17336,7 +18380,7 @@
     }
    ],
    "has_article": false,
-   "image_count": 0,
+   "image_count": 1,
    "media_type": "document",
    "series": [
     "10 Things To Consider"
@@ -17353,9 +18397,16 @@
      "reactions": 6,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 435,
+     "reactions": 6,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7438494122623123457"
   },
   {
@@ -17368,7 +18419,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7438159602455588864",
-   "impressions": 1854,
+   "impressions": 1855,
    "reactions": 19,
    "comments": 3,
    "reposts": 3,
@@ -17479,9 +18530,16 @@
      "reactions": 19,
      "comments": 3,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1855,
+     "reactions": 19,
+     "comments": 3,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7438159603244113920"
   },
   {
@@ -17560,9 +18618,16 @@
      "reactions": 10,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 402,
+     "reactions": 10,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7437898829430972416"
   },
   {
@@ -17575,7 +18640,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7437488847158009856",
-   "impressions": 1236,
+   "impressions": 1237,
    "reactions": 17,
    "comments": 1,
    "reposts": 4,
@@ -17666,9 +18731,16 @@
      "reactions": 17,
      "comments": 1,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1237,
+     "reactions": 17,
+     "comments": 1,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7437488847707324416"
   },
   {
@@ -17785,9 +18857,16 @@
      "reactions": 55,
      "comments": 3,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2951,
+     "reactions": 55,
+     "comments": 3,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7437443229807120384"
   },
   {
@@ -17841,9 +18920,16 @@
      "reactions": 76,
      "comments": 32,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 6161,
+     "reactions": 76,
+     "comments": 32,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7437079654584406016"
   },
   {
@@ -17955,9 +19041,16 @@
      "reactions": 21,
      "comments": 5,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1915,
+     "reactions": 21,
+     "comments": 5,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7436679703748411393"
   },
   {
@@ -18023,9 +19116,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 292,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7435690862677843968"
   },
   {
@@ -18226,9 +19326,16 @@
      "reactions": 74,
      "comments": 7,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3025,
+     "reactions": 74,
+     "comments": 7,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7435631807372382208"
   },
   {
@@ -18384,9 +19491,16 @@
      "reactions": 26,
      "comments": 3,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1721,
+     "reactions": 26,
+     "comments": 3,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7435220924070756352"
   },
   {
@@ -18505,9 +19619,16 @@
      "reactions": 49,
      "comments": 4,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2321,
+     "reactions": 49,
+     "comments": 4,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7434848007138820096"
   },
   {
@@ -18520,7 +19641,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7434641612753969152",
-   "impressions": 627,
+   "impressions": 628,
    "reactions": 20,
    "comments": 0,
    "reposts": 3,
@@ -18603,9 +19724,16 @@
      "reactions": 20,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 628,
+     "reactions": 20,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7434641780937113600"
   },
   {
@@ -18765,9 +19893,16 @@
      "reactions": 38,
      "comments": 5,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2051,
+     "reactions": 38,
+     "comments": 5,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7434547511933095936"
   },
   {
@@ -18873,9 +20008,16 @@
      "reactions": 16,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1112,
+     "reactions": 16,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7434240587366723584"
   },
   {
@@ -18888,7 +20030,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7434157979945320448",
-   "impressions": 6374,
+   "impressions": 6380,
    "reactions": 53,
    "comments": 1,
    "reposts": 3,
@@ -18995,9 +20137,16 @@
      "reactions": 53,
      "comments": 1,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 6380,
+     "reactions": 53,
+     "comments": 1,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7434157980692090881"
   },
   {
@@ -19097,9 +20246,16 @@
      "reactions": 36,
      "comments": 8,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3035,
+     "reactions": 36,
+     "comments": 8,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7433056073244254209"
   },
   {
@@ -19185,9 +20341,16 @@
      "reactions": 20,
      "comments": 2,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1148,
+     "reactions": 20,
+     "comments": 2,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7432718621547782144"
   },
   {
@@ -19257,9 +20420,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 311,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7432333207657848832"
   },
   {
@@ -19334,9 +20504,16 @@
      "reactions": 18,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1139,
+     "reactions": 18,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7432105270346125313"
   },
   {
@@ -19498,9 +20675,16 @@
      "reactions": 51,
      "comments": 9,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3678,
+     "reactions": 51,
+     "comments": 9,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7431997146545098752"
   },
   {
@@ -19572,9 +20756,16 @@
      "reactions": 31,
      "comments": 8,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2146,
+     "reactions": 31,
+     "comments": 8,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7431652164348985344"
   },
   {
@@ -19587,7 +20778,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7431617146650148864",
-   "impressions": 2396,
+   "impressions": 2397,
    "reactions": 19,
    "comments": 5,
    "reposts": 1,
@@ -19648,9 +20839,16 @@
      "reactions": 19,
      "comments": 5,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2397,
+     "reactions": 19,
+     "comments": 5,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7431617147098996736"
   },
   {
@@ -19663,7 +20861,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7430944647285198849",
-   "impressions": 164,
+   "impressions": 165,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -19712,9 +20910,16 @@
      "reactions": 3,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 165,
+     "reactions": 3,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7430944647834693633"
   },
   {
@@ -19829,9 +21034,16 @@
      "reactions": 11,
      "comments": 2,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1628,
+     "reactions": 11,
+     "comments": 2,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7430534360002383872"
   },
   {
@@ -19923,9 +21135,16 @@
      "reactions": 18,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1628,
+     "reactions": 18,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7430249852153913344"
   },
   {
@@ -19984,9 +21203,16 @@
      "reactions": 25,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1154,
+     "reactions": 25,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7430190566874742786"
   },
   {
@@ -20078,9 +21304,16 @@
      "reactions": 24,
      "comments": 6,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1359,
+     "reactions": 24,
+     "comments": 6,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7429809269748776960"
   },
   {
@@ -20152,9 +21385,16 @@
      "reactions": 22,
      "comments": 13,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3002,
+     "reactions": 22,
+     "comments": 13,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7429437336825774080"
   },
   {
@@ -20323,9 +21563,16 @@
      "reactions": 40,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1563,
+     "reactions": 40,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7429074774271692800"
   },
   {
@@ -20427,9 +21674,16 @@
      "reactions": 12,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1750,
+     "reactions": 12,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7427974164122243072"
   },
   {
@@ -20537,9 +21791,16 @@
      "reactions": 24,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 991,
+     "reactions": 24,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7427604715472916480"
   },
   {
@@ -20552,7 +21813,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7427341383927054337",
-   "impressions": 3758,
+   "impressions": 3759,
    "reactions": 75,
    "comments": 4,
    "reposts": 1,
@@ -20679,9 +21940,16 @@
      "reactions": 75,
      "comments": 4,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3759,
+     "reactions": 75,
+     "comments": 4,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7427341385294475264"
   },
   {
@@ -20694,7 +21962,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7427336054136918016",
-   "impressions": 201,
+   "impressions": 202,
    "reactions": 6,
    "comments": 0,
    "reposts": 1,
@@ -20752,9 +22020,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 202,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7427336055311351808"
   },
   {
@@ -20813,9 +22088,16 @@
      "reactions": 25,
      "comments": 1,
      "reposts": 5
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 948,
+     "reactions": 25,
+     "comments": 1,
+     "reposts": 5
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7426624284388909056"
   },
   {
@@ -20906,9 +22188,16 @@
      "reactions": 11,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 643,
+     "reactions": 11,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7425471363655589888"
   },
   {
@@ -21013,9 +22302,16 @@
      "reactions": 18,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 18,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:b7af31b9ad6542aa"
   },
   {
@@ -21028,7 +22324,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7425290454155563009",
-   "impressions": 505,
+   "impressions": 506,
    "reactions": 15,
    "comments": 0,
    "reposts": 2,
@@ -21063,9 +22359,16 @@
      "reactions": 15,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 506,
+     "reactions": 15,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7425290455057244160"
   },
   {
@@ -21078,7 +22381,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7425123175652507649",
-   "impressions": 1332,
+   "impressions": 1335,
    "reactions": 11,
    "comments": 0,
    "reposts": 2,
@@ -21147,9 +22450,16 @@
      "reactions": 11,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1335,
+     "reactions": 11,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7425123176352960512"
   },
   {
@@ -21292,9 +22602,16 @@
      "reactions": 10,
      "comments": 1,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1185,
+     "reactions": 10,
+     "comments": 1,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7424730347747217408"
   },
   {
@@ -21399,9 +22716,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:7c4ea6a8fbc6b538"
   },
   {
@@ -21414,7 +22738,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7424008903220154369",
-   "impressions": 1479,
+   "impressions": 1480,
    "reactions": 19,
    "comments": 1,
    "reposts": 2,
@@ -21495,9 +22819,16 @@
      "reactions": 19,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1480,
+     "reactions": 19,
+     "comments": 1,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7424008903941820416"
   },
   {
@@ -21597,9 +22928,16 @@
      "reactions": 11,
      "comments": 0,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 11,
+     "comments": 0,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:930e6604cd355c0c"
   },
   {
