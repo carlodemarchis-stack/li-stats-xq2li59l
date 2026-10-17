@@ -38,6 +38,20 @@ button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-co
 .filters{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;max-width:1240px;margin:0 auto 16px}
 .filters .group{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
 .filters .lbl{color:var(--muted);font-size:12px;margin-right:2px}
+.searchrow{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;max-width:1240px;margin:0 auto 10px}
+.searchrow input{flex:1;min-width:260px;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:8px 12px;outline:none}
+.searchrow input:focus{border-color:var(--ink2)}
+.searchrow .hint{color:var(--muted);font-size:12px}
+.searchrow .hint code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;background:var(--wash);padding:1px 4px;border-radius:4px}
+.results .r{padding:10px 0;border-bottom:1px solid var(--grid);display:grid;grid-template-columns:92px 1fr auto;gap:4px 14px;align-items:baseline}
+.results .r:last-child{border-bottom:0}
+.results .d{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.results .t a{color:var(--ink);text-decoration:none;font-weight:600}
+.results .t a:hover{text-decoration:underline}
+.results .s{grid-column:2;color:var(--ink2);font-size:13px;line-height:1.4}
+.results .m{color:var(--ink2);font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.results mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;border-radius:2px;padding:0 1px}
+@media (max-width:700px){.results .r{grid-template-columns:1fr auto}.results .d{grid-column:1 / -1}.results .s{grid-column:1 / -1}}
 .grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr);max-width:1240px;margin:0 auto}
 .card{grid-column:span 12;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px 12px;min-width:0}
 .c6{grid-column:span 6}.c4{grid-column:span 4}.c3{grid-column:span 3}.c8{grid-column:span 8}
@@ -90,6 +104,11 @@ td a:hover{border-color:var(--ink)}
   <button id="theme" title="Toggle dark mode">◐ Theme</button>
 </header>
 
+<div class="searchrow">
+  <input id="q" type="search" placeholder="Search posts: words, &quot;exact phrase&quot;, -exclude, #tag, @name, has:video, about:dolby, series:dataviz, kind:quote" autocomplete="off" spellcheck="false">
+  <span class="hint" id="qhint">Everything below follows the search. <code>has:</code> video, images, article, document, link, boosted · <code>about:</code> dolby, cleeng, mercury · <code>kind:</code> post, quote, repost · <code>series:</code> 10things, retention, dataviz, ytft, episode, untangling · <code>imp>5000</code>, <code>chars<300</code>, <code>date:2026-07</code></span>
+</div>
+<div class="card results" id="c-results" style="max-width:1240px;margin:0 auto 14px;display:none"></div>
 <div class="filters" id="filters">
   <div class="group"><span class="lbl">Range</span>
     <button data-range="all" aria-pressed="true">All</button>
@@ -149,7 +168,32 @@ const capturedTs = new Date(latest + 'T23:59:59Z');
 
 // ---------- state & filters
 const CAPS = D.captures || [D.captured];
-const state = { range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], lenArticle:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
+const norm = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+for (const p of ALL) { p._text = norm(p.text); p._all = norm([p.text, p.qtext, p.mentions.map(m => m[0]).join(' '), p.tags.map(t => '#' + t).join(' '), p.author, p.quoted || ''].join('\n')); p._mentions = norm(p.mentions.map(m => m[0]).join('\n')); }
+const SERIES_ALIAS = {'10things':'10 Things To Consider', '10 things':'10 Things To Consider', retention:'Retention Zone', dataviz:'Dataviz', ytft:'YouTube Football Tracker', youtube:'YouTube Football Tracker', episode:'Episode', ep:'Episode', untangling:'Untangling AI', ai:'Untangling AI'};
+const SPONSOR_ALIAS = {dolby:'Dolby OptiView', optiview:'Dolby OptiView', cleeng:'Cleeng', mercury:'Mercury Intermedia', quicksilver:'Mercury Intermedia'};
+function parseQuery(q){
+  const terms = [], re = /(-)?(?:(\w+)(:|>=|<=|>|<))?(?:"([^"]*)"|(\S+))/g; let m;
+  while ((m = re.exec(q))) { const neg = !!m[1], field = (m[2] || '').toLowerCase(), op = m[3] || ':', val = (m[4] != null ? m[4] : m[5]); if (!val && !field) continue; terms.push({neg, field, val: (op === ':' ? '' : op) + norm(val), raw: val}); }
+  return terms;
+}
+function matchTerm(p, t){
+  const v = t.val;
+  if (t.field === 'has') return ({video: p.media === 'video', images: p.media === 'images', image: p.media === 'images', article: p.article, document: p.attachments.includes('document'), link: p.attachments.includes('link'), boosted: p.boosted, quote: !!p.quoted})[v] ?? false;
+  if (t.field === 'about' || t.field === 'sponsor') return p.subject.includes(SPONSOR_ALIAS[v] || t.raw);
+  if (t.field === 'kind') return v === 'repost' ? p.kind !== 'post' : p.kind === v || (v === 'quote' && p.kind.startsWith('quote'));
+  if (t.field === 'series') { const s = SERIES_ALIAS[v]; return p.series.some(x => s ? x === s : norm(x).includes(v)); }
+  if (t.field === 'chars') { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? p.chars < n : op === '<=' ? p.chars <= n : op === '>' ? p.chars > n : p.chars >= n; }
+  if (t.field === 'imp' || t.field === 'impressions') { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm || p.imp == null) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? p.imp < n : op === '<=' ? p.imp <= n : op === '>' ? p.imp > n : p.imp >= n; }
+  if (t.field === 'date' || t.field === 'year' || t.field === 'month') return p.date.startsWith(v);
+  if (!t.field && v.startsWith('#')) return p.tags.some(x => norm(x) === v.slice(1) || norm(x).startsWith(v.slice(1)));
+  if (!t.field && v.startsWith('@')) return p._mentions.includes(v.slice(1));
+  if (t.field === 'tag') return p.tags.some(x => norm(x).includes(v));
+  if (t.field === 'mention' || t.field === 'with') return p._mentions.includes(v);
+  return p._all.includes(v);
+}
+function matchesQuery(p, terms){ return terms.every(t => matchTerm(p, t) !== t.neg); }
+const state = { q:'', range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], lenArticle:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
 const seriesNames = [...new Set(ALL.flatMap(p => p.series))].sort();
 for (const s of seriesNames) $('#series').append(el('option', {value:s}, s));
 $('#filters').addEventListener('click', e => {
@@ -162,6 +206,8 @@ function press(b, sel){ b.parentElement.querySelectorAll(sel).forEach(x => x.set
 $('#series').addEventListener('change', e => { state.series = e.target.value; render(); });
 $('#format').addEventListener('change', e => { state.format = e.target.value; render(); });
 $('#sponsor').addEventListener('change', e => { state.sponsor = e.target.value; render(); });
+{ let qt; const qi = $('#q'); qi.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => { state.q = qi.value.trim(); render(); }, 180); }); qi.addEventListener('keydown', e => { if (e.key === 'Escape') { qi.value = ''; state.q = ''; render(); } });
+  const u = new URLSearchParams(location.search).get('q'); if (u) { qi.value = u; state.q = u.trim(); } }
 $('#theme').addEventListener('click', () => {
   const r = document.documentElement, dark = matchMedia('(prefers-color-scheme: dark)').matches;
   const cur = r.dataset.theme || (dark ? 'dark' : 'light');
@@ -170,6 +216,7 @@ $('#theme').addEventListener('click', () => {
 
 function filtered(opts = {}){
   let ps = ALL;
+  if (state.q) { const terms = parseQuery(state.q); ps = ps.filter(p => matchesQuery(p, terms)); }
   if (state.kind === 'mine') ps = ps.filter(p => p.author === ME && p.kind !== 'repost_own');
   if (state.range !== 'all') { const from = new Date(capturedTs - state.range*864e5).toISOString().slice(0,10); ps = ps.filter(p => p.date >= from); }
   if (state.series) ps = ps.filter(p => p.series.includes(state.series));
@@ -271,6 +318,20 @@ function legend(body, items){ const l = el('div', {class:'legend'}); for (const 
 function weekStart(d){ const dt = new Date(d + 'T00:00:00Z'); const dow = (dt.getUTCDay() + 6) % 7; dt.setUTCDate(dt.getUTCDate() - dow); return dt.toISOString().slice(0,10); }
 function monthLabel(d){ return new Date(d + 'T00:00:00Z').toLocaleString('en-GB', {month:'short', timeZone:'UTC'}); }
 function romeHour(ts){ return +new Date(ts).toLocaleString('en-GB', {hour:'2-digit', hour12:false, timeZone:'Europe/Rome'}); }
+function snippetFor(p, terms){
+  // the passage around the first matching term, with every term highlighted; text goes in via textContent
+  const s = el('div', {class:'s'}); const text = p.text || ''; const low = p._text;
+  let pos = -1; for (const t of terms) { const i = low.indexOf(t.val); if (i >= 0 && (pos < 0 || i < pos)) pos = i; }
+  if (pos < 0) { s.textContent = text.slice(0, 220).replace(/\s+/g, ' ') + (text.length > 220 ? '…' : ''); return s; }
+  const start = Math.max(0, pos - 90), end = Math.min(text.length, pos + 200);
+  let frag = text.slice(start, end).replace(/\s+/g, ' '); const fragLow = norm(frag);
+  const hits = []; for (const t of terms) { let i = 0; while (t.val && (i = fragLow.indexOf(t.val, i)) >= 0) { hits.push([i, i + t.val.length]); i += t.val.length; } }
+  hits.sort((a,b) => a[0] - b[0]);
+  if (start > 0) s.append('…');
+  let cur = 0; for (const [a, b] of hits) { if (a < cur) continue; s.append(frag.slice(cur, a)); s.append(el('mark', {}, frag.slice(a, b))); cur = b; }
+  s.append(frag.slice(cur)); if (end < text.length) s.append('…');
+  return s;
+}
 function postLink(p){ const a = el('a', {href: p.url || '#', target:'_blank', rel:'noopener'}, p.title || '(no text)'); return a; }
 function kindTag(p){ const f = document.createDocumentFragment(); f.append(postLink(p)); if (p.article) f.append(el('span', {class:'tag'}, 'article')); if (p.attachments.includes('document')) f.append(el('span', {class:'tag'}, 'document')); if (p.media === 'video') f.append(el('span', {class:'tag'}, 'video')); if (p.media === 'images') f.append(el('span', {class:'tag'}, p.images > 1 ? p.images + ' images' : 'image')); for (const sname of p.subject) f.append(el('span', {class:'tag'}, 'about ' + sname)); if (p.boosted) f.append(el('span', {class:'tag'}, 'boosted')); if (p.kind.startsWith('quote')) f.append(el('span', {class:'tag'}, p.kind === 'quote_own' ? 'quote (own)' : 'quote')); if (p.kind === 'repost_other') f.append(el('span', {class:'tag'}, 'repost of ' + p.author)); return f; }
 
@@ -278,6 +339,27 @@ function kindTag(p){ const f = document.createDocumentFragment(); f.append(postL
 function render(){
   const ps = filtered(), withImp = ps.filter(p => p.imp != null);
   $('#subtitle').textContent = `${ALL.length} items captured ${D.captured} · showing ${ps.length}` + (ps.length ? ` from ${ps[ps.length-1].date} to ${ps[0].date}` : '');
+
+  // search results
+  { const c = $('#c-results');
+    if (!state.q) { c.style.display = 'none'; c.replaceChildren(); }
+    else {
+      c.style.display = ''; c.replaceChildren();
+      const terms = parseQuery(state.q).filter(t => !t.neg && !t.field && !t.val.startsWith('#') && !t.val.startsWith('@'));
+      const head = el('div', {class:'head'}); head.append(el('h2', {}, `${ps.length} post${ps.length === 1 ? '' : 's'} match`), el('span', {class:'sub'}, `“${state.q}” · ${fmt(ps.reduce((s,p) => s + (p.imp||0), 0))} impressions together · the filters and charts below are scoped to these posts`)); c.append(head);
+      const list = ps.slice(0, 60);
+      for (const p of list) {
+        const r = el('div', {class:'r'});
+        r.append(el('div', {class:'d'}, p.date));
+        const t = el('div', {class:'t'}); t.append(kindTag(p)); r.append(t);
+        r.append(el('div', {class:'m'}, p.imp != null ? `${fmt(p.imp)} impr. · ${p.rx} reactions · ${p.cm} comments` : `${p.rx} reactions`));
+        r.append(snippetFor(p, terms)); c.append(r);
+      }
+      if (ps.length > list.length) c.append(el('div', {class:'sub', style:'padding:8px 0'}, `Showing the first ${list.length}. Narrow the search or use the tables below.`));
+      try { const u = new URL(location.href); u.searchParams.set('q', state.q); history.replaceState(null, '', u); } catch (e) {}
+    }
+    if (!state.q) { try { const u = new URL(location.href); if (u.searchParams.has('q')) { u.searchParams.delete('q'); history.replaceState(null, '', u); } } catch (e) {} }
+  }
 
   // tiles
   const sum = k => ps.reduce((s,p) => s + (p[k]||0), 0);

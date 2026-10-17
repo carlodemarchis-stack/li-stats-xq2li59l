@@ -126,6 +126,12 @@ pagination, and build_store.py merges whatever each capture reached.
 it loads `analytics-data.js` next to it, no server needed), or serve the folder with
 `python3 -m http.server`.
 
+- Search bar above the filters, scoping everything below it and listing the matching posts with the
+  matching passage highlighted. Plain words match the post text, quoted post, mentions and hashtags
+  (accent-insensitive, all words must match); `"exact phrase"`, `-exclude`, `#tag`, `@name`,
+  `has:video|images|article|document|link|boosted`, `about:dolby|cleeng|mercury` (sponsor as subject),
+  `kind:post|quote|repost`, `series:10things|retention|dataviz|ytft|episode|untangling`,
+  `imp>5000`, `chars<300`, `date:2026-07`. The query is kept in the URL (`?q=`), so a search can be bookmarked.
 - Filters (one row, scope everything below): date range, my posts vs. everything incl. reposts,
   series, format (article, native video, images, document, boosted), sponsor (as subject of the post).
 - Stat tiles: posts, impressions, reactions, comments, reposts, engagement rate.
