@@ -18,6 +18,8 @@ for p in d['posts']:
         'attachments': [a['type'] for a in p['attachments']],
         'mentions': [[m['name'], m['type']] for m in p['mentions']],
         'tags': p['hashtags'], 'series': p['series'], 'disc': p['disclosures'],
+        'sponsors': p.get('sponsors', []), 'subject': p.get('sponsor_subject', []),
+        'media': p.get('media_type'), 'images': p.get('image_count', 0),
         'quoted': (p['quoted_post'] or {}).get('author'),
     })
 js = 'window.LI_DATA = ' + json.dumps({'captured': d['captured_at'], 'posts': out}, ensure_ascii=False) + ';\n'

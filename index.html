@@ -10,17 +10,17 @@
   color-scheme:light;
   --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
   --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
-  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --wash:rgba(11,11,11,.05);
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --gold:#eda100; --wash:rgba(11,11,11,.05);
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   color-scheme:dark; --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
   --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
-  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --wash:rgba(255,255,255,.07);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --gold:#c98500; --wash:rgba(255,255,255,.07);
 }}
 :root[data-theme="dark"]{
   color-scheme:dark; --page:#0d0d0d; --surface:#1a1a19; --ink:#fff; --ink2:#c3c2b7; --muted:#898781;
   --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
-  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --wash:rgba(255,255,255,.07);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --gold:#c98500; --wash:rgba(255,255,255,.07);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--page);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding:20px 16px 48px}
@@ -56,6 +56,8 @@ svg .axis{stroke:var(--axis);stroke-width:1}
 .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin:4px 0 8px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .legend i.line{height:2px;width:14px;border-radius:1px;vertical-align:3px}
+.legend i.ring{background:transparent!important;border:2.5px solid var(--gold);border-radius:50%;width:9px;height:9px}
+.legend i.hollow{background:transparent!important;border:2px solid var(--s3);border-radius:50%;width:9px;height:9px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
 th{color:var(--muted);font-weight:500;font-size:12px;cursor:pointer;user-select:none;white-space:nowrap}
@@ -93,7 +95,9 @@ td a:hover{border-color:var(--ink)}
   </div>
   <div class="group"><span class="lbl">Series</span><select id="series"><option value="">All</option></select></div>
   <div class="group"><span class="lbl">Format</span><select id="format">
-    <option value="">All</option><option value="article">With article</option><option value="plain">Without article</option><option value="boosted">Boosted</option></select></div>
+    <option value="">All</option><option value="article">With article</option><option value="plain">Without article</option><option value="video">Native video</option><option value="images">Images</option><option value="document">Document</option><option value="boosted">Boosted</option></select></div>
+  <div class="group"><span class="lbl">Sponsor</span><select id="sponsor">
+    <option value="">All</option><option value="Dolby OptiView">Dolby OptiView</option><option value="Cleeng">Cleeng</option><option value="Mercury Intermedia">Mercury Intermedia</option><option value="any">Any sponsor as subject</option><option value="none">No sponsor as subject</option></select></div>
 </div>
 
 <div class="grid" id="grid">
@@ -134,7 +138,7 @@ const latest = ALL.reduce((m,p) => p.date > m ? p.date : m, '');
 const capturedTs = new Date(latest + 'T23:59:59Z');
 
 // ---------- state & filters
-const state = { range:'all', kind:'mine', series:'', format:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
+const state = { range:'all', kind:'mine', series:'', format:'', sponsor:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
 const seriesNames = [...new Set(ALL.flatMap(p => p.series))].sort();
 for (const s of seriesNames) $('#series').append(el('option', {value:s}, s));
 $('#filters').addEventListener('click', e => {
@@ -146,6 +150,7 @@ $('#filters').addEventListener('click', e => {
 function press(b, sel){ b.parentElement.querySelectorAll(sel).forEach(x => x.setAttribute('aria-pressed', x === b)); }
 $('#series').addEventListener('change', e => { state.series = e.target.value; render(); });
 $('#format').addEventListener('change', e => { state.format = e.target.value; render(); });
+$('#sponsor').addEventListener('change', e => { state.sponsor = e.target.value; render(); });
 $('#theme').addEventListener('click', () => {
   const r = document.documentElement, dark = matchMedia('(prefers-color-scheme: dark)').matches;
   const cur = r.dataset.theme || (dark ? 'dark' : 'light');
@@ -160,6 +165,10 @@ function filtered(){
   if (state.format === 'article') ps = ps.filter(p => p.article);
   if (state.format === 'plain') ps = ps.filter(p => !p.article);
   if (state.format === 'boosted') ps = ps.filter(p => p.boosted);
+  if (['video','images','document'].includes(state.format)) ps = ps.filter(p => p.media === state.format);
+  if (state.sponsor === 'any') ps = ps.filter(p => p.subject.length);
+  else if (state.sponsor === 'none') ps = ps.filter(p => !p.subject.length);
+  else if (state.sponsor) ps = ps.filter(p => p.subject.includes(state.sponsor));
   return ps;
 }
 
@@ -233,7 +242,8 @@ function hbars(body, rows, opts){
     const yy = 3 + i*rowH, w = innerW * r.value / maxV;
     const g = svgEl('g');
     const lab = svgEl('text', {x:labelW-10, y:yy+16, 'text-anchor':'end', class:'ink'}); lab.textContent = r.label.length > 30 ? r.label.slice(0,29) + '…' : r.label; g.append(lab);
-    g.append(svgEl('rect', {x:labelW, y:yy+5, width:Math.max(1,w), height:rowH-10, fill:r.color || 'var(--s1)', rx:3}));
+    if (r.segments) { let acc = 0; for (const sg of r.segments) { if (!sg.value) continue; const sw = innerW * sg.value / maxV; g.append(svgEl('rect', {x:labelW + acc + (acc ? 2 : 0), y:yy+5, width:Math.max(1, sw - (acc ? 2 : 0)), height:rowH-10, fill:sg.color, rx:3})); acc += sw; } }
+    else g.append(svgEl('rect', {x:labelW, y:yy+5, width:Math.max(1,w), height:rowH-10, fill:r.color || 'var(--s1)', rx:3}));
     const v = svgEl('text', {x:labelW + w + 6, y:yy+16}); v.textContent = r.valueLabel ?? fmt(r.value); g.append(v);
     g.append(svgEl('rect', {x:0, y:yy, width:W, height:rowH, fill:'transparent'}));
     g.addEventListener('pointerenter', () => g.style.opacity = .75); g.addEventListener('pointerleave', () => g.style.opacity = 1);
@@ -244,14 +254,14 @@ function hbars(body, rows, opts){
 }
 function niceTicks(max, n){ const raw = max/n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw/p, step = (m<=1?1:m<=2?2:m<=5?5:10)*p; const out = []; for (let v = 0; v <= max + 1e-9; v += step) out.push(v); return out; }
 function short(n){ return n >= 1e6 ? (n/1e6).toFixed(1)+'M' : n >= 1000 ? (n/1000).toFixed(n>=10000?0:1)+'k' : String(Math.round(n)); }
-function legend(body, items){ const l = el('div', {class:'legend'}); for (const it of items) { const s = el('span'); const i = el('i', {class: it.line ? 'line' : ''}); i.style.background = it.color; s.append(i, document.createTextNode(it.name)); l.append(s); } body.append(l); }
+function legend(body, items){ const l = el('div', {class:'legend'}); for (const it of items) { const s = el('span'); const i = el('i', {class: it.line ? 'line' : it.ring ? 'ring' : it.hollow ? 'hollow' : ''}); if (it.color) i.style.background = it.color; s.append(i, document.createTextNode(it.name)); l.append(s); } body.append(l); }
 
 // ---------- helpers
 function weekStart(d){ const dt = new Date(d + 'T00:00:00Z'); const dow = (dt.getUTCDay() + 6) % 7; dt.setUTCDate(dt.getUTCDate() - dow); return dt.toISOString().slice(0,10); }
 function monthLabel(d){ return new Date(d + 'T00:00:00Z').toLocaleString('en-GB', {month:'short', timeZone:'UTC'}); }
 function romeHour(ts){ return +new Date(ts).toLocaleString('en-GB', {hour:'2-digit', hour12:false, timeZone:'Europe/Rome'}); }
 function postLink(p){ const a = el('a', {href: p.url || '#', target:'_blank', rel:'noopener'}, p.title || '(no text)'); return a; }
-function kindTag(p){ const f = document.createDocumentFragment(); f.append(postLink(p)); if (p.article) f.append(el('span', {class:'tag'}, 'article')); if (p.attachments.includes('document')) f.append(el('span', {class:'tag'}, 'document')); if (p.boosted) f.append(el('span', {class:'tag'}, 'boosted')); if (p.kind.startsWith('quote')) f.append(el('span', {class:'tag'}, p.kind === 'quote_own' ? 'quote (own)' : 'quote')); if (p.kind === 'repost_other') f.append(el('span', {class:'tag'}, 'repost of ' + p.author)); return f; }
+function kindTag(p){ const f = document.createDocumentFragment(); f.append(postLink(p)); if (p.article) f.append(el('span', {class:'tag'}, 'article')); if (p.attachments.includes('document')) f.append(el('span', {class:'tag'}, 'document')); if (p.media === 'video') f.append(el('span', {class:'tag'}, 'video')); if (p.media === 'images') f.append(el('span', {class:'tag'}, p.images > 1 ? p.images + ' images' : 'image')); for (const sname of p.subject) f.append(el('span', {class:'tag'}, 'about ' + sname)); if (p.boosted) f.append(el('span', {class:'tag'}, 'boosted')); if (p.kind.startsWith('quote')) f.append(el('span', {class:'tag'}, p.kind === 'quote_own' ? 'quote (own)' : 'quote')); if (p.kind === 'repost_other') f.append(el('span', {class:'tag'}, 'repost of ' + p.author)); return f; }
 
 // ---------- render
 function render(){
@@ -286,7 +296,11 @@ function render(){
 
   // dots: each post
   card('c-dots', 'Every post', 'impressions per post over time, square-root scale · hover for the post', b => {
-    legend(b, [{name:'With newsletter article', color:'var(--s1)'}, {name:'Without', color:'var(--s2)'}]);
+    const dotColor = p => p.kind !== 'post' ? 'var(--s3)' : p.article ? 'var(--s1)' : 'var(--s2)';
+    const leg = [{name:'Post with newsletter article', color:'var(--s1)'}, {name:'Post without', color:'var(--s2)'}, {name:'Quote repost', color:'var(--s3)'}, {name:'Boosted', ring:true}];
+    const plain = ps.filter(p => p.imp == null);
+    if (plain.length) leg.push({name:'Plain repost, no analytics (on the baseline)', hollow:true});
+    legend(b, leg);
     const H = 260, padL = 44, padR = 10, padT = 10, padB = 26, W = Math.max(320, b.clientWidth || 900);
     const svg = svgEl('svg', {viewBox:`0 0 ${W} ${H}`, role:'img', 'aria-label':'Impressions per post'});
     if (!withImp.length) { b.append(el('div', {class:'empty'}, 'Nothing in this selection')); return; }
@@ -301,15 +315,23 @@ function render(){
     while (m <= last) { const d = m + '-01'; if (new Date(d+'T00:00:00Z') >= t0) { const tx = svgEl('text', {x:x(d), y:H-8, 'text-anchor':'middle'}); tx.textContent = monthLabel(d) + (m.endsWith('-01') ? ' ' + m.slice(0,4) : ''); svg.append(tx); } const dt = new Date(d + 'T00:00:00Z'); dt.setUTCMonth(dt.getUTCMonth()+1); m = dt.toISOString().slice(0,7); }
     for (const p of withImp) {
       const g2 = svgEl('g'); const cx = x(p.date), cy = y(p.imp);
-      g2.append(svgEl('circle', {cx, cy, r:5, fill: p.article ? 'var(--s1)' : 'var(--s2)', stroke:'var(--surface)', 'stroke-width':2}));
+      if (p.boosted) g2.append(svgEl('circle', {cx, cy, r:9, fill:'none', stroke:'var(--gold)', 'stroke-width':2.5}));
+      g2.append(svgEl('circle', {cx, cy, r:5, fill: dotColor(p), stroke:'var(--surface)', 'stroke-width':2}));
       g2.append(svgEl('circle', {cx, cy, r:12, fill:'transparent'}));
       g2.addEventListener('pointerenter', () => g2.firstChild.setAttribute('r', 7)); g2.addEventListener('pointerleave', () => g2.firstChild.setAttribute('r', 5));
-      hover(g2, p.title, () => [['Date', p.date], ['Impressions', fmt(p.imp)], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Engagement', pct(er(p))]]);
+      hover(g2, p.title, () => [['Date', p.date], ['Impressions', fmt(p.imp)], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Engagement', pct(er(p))], ['Format', p.media + (p.boosted ? ', boosted' : '') + (p.subject.length ? ', about ' + p.subject.join(', ') : '')]]);
       g2.style.cursor = 'pointer'; g2.addEventListener('click', () => p.url && window.open(p.url, '_blank'));
       svg.append(g2);
     }
+    for (const p of plain) {
+      const g2 = svgEl('g'); const cx = x(p.date), cy = y(0);
+      g2.append(svgEl('circle', {cx, cy, r:4, fill:'var(--surface)', stroke:'var(--s3)', 'stroke-width':2}));
+      g2.append(svgEl('circle', {cx, cy, r:12, fill:'transparent'}));
+      hover(g2, 'Repost of ' + p.author, () => [['Date', p.date + (p.approx ? ' (approx.)' : '')], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Post', p.title]]);
+      svg.append(g2);
+    }
     b.append(svg);
-  }, {cols:[{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}], rows:withImp});
+  }, {cols:[{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'media', label:'Format'}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}], rows:ps});
 
   // best posts (always a table)
   { const c = $('#c-best'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Best posts'), el('span', {class:'sub'}, 'top 25 · click a column to sort')); c.append(head);
@@ -322,9 +344,14 @@ function render(){
   const gCols = [{key:'label', label:''}, {key:'n', label:'Posts', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'imp', label:'Total impr.', num:true}, {key:'er', label:'Eng. rate', num:true, render:o => pct(o.imp ? o.eng/o.imp : null)}];
   const ser = groupStats(p => p.series.length ? p.series : ['(no series)']);
   card('c-series', 'Series', 'posts per series · hover for reach', b => hbars(b, gRows(ser), {labelW:170}), {cols:gCols, rows:ser});
-  const disc = groupStats(p => p.disc.length ? p.disc : ['(none)']);
-  card('c-disc', 'Disclosures', 'partner named in the post', b => hbars(b, gRows(disc), {labelW:150}), {cols:gCols, rows:disc});
-  const fmtGroups = [['With article', p => p.article], ['Without article', p => !p.article], ['Document', p => p.attachments.includes('document')], ['Link card', p => p.attachments.includes('link')], ['Boosted', p => p.boosted], ['Not boosted', p => !p.boosted], ['Edited', p => p.edited], ['Quote repost', p => p.kind.startsWith('quote')]];
+  { const sp = new Map();
+    for (const p of ps) for (const x of p.sponsors) { const o = sp.get(x.name) || {label:x.name, body:0, footer:0, bodyImp:0, bodyN:0}; o[x.where]++; if (x.where === 'body' && p.imp != null) { o.bodyImp += p.imp; o.bodyN++; } sp.set(x.name, o); }
+    const rows = [...sp.values()].sort((a,b) => (b.body+b.footer) - (a.body+a.footer));
+    card('c-disc', 'Sponsors', 'subject of the post vs. disclosure footer only', b => {
+      legend(b, [{name:'Sponsor is the subject', color:'var(--s1)'}, {name:'Footer only', color:'var(--s2)'}]);
+      hbars(b, rows.map(o => ({label:o.label, value:o.body + o.footer, valueLabel:`${o.body} + ${o.footer}`, segments:[{value:o.body, color:'var(--s1)'}, {value:o.footer, color:'var(--s2)'}], tip: () => [['Subject of the post', String(o.body)], ['Footer only', String(o.footer)], ['Avg impressions when subject', fmt(o.bodyN ? o.bodyImp/o.bodyN : null)]]})), {labelW:150});
+    }, {cols:[{key:'label', label:'Sponsor'}, {key:'body', label:'Subject', num:true}, {key:'footer', label:'Footer only', num:true}, {key:'avg', label:'Avg impr. (subject)', num:true, render:o => fmt(o.bodyN ? o.bodyImp/o.bodyN : null)}], rows}); }
+  const fmtGroups = [['With article', p => p.article], ['Without article', p => !p.article], ['Native video', p => p.media === 'video'], ['Images', p => p.media === 'images'], ['Document', p => p.attachments.includes('document')], ['Link card', p => p.attachments.includes('link')], ['Sponsor as subject', p => p.subject.length > 0], ['Boosted', p => p.boosted], ['Not boosted', p => !p.boosted], ['Edited', p => p.edited], ['Quote repost', p => p.kind.startsWith('quote')]];
   const fr = fmtGroups.map(([label, f]) => { const g = withImp.filter(f); return {label, n:g.length, imp:g.reduce((s,p) => s+p.imp,0), nImp:g.length, eng:g.reduce((s,p) => s+eng(p),0)}; }).filter(o => o.n);
   card('c-format', 'What travels', 'average impressions per post by format', b => hbars(b, fr.map(o => ({label:o.label, value:o.imp/o.nImp, valueLabel: fmt(o.imp/o.nImp) + '  (' + o.n + ')', tip: () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.imp/o.nImp)], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]]})), {labelW:120}), {cols:gCols, rows:fr});
 

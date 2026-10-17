@@ -60,7 +60,9 @@ def main():
       age_label TEXT, edited INTEGER, kind TEXT, author TEXT, posted_with TEXT,
       text TEXT, text_chars INTEGER, reactions INTEGER, comments INTEGER, reposts INTEGER,
       impressions INTEGER, boost_label TEXT, was_boosted INTEGER, has_article INTEGER,
-      quoted_author TEXT, quoted_text TEXT, quoted_url TEXT, first_captured TEXT, last_captured TEXT);
+      quoted_author TEXT, quoted_text TEXT, quoted_url TEXT, first_captured TEXT, last_captured TEXT,
+      media_type TEXT, image_count INTEGER);
+    CREATE TABLE sponsors(post_idx INTEGER, name TEXT, place TEXT);
     CREATE TABLE history(post_idx INTEGER, captured TEXT, impressions INTEGER, reactions INTEGER, comments INTEGER, reposts INTEGER);
     CREATE TABLE mentions(post_idx INTEGER, name TEXT, type TEXT, url TEXT);
     CREATE TABLE hashtags(post_idx INTEGER, tag TEXT);
@@ -71,13 +73,15 @@ def main():
     ''')
     for r in recs:
         q = r['quoted_post'] or {}
-        con.execute('INSERT INTO posts VALUES (' + ','.join('?'*28) + ')', (
+        con.execute('INSERT INTO posts VALUES (' + ','.join('?'*30) + ')', (
             r['idx'], r['key'], r.get('activity_id'), r.get('activity_urn'), r.get('content_urn'),
             r.get('post_url'), r.get('posted_at_utc'), r.get('posted_date'), int(r['date_is_approx']),
             r['age_label'], int(r['edited']), r['kind'], r['author'], r['posted_with'],
             r['text'], r['text_chars'], r['reactions'], r['comments'], r['reposts'],
             r['impressions'], r['boost_label'], int(r['was_boosted']), int(r['has_article']),
-            q.get('author'), q.get('text'), q.get('url'), r['first_captured'], r['last_captured']))
+            q.get('author'), q.get('text'), q.get('url'), r['first_captured'], r['last_captured'],
+            r.get('media_type'), r.get('image_count')))
+        con.executemany('INSERT INTO sponsors VALUES (?,?,?)', [(r['idx'], x['name'], x['where']) for x in r.get('sponsors', [])])
         con.executemany('INSERT INTO history VALUES (?,?,?,?,?,?)',
                         [(r['idx'], h['captured'], h['impressions'], h['reactions'], h['comments'], h['reposts']) for h in r['history']])
         con.executemany('INSERT INTO mentions VALUES (?,?,?,?)',

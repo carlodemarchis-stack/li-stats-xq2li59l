@@ -72,12 +72,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Episode"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -185,10 +194,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -251,8 +264,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -364,8 +381,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -424,8 +452,12 @@
    "kind": "repost_own",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "posted_date": "2026-10-14",
    "date_is_approx": true,
    "first_captured": "2026-10-16",
@@ -477,8 +509,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -544,10 +580,25 @@
    ],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
     "Mercury Intermedia"
    ],
    "date_is_approx": false,
@@ -685,8 +736,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -739,8 +801,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -837,11 +903,24 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView",
     "Mercury Intermedia"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -907,8 +986,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -996,8 +1079,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
     "Mercury Intermedia"
    ],
    "date_is_approx": false,
@@ -1075,10 +1169,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1155,8 +1253,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1201,8 +1303,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1294,11 +1400,24 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView",
     "Mercury Intermedia"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1354,8 +1473,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1432,8 +1555,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1489,8 +1616,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1657,8 +1788,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1736,11 +1871,24 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView",
     "Mercury Intermedia"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1796,8 +1944,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1848,8 +2000,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1905,10 +2061,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -1990,12 +2150,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2091,8 +2260,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -2165,10 +2345,19 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "text",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2234,8 +2423,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2285,8 +2478,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 4,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2331,8 +2528,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2398,8 +2599,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 2,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2444,8 +2649,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2504,8 +2713,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2561,8 +2774,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2636,8 +2853,29 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Cleeng",
+     "where": "body"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView",
+    "Cleeng",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView",
     "Cleeng",
     "Mercury Intermedia"
@@ -2692,8 +2930,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 2,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2756,10 +3000,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2810,8 +3058,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2870,10 +3122,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -2946,8 +3206,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3033,10 +3297,26 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView",
     "Mercury Intermedia"
    ],
@@ -3109,10 +3389,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3184,8 +3472,14 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3252,8 +3546,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
     "Mercury Intermedia"
    ],
    "date_is_approx": false,
@@ -3339,8 +3644,14 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3419,8 +3730,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -3492,8 +3814,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3563,12 +3889,25 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3644,8 +3983,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3744,8 +4087,19 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -3848,8 +4202,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3905,8 +4265,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -3989,8 +4353,19 @@
    "kind": "repost_other",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "posted_date": "2026-09-03",
@@ -4065,8 +4440,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4194,8 +4573,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4241,10 +4626,20 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
-   "series": [],
+   "image_count": 0,
+   "media_type": "video",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4319,8 +4714,24 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView",
     "Mercury Intermedia"
    ],
@@ -4392,10 +4803,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4471,10 +4890,14 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4530,8 +4953,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -4632,8 +5066,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -4724,8 +5169,14 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4790,10 +5241,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "Untangling AI"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4854,8 +5309,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4916,10 +5375,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 4,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -4980,8 +5443,19 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -5034,8 +5508,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5084,10 +5564,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5177,8 +5665,19 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -5236,10 +5735,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5304,8 +5811,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5361,8 +5872,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5431,8 +5946,14 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5491,8 +6012,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5559,8 +6084,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5637,12 +6166,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5698,8 +6236,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5795,10 +6337,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Episode"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5873,8 +6419,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -5927,8 +6484,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -5981,8 +6542,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "document",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6052,8 +6617,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6122,10 +6693,21 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 1,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6184,8 +6766,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6263,8 +6849,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6331,8 +6923,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 1,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6404,8 +7002,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 4,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6461,8 +7063,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6539,8 +7145,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6602,10 +7212,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6664,8 +7278,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6710,8 +7328,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6767,8 +7389,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6841,8 +7467,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6902,8 +7532,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -6980,8 +7616,14 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7036,8 +7678,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 3,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7114,10 +7762,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Episode"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7173,10 +7825,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Episode"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7273,11 +7929,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -7348,8 +8015,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7407,8 +8078,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 1,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7459,8 +8136,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7533,8 +8214,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "posted_date": "2026-07-12",
    "date_is_approx": true,
    "first_captured": "2026-10-16",
@@ -7591,8 +8276,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7669,8 +8358,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -7747,8 +8447,19 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -7843,12 +8554,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7916,8 +8636,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -7967,10 +8693,25 @@
    ],
    "quoted_post": null,
    "kind": "repost_other",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "posted_date": "2026-07-05",
@@ -8042,10 +8783,21 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8096,8 +8848,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8147,8 +8903,12 @@
    "kind": "repost_other",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "posted_date": "2026-07-03",
    "date_is_approx": true,
    "first_captured": "2026-10-16",
@@ -8218,8 +8978,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
-   "series": [],
+   "image_count": 3,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8284,8 +9050,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8364,10 +9134,21 @@
     }
    ],
    "has_article": true,
-   "series": [],
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8462,10 +9243,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8525,8 +9315,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8601,8 +9395,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8653,8 +9451,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8786,11 +9588,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -8843,8 +9656,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -8912,8 +9729,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9002,12 +9823,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9078,10 +9908,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9137,8 +9971,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 2,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9189,8 +10027,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9256,8 +10098,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9342,12 +10188,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9424,8 +10279,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9496,10 +10355,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9552,10 +10415,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9633,12 +10500,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9789,12 +10665,21 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9865,10 +10750,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -9963,10 +10857,21 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -10018,8 +10923,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10085,8 +10994,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "document",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10146,8 +11059,12 @@
    "kind": "repost_other",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "posted_date": "2026-06-04",
    "date_is_approx": true,
    "first_captured": "2026-10-16",
@@ -10280,12 +11197,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10375,8 +11301,12 @@
    "kind": "repost_other",
    "attachments": [],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "text",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "posted_date": "2026-06-03",
    "date_is_approx": true,
    "first_captured": "2026-10-16",
@@ -10440,8 +11370,12 @@
    "kind": "repost_other",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "posted_date": "2026-06-03",
    "date_is_approx": true,
    "first_captured": "2026-10-16",
@@ -10485,10 +11419,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10554,10 +11496,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
    "series": [
     "YouTube Football Tracker"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10649,12 +11595,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10753,10 +11708,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10855,8 +11819,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10906,8 +11874,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -10973,8 +11945,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "document",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11031,8 +12007,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11135,8 +12115,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11234,8 +12218,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11333,8 +12321,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11432,8 +12424,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11531,8 +12527,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11604,12 +12604,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11692,12 +12701,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11775,8 +12793,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -11910,11 +12932,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -11990,12 +13023,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -12046,8 +13088,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -12115,12 +13161,21 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -12254,11 +13309,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -12327,10 +13393,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -12391,8 +13466,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -12550,10 +13629,21 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -12704,10 +13794,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -12871,10 +13972,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13041,12 +14151,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13096,8 +14215,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13229,11 +14352,27 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
-    "Dolby OptiView"
+    "Dolby OptiView",
+    "Cleeng"
+   ],
+   "sponsor_subject": [
+    "Cleeng"
    ],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
@@ -13336,8 +14475,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -13396,8 +14546,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13486,12 +14640,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Untangling AI"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13593,10 +14756,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13723,10 +14895,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13803,13 +14979,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider",
     "Untangling AI"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13876,12 +15061,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -13985,8 +15179,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -14046,8 +15251,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -14151,10 +15367,26 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView",
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView",
     "Cleeng"
    ],
@@ -14246,8 +15478,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -14356,12 +15599,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -14429,8 +15681,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -14572,11 +15828,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -14670,12 +15937,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -14731,10 +16007,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 2,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -14824,8 +16104,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -14909,10 +16200,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -14970,8 +16270,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15058,12 +16362,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15150,12 +16463,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Untangling AI"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15237,12 +16559,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15308,8 +16639,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15386,8 +16721,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15474,12 +16813,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15555,10 +16903,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15641,10 +16993,14 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "document",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15756,12 +17112,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15835,10 +17200,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -15930,12 +17299,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16040,8 +17418,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -16094,8 +17483,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16195,12 +17588,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16263,8 +17665,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16447,10 +17853,25 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,
@@ -16598,10 +18019,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16708,12 +18138,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16798,12 +18237,20 @@
    ],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -16948,11 +18395,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -17050,10 +18508,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17161,12 +18628,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17254,12 +18730,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17340,10 +18825,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17410,8 +18899,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17483,8 +18976,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17636,10 +19133,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17701,10 +19207,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17766,12 +19281,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17830,8 +19354,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -17934,12 +19462,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18019,12 +19556,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18080,8 +19626,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 2,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18167,11 +19717,15 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider",
     "Untangling AI"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18233,10 +19787,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18395,10 +19958,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18490,10 +20062,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18591,10 +20172,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18731,8 +20321,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18798,10 +20392,14 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "10 Things To Consider"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18851,10 +20449,18 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -18933,12 +20539,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Untangling AI"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
    ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19022,12 +20637,27 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "repost_other",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "posted_date": "2026-02-06",
@@ -19075,8 +20705,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19148,10 +20782,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19284,10 +20927,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19371,12 +21023,27 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "repost_other",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "posted_date": "2026-02-04",
@@ -19463,10 +21130,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19545,12 +21221,27 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "repost_other",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "posted_date": "2026-02-02",
@@ -19680,8 +21371,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "text",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19760,12 +21455,27 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "repost_other",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "posted_date": "2026-01-31",
@@ -19842,10 +21552,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -19909,10 +21628,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20044,11 +21772,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -20155,10 +21894,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20260,8 +22008,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20379,10 +22131,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20485,8 +22246,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20578,10 +22343,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20698,10 +22472,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20749,10 +22532,18 @@
     "text": "Claude + Cleeng = a global subscription platform in 60 minutes 🤩\n\nWe challenged our Product Designer, Anna Sobiak, to build a fully functional educational subscription platform from scratch in under an hour.\n\nThe result is \"Bloompath\" – and it’s not just a prototype. It’s a business ready to accept payments in 230 countries.\n\nIn our latest video, Anna breaks down exactly how she did it using vibe coding principles:\n\n🔹 The UI: built instantly using Claude 3.5 Sonnet\n🔹 The business logic: powered by Cleeng’s Hosted Widgets\n\nInstead of coding billing systems, tax compliance, or customer support forms from scratch, Anna simply injected Cleeng’s logic directly into the AI-generated code.\n\nWatch the full video to see how the idea-to-launch gap just got smaller 👉 https://lnkd.in/ezFG7uPE"
    },
    "kind": "quote",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20838,10 +22629,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -20915,10 +22715,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21000,8 +22809,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21070,10 +22883,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21144,8 +22966,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -21213,10 +23046,21 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -21278,12 +23122,20 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [],
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
    "series": [
     "Untangling AI"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21351,8 +23203,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21480,10 +23336,21 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -21535,8 +23402,12 @@
    "kind": "quote",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21663,10 +23534,21 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -21722,10 +23604,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21796,8 +23687,12 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21855,8 +23750,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -21921,10 +23820,14 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "document",
    "series": [
     "Untangling AI"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22001,10 +23904,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22068,10 +23980,14 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Untangling AI"
    ],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22129,8 +24045,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22210,8 +24130,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22291,8 +24215,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22371,8 +24299,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22441,8 +24373,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22514,11 +24450,22 @@
    "kind": "repost_other",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "posted_date": "2025-12-21",
@@ -22596,10 +24543,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22745,10 +24701,21 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 4,
+   "media_type": "images",
    "series": [
     "Retention Zone"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -22821,8 +24788,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22890,10 +24861,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -22966,8 +24946,24 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 2,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView",
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView",
     "Cleeng"
    ],
@@ -23040,10 +25036,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23111,8 +25116,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23196,10 +25205,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23347,11 +25365,22 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [
     "Retention Zone",
     "Episode"
    ],
+   "sponsors": [
+    {
+     "name": "Cleeng",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Cleeng"
+   ],
+   "sponsor_subject": [
     "Cleeng"
    ],
    "date_is_approx": false,
@@ -23428,8 +25457,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23480,8 +25513,12 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23624,8 +25661,12 @@
     }
    ],
    "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
    "series": [],
+   "sponsors": [],
    "disclosures": [],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23757,10 +25798,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23848,10 +25898,19 @@
     }
    ],
    "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    }
+   ],
    "disclosures": [
     "Dolby OptiView"
    ],
+   "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-16",
    "history": [
@@ -23943,8 +26002,19 @@
    "kind": "post",
    "attachments": [],
    "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
    "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
    "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
     "Dolby OptiView"
    ],
    "date_is_approx": false,

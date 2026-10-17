@@ -18,6 +18,32 @@ AGE_RE = re.compile(r'(?:^|•\s*)(\d+\s*(?:h|d|w|mo|yr))\s*(•\s*Edited)?\s*$'
 AGE_UNITS = {'h': 1/24, 'd': 1, 'w': 7, 'mo': 30.4, 'yr': 365}
 
 
+DATAVIZ_RE = re.compile(r'\bdata ?viz\b|#dataviz|interactive (sport|world cup|fan|experience|bracket|dataviz)|'
+                        r'sport interactive experience|Season Tower|F1viz|Road to the Final|World Record Film|'
+                        r'cards? you flip|(nfl|f1|tennis|wc|worldcup|golf|nba|nhl|athletics|dataviz|top5)\.aguywithascarf\.com|'
+                        r'standings I designed|tournament in one screen|interactive dataviz|dataviz creators', re.I)
+# boilerplate lines that carry a sponsor name without the post being about the sponsor
+BOILER_RE = re.compile(r'is collaborating with|Enabling live sports experiences|Representing Mercury|I represent Mercury|'
+                       r'Presented by Cleeng|Hosted (and produced )?by Carlo|Check out my (new )?book|'
+                       r'Retention Zone is presented|Quicksilver Stream the in-house|#ad\b|^-{3,}$', re.I)
+SPONSORS = [('Dolby OptiView', re.compile(r'Dolby')), ('Cleeng', re.compile(r'Cleeng')),
+            ('Mercury Intermedia', re.compile(r'Mercury'))]
+
+
+def sponsor_roles(text, series):
+    """[{name, where}] where = 'body' when the sponsor is named in the post itself,
+    'footer' when it only appears in the disclosure boilerplate. Retention Zone
+    episodes are Cleeng-presented content, so they count as body."""
+    body = '\n'.join(l for l in text.split('\n') if not BOILER_RE.search(l))
+    out = []
+    for name, pat in SPONSORS:
+        if pat.search(body) or (name == 'Cleeng' and 'Retention Zone' in series):
+            out.append({'name': name, 'where': 'body'})
+        elif pat.search(text):
+            out.append({'name': name, 'where': 'footer'})
+    return out
+
+
 def load_html(path):
     opener = gzip.open if path.endswith('.gz') else open
     with opener(path, 'rt', encoding='utf-8') as f:
@@ -239,10 +265,18 @@ def parse_item(item, idx):
     m = re.search(r'([^·]{3,80}?)\s*·\s*(\d+) pages', full_text)
     if m:
         merged.append({'type': 'document', 'title': m.group(1).strip(), 'pages': int(m.group(2))})
-    if item.find('video') or 'video' in (item.get_text(' ', strip=True)[:0]):
+    imgs = item.find_all('img')
+    has_video = bool(item.find(attrs={'aria-label': 'Video Player'})) or any('videocover' in (i.get('src') or '') for i in imgs)
+    image_ids = {re.search(r'/image/v2/([^/]+)/', i['src']).group(1) for i in imgs
+                 if 'feedshare' in (i.get('src') or '') and '/image/v2/' in i['src']}
+    if has_video:
         merged.append({'type': 'video'})
     rec['attachments'] = merged
     rec['has_article'] = any(a['type'] == 'article' for a in merged)
+    rec['image_count'] = len(image_ids)
+    types = [a['type'] for a in merged]
+    rec['media_type'] = ('video' if has_video else 'document' if 'document' in types else 'article' if 'article' in types
+                         else 'images' if image_ids else 'link' if 'link' in types else 'text')
 
     # ---- disclosures / series (cheap flags for later analysis)
     t = rec['text']
@@ -252,10 +286,10 @@ def parse_item(item, idx):
     if 'Untangling AI' in t: rec['series'].append('Untangling AI')
     if re.search(r'\bEp\.?\s*\d+', t): rec['series'].append('Episode')
     if 'YouTube Football Tracker' in t or 'YTFT' in t: rec['series'].append('YouTube Football Tracker')
-    rec['disclosures'] = []
-    if 'Dolby OptiView' in t: rec['disclosures'].append('Dolby OptiView')
-    if 'Cleeng' in t: rec['disclosures'].append('Cleeng')
-    if 'Mercury' in t: rec['disclosures'].append('Mercury Intermedia')
+    if DATAVIZ_RE.search(t): rec['series'].append('Dataviz')
+    rec['sponsors'] = sponsor_roles(t, rec['series'])
+    rec['disclosures'] = [x['name'] for x in rec['sponsors']]          # kept for compatibility
+    rec['sponsor_subject'] = [x['name'] for x in rec['sponsors'] if x['where'] == 'body']
     return rec
 
 

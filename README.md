@@ -95,11 +95,12 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
 `python3 -m http.server`.
 
 - Filters (one row, scope everything below): date range, my posts vs. everything incl. reposts,
-  series, format (with/without article, boosted).
+  series, format (article, native video, images, document, boosted), sponsor (as subject of the post).
 - Stat tiles: posts, impressions, reactions, comments, reposts, engagement rate.
-- Impressions per week and posts per week; every post as a dot over time (click a dot to open
-  the post on LinkedIn); best posts table, sortable by any column.
-- Series, disclosures and "what travels" (average impressions by format).
+- Impressions per week and posts per week; every post as a dot over time: blue with article,
+  orange without, green for quote reposts, a gold ring on boosted posts, plain reposts hollow on
+  the baseline (click a dot to open the post on LinkedIn); best posts table, sortable by any column.
+- Series, sponsors (subject of the post vs. footer only) and "what travels" (average impressions by format).
 - Who I tag (people / companies / showcase pages, with my own pages hidden by default), hashtags.
 - Day of week and hour of day (Europe/Rome) of publication.
 - Every chart has a Table button with the same numbers; the page follows the OS light/dark
@@ -131,11 +132,13 @@ python3 export_analytics.py
 | `quoted_post` | `{author, author_url, age_label, url, text}` for quote reposts |
 | `reactions`, `comments`, `reposts`, `impressions` | counts shown on the page; impressions null on reposts |
 | `boost_label`, `was_boosted` | "Boost" / "Boost again" / "Manage boost"; the last two mean the post was boosted |
-| `series[]` | cheap flags: 10 Things To Consider, Retention Zone, Untangling AI, Episode, YouTube Football Tracker |
-| `disclosures[]` | cheap flags: Dolby OptiView, Cleeng, Mercury Intermedia named in the text |
+| `media_type`, `image_count` | `video` (native video player), `document`, `article`, `images` (feed images, with count), `link`, `text`; first match in that order |
+| `series[]` | cheap flags: 10 Things To Consider, Retention Zone, Untangling AI, Episode, YouTube Football Tracker, Dataviz (the interactive sport experiences) |
+| `sponsors[]`, `sponsor_subject[]` | `{name, where}` per sponsor (Dolby OptiView, Cleeng, Mercury Intermedia): `body` when named in the post itself, `footer` when only in the disclosure boilerplate; Retention Zone episodes count as Cleeng body. `sponsor_subject` lists the body ones |
+| `disclosures[]` | the sponsor names, body or footer (kept for compatibility) |
 
-SQLite side tables: `mentions`, `hashtags`, `attachments`, `external_links`, `series`,
-`disclosures`, all keyed by `post_idx`.
+SQLite side tables: `history`, `mentions`, `hashtags`, `attachments`, `external_links`, `series`,
+`sponsors` (name, place), `disclosures`, all keyed by `post_idx`.
 
 ## What the page does not give
 
