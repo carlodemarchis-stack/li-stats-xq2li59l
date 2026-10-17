@@ -146,7 +146,7 @@ const capturedTs = new Date(latest + 'T23:59:59Z');
 
 // ---------- state & filters
 const CAPS = D.captures || [D.captured];
-const state = { range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
+const state = { range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], lenArticle:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
 const seriesNames = [...new Set(ALL.flatMap(p => p.series))].sort();
 for (const s of seriesNames) $('#series').append(el('option', {value:s}, s));
 $('#filters').addEventListener('click', e => {
@@ -165,13 +165,13 @@ $('#theme').addEventListener('click', () => {
   r.dataset.theme = cur === 'dark' ? 'light' : 'dark';
 });
 
-function filtered(){
+function filtered(opts = {}){
   let ps = ALL;
   if (state.kind === 'mine') ps = ps.filter(p => p.author === ME && p.kind !== 'repost_own');
   if (state.range !== 'all') { const from = new Date(capturedTs - state.range*864e5).toISOString().slice(0,10); ps = ps.filter(p => p.date >= from); }
   if (state.series) ps = ps.filter(p => p.series.includes(state.series));
-  if (state.format === 'article') ps = ps.filter(p => p.article);
-  if (state.format === 'plain') ps = ps.filter(p => !p.article);
+  if (state.format === 'article' && !opts.ignoreArticle) ps = ps.filter(p => p.article);
+  if (state.format === 'plain' && !opts.ignoreArticle) ps = ps.filter(p => !p.article);
   if (state.format === 'boosted') ps = ps.filter(p => p.boosted);
   if (['video','images','document'].includes(state.format)) ps = ps.filter(p => p.media === state.format);
   if (state.sponsor === 'any') ps = ps.filter(p => p.subject.length);
@@ -396,10 +396,15 @@ function render(){
 
   // post length segments
   { const SEGS = [['Under 300', 0, 300], ['300 to 699', 300, 700], ['700 to 1,199', 700, 1200], ['1,200 to 1,799', 1200, 1800], ['1,800 to 2,399', 1800, 2400], ['2,400 and up', 2400, 1e9]];
-    const ls = SEGS.map(([label, lo, hi]) => { const g = ps.filter(p => p.chars >= lo && p.chars < hi), gi = g.filter(p => p.imp != null);
+    const psLen = state.lenArticle ? filtered({ignoreArticle:true}).filter(p => state.lenArticle === 'article' ? p.article : !p.article) : ps;
+    const ls = SEGS.map(([label, lo, hi]) => { const g = psLen.filter(p => p.chars >= lo && p.chars < hi), gi = g.filter(p => p.imp != null);
       return {label, n:g.length, nImp:gi.length, imp:gi.reduce((s,p) => s+p.imp, 0), eng:gi.reduce((s,p) => s+eng(p), 0), rx:g.reduce((s,p) => s+p.rx, 0), cm:g.reduce((s,p) => s+p.cm, 0)}; });
     const tipOf = o => () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Avg reactions', o.n ? (o.rx/o.n).toFixed(1) : '–'], ['Avg comments', o.n ? (o.cm/o.n).toFixed(1) : '–'], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]];
     card('c-length', 'Post length', 'characters in the post body (LinkedIn allows 3,000) · hover for reach and engagement', b => {
+      const ctl = el('div', {class:'legend'});
+      for (const [v, lab] of [['', 'As filtered above'], ['article', 'With article'], ['plain', 'Without article']]) { const bt = el('button', {'aria-pressed': state.lenArticle === v}, lab); bt.style.cssText = 'padding:2px 8px;font-size:12px'; bt.addEventListener('click', () => { state.lenArticle = v; render(); }); ctl.append(bt); }
+      if (state.lenArticle) ctl.append(el('span', {}, `${psLen.length} posts · overrides the Format filter for this card only`));
+      b.append(ctl);
       const row = el('div'); row.style.cssText = 'display:flex;gap:28px;flex-wrap:wrap';
       const a = el('div'), c = el('div'); a.style.cssText = c.style.cssText = 'flex:1;min-width:280px';
       a.append(el('div', {class:'sub'}, 'Posts per segment')); c.append(el('div', {class:'sub'}, 'Average impressions per segment'));

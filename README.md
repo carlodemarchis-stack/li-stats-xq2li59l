@@ -135,7 +135,8 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   only comparable for posts present in both captures, which is why a regular full capture (scroll
   back to the oldest post you care about) is what makes the trend meaningful.
 - Post length in six segments (under 300 to 2,400+ characters): posts per segment next to average
-  impressions per segment, engagement in the tooltip and table.
+  impressions per segment, engagement in the tooltip and table. The card has its own With / Without article
+  toggle that overrides the main Format filter for that card only.
 - Who I tag (people / companies / showcase pages, with my own pages hidden by default), hashtags.
 - Day of week and hour of day (Europe/Rome) of publication.
 - Every chart has a Table button with the same numbers; the page follows the OS light/dark
