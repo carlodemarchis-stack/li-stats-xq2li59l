@@ -83,7 +83,9 @@ svg .axis{stroke:var(--axis);stroke-width:1}
 .legend i.hollow{background:transparent!important;border:2px solid var(--s3);border-radius:50%;width:9px;height:9px}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
-th{color:var(--muted);font-weight:500;font-size:12px;cursor:pointer;user-select:none;white-space:nowrap}
+th{color:var(--muted);font-weight:500;font-size:12px;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0;background:var(--surface);z-index:1}
+.tile .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--axis)}
+.tile .v.small{font-size:15px;line-height:1.3;font-weight:600}
 th[aria-sort]:not([aria-sort="none"]){color:var(--ink)}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 td a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--axis)}
@@ -442,6 +444,12 @@ function render(){
       const tot = k => rows.reduce((s,r) => s + r[k], 0), moved = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).length;
       const mt = el('div', {class:'minitiles'});
       for (const [k,v,d] of [['Posts compared', fmt(rows.length), `${moved} moved`], ['Impressions gained', '+' + fmt(tot('dImp')), A + ' to ' + B], ['Reactions', '+' + fmt(tot('dRx')), ''], ['Comments', '+' + fmt(tot('dCm')), ''], ['Reposts', '+' + fmt(tot('dRp')), '']]) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); mt.append(t); }
+      { const movers = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp); const oldest = movers.length ? movers.reduce((m, r) => r.date < m.date ? r : m) : null;
+        const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, 'Oldest post still moving'));
+        if (oldest) { const v = el('div', {class:'v small'}); const a = el('a', {href: oldest.url || '#', target:'_blank', rel:'noopener'}, oldest.title.length > 60 ? oldest.title.slice(0, 59) + '…' : oldest.title); v.append(a); const age = Math.round((new Date(B) - new Date(oldest.date)) / 864e5);
+          t.append(v, el('div', {class:'d'}, `${oldest.date} · ${age} days old · ${oldest.dImp >= 0 ? '+' : ''}${fmt(oldest.dImp)} impr., +${oldest.dRx + oldest.dCm + oldest.dRp} engagements`)); }
+        else t.append(el('div', {class:'v small'}, '–'));
+        mt.append(t); }
       c.append(mt);
       if (A >= B) c.append(el('div', {class:'empty'}, 'Pick an earlier capture first and a later one second.'));
       else if (!rows.length) c.append(el('div', {class:'empty'}, 'No post of the current selection is in both captures.'));
