@@ -1,8 +1,9 @@
 {
  "captures": [
-  "2026-10-16"
+  "2026-10-16",
+  "2026-10-17"
  ],
- "captured_at": "2026-10-16",
+ "captured_at": "2026-10-17",
  "count": 289,
  "posts": [
   {
@@ -15,15 +16,15 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7516763986231726080",
-   "impressions": 300,
-   "reactions": 4,
-   "comments": 0,
+   "impressions": 499,
+   "reactions": 7,
+   "comments": 1,
    "reposts": 1,
    "reposted_by_me": false,
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": null,
-   "age_label": "3h",
+   "age_label": "20h",
    "edited": false,
    "mentions": [
     {
@@ -96,9 +97,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 499,
+     "reactions": 7,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7516763986965667840"
   },
   {
@@ -111,7 +119,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7516404140835688448",
-   "impressions": 326,
+   "impressions": 354,
    "reactions": 6,
    "comments": 0,
    "reposts": 1,
@@ -211,9 +219,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 354,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7516404142286893056"
   },
   {
@@ -226,7 +241,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7516165683290955776",
-   "impressions": 811,
+   "impressions": 841,
    "reactions": 8,
    "comments": 0,
    "reposts": 1,
@@ -234,7 +249,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "1d",
+   "age_label": "2d",
    "edited": false,
    "mentions": [
     {
@@ -279,9 +294,16 @@
      "reactions": 8,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 841,
+     "reactions": 8,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7516165686491082752"
   },
   {
@@ -294,10 +316,10 @@
    "boost_label": "Manage boost",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7516040872270983168",
-   "impressions": 7999,
-   "reactions": 26,
+   "impressions": 9172,
+   "reactions": 28,
    "comments": 3,
-   "reposts": 3,
+   "reposts": 4,
    "reposted_by_me": false,
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
@@ -405,9 +427,16 @@
      "reactions": 26,
      "comments": 3,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 9172,
+     "reactions": 28,
+     "comments": 3,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7516040873026101248"
   },
   {
@@ -422,7 +451,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "1d",
+   "age_label": "2d",
    "edited": false,
    "mentions": [
     {
@@ -468,9 +497,16 @@
      "reactions": 8,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": null,
+     "reactions": 8,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "x:dc2e24f4416cf0c5"
   },
   {
@@ -483,7 +519,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7515773247498678273",
-   "impressions": 480,
+   "impressions": 485,
    "reactions": 7,
    "comments": 0,
    "reposts": 1,
@@ -491,7 +527,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "2d",
+   "age_label": "3d",
    "edited": false,
    "mentions": [
     {
@@ -524,9 +560,16 @@
      "reactions": 7,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 485,
+     "reactions": 7,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7515773250577215488"
   },
   {
@@ -539,7 +582,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7515758709508284418",
-   "impressions": 164,
+   "impressions": 166,
    "reactions": 3,
    "comments": 1,
    "reposts": 2,
@@ -547,7 +590,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "2d",
+   "age_label": "3d",
    "edited": false,
    "mentions": [
     {
@@ -610,9 +653,16 @@
      "reactions": 3,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 166,
+     "reactions": 3,
+     "comments": 1,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7515758810125283329"
   },
   {
@@ -625,7 +675,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7515222319754297344",
-   "impressions": 1025,
+   "impressions": 1028,
    "reactions": 19,
    "comments": 7,
    "reposts": 0,
@@ -760,9 +810,16 @@
      "reactions": 19,
      "comments": 7,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1028,
+     "reactions": 19,
+     "comments": 7,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7515286387135459328"
   },
   {
@@ -775,7 +832,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7514358856806879232",
-   "impressions": 1265,
+   "impressions": 1266,
    "reactions": 4,
    "comments": 2,
    "reposts": 0,
@@ -783,7 +840,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "6d",
+   "age_label": "1w",
    "edited": true,
    "mentions": [
     {
@@ -816,9 +873,16 @@
      "reactions": 4,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1266,
+     "reactions": 4,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7514358860472684544"
   },
   {
@@ -831,7 +895,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7513707652833759233",
-   "impressions": 495,
+   "impressions": 499,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -930,9 +994,16 @@
      "reactions": 3,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 499,
+     "reactions": 3,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7513707653429104640"
   },
   {
@@ -945,7 +1016,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7513500226935189505",
-   "impressions": 175,
+   "impressions": 177,
    "reactions": 5,
    "comments": 4,
    "reposts": 0,
@@ -1001,9 +1072,16 @@
      "reactions": 5,
      "comments": 4,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 177,
+     "reactions": 5,
+     "comments": 4,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7513500228126175233"
   },
   {
@@ -1016,7 +1094,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7513164018170114048",
-   "impressions": 8468,
+   "impressions": 8474,
    "reactions": 29,
    "comments": 2,
    "reposts": 20,
@@ -1103,9 +1181,16 @@
      "reactions": 29,
      "comments": 2,
      "reposts": 20
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 8474,
+     "reactions": 29,
+     "comments": 2,
+     "reposts": 20
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7513164018946326528"
   },
   {
@@ -1186,9 +1271,16 @@
      "reactions": 4,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1039,
+     "reactions": 4,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7512874528348274688"
   },
   {
@@ -1201,7 +1293,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512412948133359616",
-   "impressions": 2486,
+   "impressions": 2487,
    "reactions": 33,
    "comments": 3,
    "reposts": 1,
@@ -1268,9 +1360,16 @@
      "reactions": 33,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2487,
+     "reactions": 33,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7512412948917710849"
   },
   {
@@ -1318,9 +1417,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 223,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7512128817939918849"
   },
   {
@@ -1333,7 +1439,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7511333549707481089",
-   "impressions": 8883,
+   "impressions": 8891,
    "reactions": 85,
    "comments": 3,
    "reposts": 3,
@@ -1427,9 +1533,16 @@
      "reactions": 85,
      "comments": 3,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 8891,
+     "reactions": 85,
+     "comments": 3,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7511333550453850112"
   },
   {
@@ -1488,9 +1601,16 @@
      "reactions": 4,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 271,
+     "reactions": 4,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7511015251559989248"
   },
   {
@@ -1570,9 +1690,16 @@
      "reactions": 19,
      "comments": 4,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1052,
+     "reactions": 19,
+     "comments": 4,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7511015040490029056"
   },
   {
@@ -1584,7 +1711,7 @@
    "posted_date": "2026-09-30",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 94,
+   "impressions": 100,
    "reactions": 0,
    "comments": 0,
    "reposts": 0,
@@ -1631,9 +1758,16 @@
      "reactions": 0,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 100,
+     "reactions": 0,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510944227401330689"
   },
   {
@@ -1646,7 +1780,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7510944004629463040",
-   "impressions": 3329,
+   "impressions": 3333,
    "reactions": 38,
    "comments": 5,
    "reposts": 1,
@@ -1803,9 +1937,16 @@
      "reactions": 38,
      "comments": 5,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 3333,
+     "reactions": 38,
+     "comments": 5,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510944005531025408"
   },
   {
@@ -1818,7 +1959,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7510620662353371137",
-   "impressions": 1310,
+   "impressions": 1313,
    "reactions": 34,
    "comments": 2,
    "reposts": 1,
@@ -1898,9 +2039,16 @@
      "reactions": 34,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1313,
+     "reactions": 34,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510620663834054656"
   },
   {
@@ -1912,7 +2060,7 @@
    "posted_date": "2026-09-29",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 240,
+   "impressions": 243,
    "reactions": 1,
    "comments": 0,
    "reposts": 0,
@@ -1959,9 +2107,16 @@
      "reactions": 1,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 243,
+     "reactions": 1,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510562273338257408"
   },
   {
@@ -2015,9 +2170,16 @@
      "reactions": 11,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1232,
+     "reactions": 11,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510561238649614336"
   },
   {
@@ -2029,7 +2191,7 @@
    "posted_date": "2026-09-28",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 241,
+   "impressions": 242,
    "reactions": 1,
    "comments": 0,
    "reposts": 0,
@@ -2078,9 +2240,16 @@
      "reactions": 1,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 242,
+     "reactions": 1,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510268530295185409"
   },
   {
@@ -2093,7 +2262,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7510268022436126721",
-   "impressions": 6730,
+   "impressions": 6732,
    "reactions": 8,
    "comments": 1,
    "reposts": 2,
@@ -2174,9 +2343,16 @@
      "reactions": 8,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 6732,
+     "reactions": 8,
+     "comments": 1,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510268023094747136"
   },
   {
@@ -2189,7 +2365,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7510231416304136193",
-   "impressions": 875,
+   "impressions": 878,
    "reactions": 21,
    "comments": 2,
    "reposts": 0,
@@ -2284,9 +2460,16 @@
      "reactions": 21,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 878,
+     "reactions": 21,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7510231417763762176"
   },
   {
@@ -2298,7 +2481,7 @@
    "posted_date": "2026-09-26",
    "boost_label": null,
    "was_boosted": false,
-   "impressions": 397,
+   "impressions": 404,
    "reactions": 4,
    "comments": 1,
    "reposts": 1,
@@ -2338,7 +2521,7 @@
    "quoted_post": {
     "author": "Ben Swanton",
     "author_url": "https://www.linkedin.com/in/benswanton/",
-    "age_label": "2w",
+    "age_label": "3w",
     "url": "https://www.linkedin.com/feed/update/urn:li:share:7509312189904633856/",
     "text": "A few people picked up on the last point in my IBC post, that almost everyone is hiring to an ownership clock. Carlo De Marchis asked me to go deeper, so here it is.\n\nI wrote recently that candidates should diligence the cap table before they sign. This is the other side of that.\n\nMost hiring briefs describe a job. Very few describe the clock it is being hired into, and the clock usually decides whether the hire works.\n\nYear two of a hold period and year four are different jobs with the same title. In year two you are hiring someone to build: new markets, new segments, a team that will take three years to mature. In year four you are hiring someone who can produce a clean, defensible growth story on a timeline that is already set, in a business where half the leadership team is watching for the exit. Both are legitimate. They are not the same person, and a good year-two hire can fail badly in year four.\n\nA founder-owned business with no exit pressure can hire for a decade. A business with a strategic minority holder whose intentions are unresolved often cannot hire at all, because nobody wants to commit budget before the ownership question settles. That hesitation is itself a decision, and it usually costs more than the hire would have.\n\nHere is what I see that most people outside the process do not. The brief a company starts with is frequently not the brief the person is eventually hired against.\n\nThat is rarely indecision. It is the clock moving. A board conversation happens, an approach arrives, a plan gets pulled forward or pushed back, and the profile shifts underneath the search. A build mandate quietly becomes a scale mandate. A regional role becomes a global one. The title stays the same and everyone carries on as though nothing changed.\n\nHandled well, that is a good thing. A search that runs over weeks forces conversations a single planning meeting never gets to, and companies often end up hiring something better than they first described. Handled badly, the candidate is the last to know and starts the job working to a brief that expired before they signed.\n\nThe practical version: before you open a senior search, answer two questions honestly between you and your board. What has to be true about this business in 24 months, and who needs to be convinced of it. Then revisit both as the process runs, and tell the shortlist when the answers change.\n\nIf you are hiring senior commercial leadership at the moment, whose clock are you really working to?\n\n#MediaTech #Broadcast #PrivateEquity #808Talent"
    },
@@ -2367,9 +2550,16 @@
      "reactions": 4,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 404,
+     "reactions": 4,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7509562863842402304"
   },
   {
@@ -2438,9 +2628,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 5031,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7509517024306569216"
   },
   {
@@ -2460,7 +2657,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": null,
-   "age_label": "2w",
+   "age_label": "3w",
    "edited": false,
    "mentions": [],
    "hashtags": [],
@@ -2493,9 +2690,16 @@
      "reactions": 23,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 722,
+     "reactions": 23,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7509210111282966529"
   },
   {
@@ -2543,9 +2747,16 @@
      "reactions": 8,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 601,
+     "reactions": 8,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7509169400957100033"
   },
   {
@@ -2558,7 +2769,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7508709812201881601",
-   "impressions": 278,
+   "impressions": 279,
    "reactions": 7,
    "comments": 4,
    "reposts": 1,
@@ -2614,9 +2825,16 @@
      "reactions": 7,
      "comments": 4,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 279,
+     "reactions": 7,
+     "comments": 4,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7508709813267304448"
   },
   {
@@ -2664,9 +2882,16 @@
      "reactions": 24,
      "comments": 5,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2262,
+     "reactions": 24,
+     "comments": 5,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7508475934778519552"
   },
   {
@@ -2728,9 +2953,16 @@
      "reactions": 14,
      "comments": 5,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1444,
+     "reactions": 14,
+     "comments": 5,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7508437128540749824"
   },
   {
@@ -2789,9 +3021,16 @@
      "reactions": 2,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 199,
+     "reactions": 2,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7508257197106270208"
   },
   {
@@ -2804,7 +3043,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7507738527791583233",
-   "impressions": 10953,
+   "impressions": 10958,
    "reactions": 32,
    "comments": 22,
    "reposts": 7,
@@ -2889,9 +3128,16 @@
      "reactions": 32,
      "comments": 22,
      "reposts": 7
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 10958,
+     "reactions": 32,
+     "comments": 22,
+     "reposts": 7
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7507738528244527104"
   },
   {
@@ -2904,7 +3150,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7507192018843086848",
-   "impressions": 643,
+   "impressions": 646,
    "reactions": 10,
    "comments": 1,
    "reposts": 0,
@@ -2947,9 +3193,16 @@
      "reactions": 10,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 646,
+     "reactions": 10,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7507192021854498816"
   },
   {
@@ -2962,7 +3215,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7506982133404434432",
-   "impressions": 894,
+   "impressions": 897,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -3017,9 +3270,16 @@
      "reactions": 3,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 897,
+     "reactions": 3,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7506982134583091200"
   },
   {
@@ -3032,7 +3292,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7506958184486436864",
-   "impressions": 282,
+   "impressions": 283,
    "reactions": 7,
    "comments": 3,
    "reposts": 0,
@@ -3073,9 +3333,16 @@
      "reactions": 7,
      "comments": 3,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 283,
+     "reactions": 7,
+     "comments": 3,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7506958187539922944"
   },
   {
@@ -3096,7 +3363,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": null,
-   "age_label": "3w",
+   "age_label": "4w",
    "edited": false,
    "mentions": [
     {
@@ -3143,9 +3410,16 @@
      "reactions": 11,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 663,
+     "reactions": 11,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7506702019722772480"
   },
   {
@@ -3158,7 +3432,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7506251259167830017",
-   "impressions": 2016,
+   "impressions": 2021,
    "reactions": 32,
    "comments": 2,
    "reposts": 2,
@@ -3221,9 +3495,16 @@
      "reactions": 32,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 2021,
+     "reactions": 32,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7506251260820508673"
   },
   {
@@ -3236,7 +3517,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7505964662958534656",
-   "impressions": 737,
+   "impressions": 742,
    "reactions": 11,
    "comments": 3,
    "reposts": 4,
@@ -3244,7 +3525,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": null,
-   "age_label": "4w",
+   "age_label": "1mo",
    "edited": false,
    "mentions": [
     {
@@ -3329,9 +3610,16 @@
      "reactions": 11,
      "comments": 3,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 742,
+     "reactions": 11,
+     "comments": 3,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7505964663470194689"
   },
   {
@@ -3389,14 +3677,10 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [
-    {
-     "type": "video"
-    }
-   ],
+   "attachments": [],
    "has_article": false,
    "image_count": 0,
-   "media_type": "video",
+   "media_type": "text",
    "series": [],
    "sponsors": [],
    "disclosures": [],
@@ -3410,9 +3694,16 @@
      "reactions": 10,
      "comments": 1,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 555,
+     "reactions": 10,
+     "comments": 1,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7504570982913695744"
   },
   {
@@ -3489,9 +3780,16 @@
      "reactions": 9,
      "comments": 4,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 892,
+     "reactions": 9,
+     "comments": 4,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7504130549792436224"
   },
   {
@@ -3570,9 +3868,16 @@
      "reactions": 13,
      "comments": 1,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 867,
+     "reactions": 13,
+     "comments": 1,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7503761915937140736"
   },
   {
@@ -3661,9 +3966,16 @@
      "reactions": 10,
      "comments": 5,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 1122,
+     "reactions": 10,
+     "comments": 5,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7503149183856685056"
   },
   {
@@ -3754,9 +4066,16 @@
      "reactions": 11,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 477,
+     "reactions": 11,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7502985862939365376"
   },
   {
@@ -3829,9 +4148,16 @@
      "reactions": 8,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 962,
+     "reactions": 8,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7502708793567313920"
   },
   {
@@ -3889,14 +4215,10 @@
    "lnkd_links": [],
    "quoted_post": null,
    "kind": "post",
-   "attachments": [
-    {
-     "type": "video"
-    }
-   ],
+   "attachments": [],
    "has_article": false,
    "image_count": 0,
-   "media_type": "video",
+   "media_type": "text",
    "series": [],
    "sponsors": [
     {
@@ -3917,9 +4239,16 @@
      "reactions": 6,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 433,
+     "reactions": 6,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7502632229454540800"
   },
   {
@@ -3998,9 +4327,16 @@
      "reactions": 6,
      "comments": 0,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 315,
+     "reactions": 6,
+     "comments": 0,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7502453456759275520"
   },
   {
@@ -4013,7 +4349,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7501929746214301696",
-   "impressions": 871,
+   "impressions": 872,
    "reactions": 12,
    "comments": 0,
    "reposts": 0,
@@ -4111,9 +4447,16 @@
      "reactions": 12,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-17",
+     "impressions": 872,
+     "reactions": 12,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-16",
+   "last_captured": "2026-10-17",
    "key": "7501929747254497281"
   },
   {
