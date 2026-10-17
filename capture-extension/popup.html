@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<title>LinkedIn Activity Capture</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; width: 340px;
+    background: #14161a; color: #e8eaed;
+    font: 13px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .wrap { padding: 12px; }
+  #url {
+    margin: 0 0 10px; font-size: 11px; color: #8b919c;
+    word-break: break-all; max-height: 32px; overflow: hidden;
+  }
+  .row { display: flex; align-items: center; gap: 8px; }
+  label { color: #8b919c; white-space: nowrap; }
+  input[type=date] {
+    flex: 1; min-width: 0; background: #1c1f25; color: #e8eaed;
+    border: 1px solid #2c3038; border-radius: 6px; padding: 5px 8px; font: inherit;
+  }
+  input:focus { outline: none; border-color: #5b8cff; }
+  button {
+    background: #0a66c2; color: #fff; border: 1px solid #0a66c2;
+    border-radius: 6px; padding: 7px 12px; font: 600 12px/1 inherit; cursor: pointer;
+  }
+  button:disabled { background: #191c21; color: #545a64; border-color: #24282f; cursor: default; }
+  #msg { font-size: 11px; color: #8b919c; margin-top: 9px; min-height: 15px; }
+  #msg.err { color: #ff8f8f; }
+  #msg.ok { color: #7ee08a; }
+</style>
+<div class="wrap">
+  <div id="url"></div>
+  <div class="row">
+    <label for="date">Scroll back to</label>
+    <input id="date" type="date">
+    <button id="go" disabled>Capture</button>
+  </div>
+  <div id="msg"></div>
+</div>
+<script src="popup.js"></script>
