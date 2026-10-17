@@ -20,8 +20,9 @@ for p in d['posts']:
         'tags': p['hashtags'], 'series': p['series'], 'disc': p['disclosures'],
         'sponsors': p.get('sponsors', []), 'subject': p.get('sponsor_subject', []),
         'media': p.get('media_type'), 'images': p.get('image_count', 0),
+        'hist': [[h['captured'], h['impressions'], h['reactions'], h['comments'], h['reposts']] for h in p.get('history', [])],
         'quoted': (p['quoted_post'] or {}).get('author'),
     })
-js = 'window.LI_DATA = ' + json.dumps({'captured': d['captured_at'], 'posts': out}, ensure_ascii=False) + ';\n'
+js = 'window.LI_DATA = ' + json.dumps({'captured': d['captured_at'], 'captures': d.get('captures', [d['captured_at']]), 'posts': out}, ensure_ascii=False) + ';\n'
 open('analytics-data.js', 'w', encoding='utf-8').write(js)
 print(len(out), 'posts ->', 'analytics-data.js', len(js)//1024, 'KB')

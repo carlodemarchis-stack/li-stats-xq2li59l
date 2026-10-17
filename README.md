@@ -128,6 +128,12 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   orange without, green for quote reposts, a gold ring on boosted posts, plain reposts hollow on
   the baseline (click a dot to open the post on LinkedIn); best posts table, sortable by any column.
 - Series, sponsors (subject of the post vs. footer only) and "what travels" (average impressions by format).
+- Growth between captures: pick two capture dates; stat tiles with what the posts present in both
+  gained (impressions, reactions, comments, reposts), a bar per capture with the total impressions of
+  the posts present in every capture of the range, and the top movers. `deltas.py` prints the same
+  comparison in the terminal. Captures are keyed by date, so one snapshot per day; the totals are
+  only comparable for posts present in both captures, which is why a regular full capture (scroll
+  back to the oldest post you care about) is what makes the trend meaningful.
 - Post length in six segments (under 300 to 2,400+ characters): posts per segment next to average
   impressions per segment, engagement in the tooltip and table.
 - Who I tag (people / companies / showcase pages, with my own pages hidden by default), hashtags.

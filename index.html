@@ -48,6 +48,11 @@ button[aria-pressed="true"]{background:var(--ink);color:var(--surface);border-co
 .tile .v{font-size:26px;font-weight:650;line-height:1.1;margin:4px 0 2px}
 .tile .k{color:var(--muted);font-size:12px}
 .tile .d{color:var(--ink2);font-size:12px}
+.minitiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin:6px 0 12px}
+.minitiles .tile{padding:8px 12px}
+.minitiles .tile .v{font-size:20px}
+.inline-ctl{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--ink2);margin:0 0 6px}
+.inline-ctl select{padding:2px 6px;font-size:12px}
 svg{display:block;width:100%;overflow:visible}
 svg text{fill:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
 svg .ink{fill:var(--ink2)}
@@ -105,6 +110,7 @@ td a:hover{border-color:var(--ink)}
   <div class="card c8" id="c-weekly"></div>
   <div class="card c4" id="c-posts-week"></div>
   <div class="card" id="c-dots"></div>
+  <div class="card" id="c-growth"></div>
   <div class="card" id="c-best"></div>
   <div class="card c4" id="c-series"></div>
   <div class="card c4" id="c-disc"></div>
@@ -139,7 +145,8 @@ const latest = ALL.reduce((m,p) => p.date > m ? p.date : m, '');
 const capturedTs = new Date(latest + 'T23:59:59Z');
 
 // ---------- state & filters
-const state = { range:'all', kind:'mine', series:'', format:'', sponsor:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
+const CAPS = D.captures || [D.captured];
+const state = { range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
 const seriesNames = [...new Set(ALL.flatMap(p => p.series))].sort();
 for (const s of seriesNames) $('#series').append(el('option', {value:s}, s));
 $('#filters').addEventListener('click', e => {
@@ -220,7 +227,7 @@ function vbars(body, items, opts){
   svg.append(g);
   svg.append(svgEl('line', {class:'axis', x1:padL, x2:W-padR, y1:y(0), y2:y(0)}));
   items.forEach((it, i) => {
-    const x0 = padL + i*bw + Math.min(2, bw*0.15), w = Math.max(1, bw - Math.min(4, bw*0.3));
+    const w = Math.max(1, Math.min(bw - Math.min(4, bw*0.3), opts.maxBar || 64)), x0 = padL + i*bw + (bw - w)/2;
     const hit = svgEl('rect', {x:padL + i*bw, y:padT, width:bw, height:innerH, fill:'transparent'});
     const grp = svgEl('g'); svg.append(grp);
     if (opts.stacked) { let acc = 0; for (const k of opts.stacked) { const v = it[k.key]||0; if (!v) continue; const r = svgEl('rect', {x:x0, y:y(acc+v), width:w, height:Math.max(0, y(acc)-y(acc+v) - (acc ? 2 : 0)), fill:k.color, rx:acc+v===it.total?3:0}); grp.append(r); acc += v; } }
@@ -333,6 +340,37 @@ function render(){
     }
     b.append(svg);
   }, {cols:[{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'media', label:'Format'}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}], rows:ps});
+
+  // growth between captures
+  { const c = $('#c-growth'); c.replaceChildren();
+    const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Growth between captures'), el('span', {class:'sub'}, 'what the posts gained from one capture to the next · only posts present in both')); c.append(head);
+    if (CAPS.length < 2) { c.append(el('div', {class:'empty'}, 'One capture so far. Run refresh.sh again later and this section fills in.')); }
+    else {
+      const ctl = el('div', {class:'inline-ctl'});
+      const mk = (key) => { const s = el('select'); for (const d of CAPS) { const o = el('option', {value:d}, d); if (state[key] === d) o.selected = true; s.append(o); } s.addEventListener('change', e => { state[key] = e.target.value; render(); }); return s; };
+      ctl.append(document.createTextNode('From'), mk('capA'), document.createTextNode('to'), mk('capB')); c.append(ctl);
+      const A = state.capA, B = state.capB;
+      const rows = [];
+      for (const p of ps) { const ha = p.hist.find(x => x[0] === A), hb = p.hist.find(x => x[0] === B); if (!ha || !hb || ha[1] == null || hb[1] == null) continue;
+        rows.push({...p, impA:ha[1], impB:hb[1], dImp:hb[1]-ha[1], dRx:hb[2]-ha[2], dCm:hb[3]-ha[3], dRp:hb[4]-ha[4]}); }
+      rows.sort((a,b) => b.dImp - a.dImp);
+      const tot = k => rows.reduce((s,r) => s + r[k], 0), moved = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).length;
+      const mt = el('div', {class:'minitiles'});
+      for (const [k,v,d] of [['Posts compared', fmt(rows.length), `${moved} moved`], ['Impressions gained', '+' + fmt(tot('dImp')), A + ' to ' + B], ['Reactions', '+' + fmt(tot('dRx')), ''], ['Comments', '+' + fmt(tot('dCm')), ''], ['Reposts', '+' + fmt(tot('dRp')), '']]) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); mt.append(t); }
+      c.append(mt);
+      if (A >= B) c.append(el('div', {class:'empty'}, 'Pick an earlier capture first and a later one second.'));
+      else if (!rows.length) c.append(el('div', {class:'empty'}, 'No post of the current selection is in both captures.'));
+      else {
+        // trend: cohort total per capture, cohort = posts present (with impressions) in every capture from A to B
+        const span = CAPS.slice(CAPS.indexOf(A), CAPS.indexOf(B) + 1);
+        const cohort = ps.filter(p => span.every(d => p.hist.some(x => x[0] === d && x[1] != null)));
+        const trend = span.map(d => { const hs = cohort.map(p => p.hist.find(x => x[0] === d)); return {label:d.slice(5), title:d, value:hs.reduce((s,x) => s + x[1], 0), rx:hs.reduce((s,x) => s + x[2], 0), n:cohort.length}; });
+        const tw = el('div'); tw.append(el('div', {class:'sub'}, `Total impressions of the ${cohort.length} posts present in every capture from ${A} to ${B}, by capture date`)); c.append(tw);
+        vbars(tw, trend.map(t => ({...t, tip: () => [['Impressions', fmt(t.value)], ['Reactions', fmt(t.rx)], ['Posts in cohort', String(t.n)]]})), {height:150, labelEvery:1, aria:'Cohort impressions by capture'});
+        c.append(el('div', {class:'sub', style:'margin:10px 0 4px'}, 'Top movers by impressions gained'));
+        renderTable(c, [{key:'date', label:'Published'}, {key:'title', label:'Post', render:kindTag}, {key:'impA', label:'Before', num:true}, {key:'impB', label:'After', num:true}, {key:'dImp', label:'Gained', num:true, render:r => (r.dImp >= 0 ? '+' : '') + fmt(r.dImp)}, {key:'dRx', label:'Reactions', num:true, render:r => '+' + r.dRx}, {key:'dCm', label:'Comments', num:true, render:r => '+' + r.dCm}, {key:'dRp', label:'Reposts', num:true, render:r => '+' + r.dRp}], rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).slice(0, 15));
+      }
+    } }
 
   // best posts (always a table)
   { const c = $('#c-best'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Best posts'), el('span', {class:'sub'}, 'top 25 · click a column to sort')); c.append(head);
