@@ -76,11 +76,17 @@ Live at https://carlodemarchis-stack.github.io/li-stats-xq2li59l/ (public GitHub
 ### Refreshing
 
 1. Open https://www.linkedin.com/in/carlodemarchis/recent-activity/all/ in Chrome and press
-   ⌘⇧L (the LinkedIn Activity Capture extension, see below). Pick the date to scroll back to
-   (default 35 days ago; older posts are kept from earlier captures, so a short reach is enough)
-   and click Capture. Keep the popup open: it scrolls the feed until a post at or before that
+   ⌘⇧L (the LinkedIn Activity Capture extension, see below). Pick how far back to scroll and
+   click Capture. Keep the popup open: it scrolls the feed until a post at or before the target
    date is loaded, then saves the page as `~/Downloads/activity-page-<today>.html` and reports
-   how many posts it got.
+   how many posts it got. The choices (the popup reads the published `posts.json` for the two
+   store-based ones):
+   - **newest post in the store** (default): only what was posted since the last capture, plus
+     the first page. The routine refresh.
+   - **oldest post in the store**: re-reads every post already in the store, to refresh
+     impressions, reactions, comments and reposts across the whole year (~30 scrolls).
+   - **this month / last month / this year / one year / 5 weeks**, or **a date…**.
+   Older posts are kept from earlier captures whatever the reach.
 2. Run:
 
 ```bash

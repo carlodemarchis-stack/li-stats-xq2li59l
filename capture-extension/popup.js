@@ -8,13 +8,19 @@
 
 const HOST = 'www.linkedin.com';
 const PATH = '/recent-activity/';
+const STORE_URL = 'https://carlodemarchis-stack.github.io/li-stats-xq2li59l/posts.json';
 const DEFAULT_DAYS = 35;
 const MAX_SCROLLS = 150;
 
 const urlEl = document.getElementById('url');
+const rangeEl = document.getElementById('range');
+const dateRowEl = document.getElementById('date-row');
 const dateEl = document.getElementById('date');
+const hintEl = document.getElementById('hint');
 const goEl = document.getElementById('go');
 const msgEl = document.getElementById('msg');
+
+let store = null;   // { newest, oldest, captured } from the published posts.json
 
 function say(text, cls = '') {
   msgEl.textContent = text;
@@ -75,21 +81,62 @@ async function captureActivity(targetDate, maxScrolls) {
   return { html, posts: items(), oldest: oldest(), scrolls, reason };
 }
 
-function todayFilename() {
+const todayFilename = () => `activity-page-${iso(new Date())}.html`;
+
+// local calendar date, not UTC: toISOString() would roll back a day in the evening
+const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+// the date the capture scrolls back to, for the selected range; null when unknown
+function targetDate() {
   const d = new Date();
-  const p = (n) => String(n).padStart(2, '0');
-  return `activity-page-${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}.html`;
+  switch (rangeEl.value) {
+    case 'store-newest': return store && store.newest;
+    case 'store-oldest': return store && store.oldest;
+    case 'this-month': d.setDate(1); return iso(d);
+    case 'last-month': d.setDate(1); d.setMonth(d.getMonth() - 1); return iso(d);
+    case 'this-year': return `${d.getFullYear()}-01-01`;
+    case 'one-year': d.setFullYear(d.getFullYear() - 1); return iso(d);
+    case 'weeks': d.setDate(d.getDate() - DEFAULT_DAYS); return iso(d);
+    case 'date': return dateEl.value || null;
+  }
+  return null;
+}
+
+function describe() {
+  dateRowEl.hidden = rangeEl.value !== 'date';
+  const t = targetDate();
+  const what = {
+    'store-newest': 'only posts newer than the store, plus the first page',
+    'store-oldest': 'every post already in the store, to refresh impressions and reactions'
+  }[rangeEl.value] || 'posts from that date on';
+  if (!t) {
+    hintEl.textContent = rangeEl.value.startsWith('store') ? 'store not loaded' : 'pick a date';
+  } else {
+    hintEl.textContent = `until a post from ${t} or earlier is loaded: ${what}`;
+  }
+  goEl.disabled = !t;
+}
+
+// newest / oldest post dates in the published store
+async function loadStore() {
+  const res = await fetch(`${STORE_URL}?t=${Date.now()}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`store returned ${res.status}`);
+  const data = await res.json();
+  const dates = data.posts.map((p) => p.posted_date).filter(Boolean).sort();
+  if (!dates.length) throw new Error('store has no dated posts');
+  return { newest: dates[dates.length - 1], oldest: dates[0], captured: data.captured_at };
 }
 
 async function run(tab) {
-  if (!dateEl.value) return say('Pick a date first.', 'err');
-  goEl.disabled = dateEl.disabled = true;
-  say(`Scrolling to ${dateEl.value}… keep this popup open.`);
+  const target = targetDate();
+  if (!target) return say('Pick a date first.', 'err');
+  goEl.disabled = rangeEl.disabled = dateEl.disabled = true;
+  say(`Scrolling to ${target}… keep this popup open.`);
   try {
     const [res] = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: captureActivity,
-      args: [dateEl.value, MAX_SCROLLS]
+      args: [target, MAX_SCROLLS]
     });
     const r = res?.result;
     if (!r) throw new Error('no result from the page');
@@ -100,7 +147,7 @@ async function run(tab) {
         `Now run refresh.sh`, 'ok');
   } catch (e) {
     say('Capture failed: ' + e.message, 'err');
-    goEl.disabled = dateEl.disabled = false;
+    goEl.disabled = rangeEl.disabled = dateEl.disabled = false;
   }
 }
 
@@ -114,12 +161,24 @@ async function init() {
   urlEl.textContent = tab.url;
   const d = new Date();
   d.setDate(d.getDate() - DEFAULT_DAYS);
-  dateEl.value = d.toISOString().slice(0, 10);
-  goEl.disabled = false;
-  goEl.focus();
-  say('Scrolls back to the date, then saves the page to Downloads.');
+  dateEl.value = iso(d);
+  rangeEl.addEventListener('change', describe);
+  dateEl.addEventListener('change', describe);
   goEl.addEventListener('click', () => run(tab));
   dateEl.addEventListener('keydown', (e) => { if (e.key === 'Enter') run(tab); });
+
+  say('Loading the store…');
+  try {
+    store = await loadStore();
+    rangeEl.options[0].textContent = `newest post in the store (${store.newest})`;
+    rangeEl.options[1].textContent = `oldest post in the store (${store.oldest})`;
+    say(`Store captured ${store.captured}. Scrolls back, then saves the page to Downloads.`);
+  } catch (e) {
+    rangeEl.value = 'weeks';
+    say(`Store unreachable (${e.message}); store options are off.`, 'err');
+  }
+  describe();
+  goEl.focus();
 }
 
 init();

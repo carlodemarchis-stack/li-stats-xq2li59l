@@ -14,11 +14,13 @@
   }
   .row { display: flex; align-items: center; gap: 8px; }
   label { color: #8b919c; white-space: nowrap; }
-  input[type=date] {
+  select, input[type=date] {
     flex: 1; min-width: 0; background: #1c1f25; color: #e8eaed;
     border: 1px solid #2c3038; border-radius: 6px; padding: 5px 8px; font: inherit;
   }
-  input:focus { outline: none; border-color: #5b8cff; }
+  select:focus, input:focus { outline: none; border-color: #5b8cff; }
+  #date-row { margin-top: 8px; }
+  #hint { font-size: 11px; color: #6b7280; margin-top: 6px; }
   button {
     background: #0a66c2; color: #fff; border: 1px solid #0a66c2;
     border-radius: 6px; padding: 7px 12px; font: 600 12px/1 inherit; cursor: pointer;
@@ -31,10 +33,24 @@
 <div class="wrap">
   <div id="url"></div>
   <div class="row">
-    <label for="date">Scroll back to</label>
-    <input id="date" type="date">
+    <label for="range">Scroll back to</label>
+    <select id="range">
+      <option value="store-newest">newest post in the store</option>
+      <option value="store-oldest">oldest post in the store</option>
+      <option value="this-month">this month</option>
+      <option value="last-month">last month</option>
+      <option value="this-year">this year</option>
+      <option value="one-year">one year</option>
+      <option value="weeks">5 weeks</option>
+      <option value="date">a date…</option>
+    </select>
     <button id="go" disabled>Capture</button>
   </div>
+  <div class="row" id="date-row" hidden>
+    <label for="date">Date</label>
+    <input id="date" type="date">
+  </div>
+  <div id="hint"></div>
   <div id="msg"></div>
 </div>
 <script src="popup.js"></script>
