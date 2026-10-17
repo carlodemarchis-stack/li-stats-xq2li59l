@@ -376,13 +376,16 @@ function render(){
 
   // weekly
   const weeks = new Map();
-  if (ps.length) { let w = weekStart(ps[ps.length-1].date); const end = weekStart(ps[0].date); while (w <= end) { weeks.set(w, {week:w, n:0, imp:0, rx:0, cm:0, rp:0, nImp:0}); const d = new Date(w + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate()+7); w = d.toISOString().slice(0,10); } }
-  for (const p of ps) { const o = weeks.get(weekStart(p.date)); o.n++; if (p.imp != null) { o.imp += p.imp; o.nImp++; } o.rx += p.rx; o.cm += p.cm; o.rp += p.rp; }
+  if (ps.length) { let w = weekStart(ps[ps.length-1].date); const end = weekStart(ps[0].date); while (w <= end) { weeks.set(w, {week:w, n:0, imp:0, rx:0, cm:0, rp:0, nImp:0, nB:0, impB:0}); const d = new Date(w + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate()+7); w = d.toISOString().slice(0,10); } }
+  for (const p of ps) { const o = weeks.get(weekStart(p.date)); o.n++; if (p.imp != null) { o.imp += p.imp; o.nImp++; if (p.boosted) o.impB += p.imp; } if (p.boosted) o.nB++; o.rx += p.rx; o.cm += p.cm; o.rp += p.rp; }
   const wk = [...weeks.values()];
-  const wkItems = wk.map((o, i) => ({ label: (i === 0 || o.week.slice(5,7) !== wk[i-1].week.slice(5,7)) ? monthLabel(o.week) : '', value:o.imp, title:'Week of ' + o.week, tip: () => [['Impressions', fmt(o.imp)], ['Posts', String(o.n)], ['Reactions', fmt(o.rx)], ['Comments', fmt(o.cm)], ['Reposts', fmt(o.rp)], ['Engagement', pct(o.imp ? (o.rx+o.cm+o.rp)/o.imp : null)]] }));
+  const wkItems = wk.map((o, i) => ({ label: (i === 0 || o.week.slice(5,7) !== wk[i-1].week.slice(5,7)) ? monthLabel(o.week) : '', value:o.imp, organic:o.imp - o.impB, boosted:o.impB, total:o.imp, title:'Week of ' + o.week, tip: () => [['Impressions', fmt(o.imp)], ...(o.impB ? [['of which boosted posts', fmt(o.impB), 'var(--gold)']] : []), ['Posts', String(o.n) + (o.nB ? ` (${o.nB} boosted)` : '')], ['Reactions', fmt(o.rx)], ['Comments', fmt(o.cm)], ['Reposts', fmt(o.rp)], ['Engagement', pct(o.imp ? (o.rx+o.cm+o.rp)/o.imp : null)]] }));
+  const STACK = [{key:'organic', color:'var(--s1)', name:'Organic'}, {key:'boosted', color:'var(--gold)', name:'Boosted posts'}];
+  const stackLegend = b => legend(b, [{name:'Not boosted', color:'var(--s1)'}, {name:'Boosted posts', color:'var(--gold)'}]);
   const wkCols = [{key:'week', label:'Week of'}, {key:'n', label:'Posts', num:true}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render: o => pct(o.imp ? (o.rx+o.cm+o.rp)/o.imp : null)}];
-  card('c-weekly', 'Impressions per week', 'sum of impressions of posts published that week', b => vbars(b, wkItems.map(i => ({...i, label:i.label})), {height:200, labelEvery:1, aria:'Weekly impressions'}), {cols:wkCols, rows:wk});
-  card('c-posts-week', 'Posts per week', '', b => vbars(b, wk.map((o,i) => ({label: wkItems[i].label, value:o.n, title:'Week of ' + o.week, tip: () => [['Posts', String(o.n)], ['Impressions', fmt(o.imp)]]})), {height:200, labelEvery:1, aria:'Posts per week'}), {cols:wkCols.slice(0,3), rows:wk});
+  const wkColsB = [...wkCols.slice(0,3), {key:'impB', label:'Impr. boosted', num:true}, {key:'nB', label:'Boosted posts', num:true}, ...wkCols.slice(3)];
+  card('c-weekly', 'Impressions per week', 'sum of impressions of posts published that week', b => { stackLegend(b); vbars(b, wkItems, {height:200, labelEvery:1, stacked:STACK, aria:'Weekly impressions, organic and boosted'}); }, {cols:wkColsB, rows:wk});
+  card('c-posts-week', 'Posts per week', '', b => { stackLegend(b); vbars(b, wk.map((o,i) => ({label: wkItems[i].label, value:o.n, organic:o.n - o.nB, boosted:o.nB, total:o.n, title:'Week of ' + o.week, tip: () => [['Posts', String(o.n)], ...(o.nB ? [['of which boosted', String(o.nB), 'var(--gold)']] : []), ['Impressions', fmt(o.imp)]]})), {height:200, labelEvery:1, stacked:STACK, aria:'Posts per week, organic and boosted'}); }, {cols:[...wkCols.slice(0,3), {key:'nB', label:'Boosted', num:true}], rows:wk});
 
   // dots: each post
   card('c-dots', 'Every post', 'impressions per post over time, square-root scale · hover for the post', b => {
