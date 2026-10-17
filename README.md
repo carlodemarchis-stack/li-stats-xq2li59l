@@ -43,7 +43,8 @@ Item kinds:
 | `parse_linkedin.py` | parser: one HTML capture -> `captures/<date>.json` |
 | `captures/*.json` | one file per capture, the merge input |
 | `build_store.py` | merges all captures -> `posts.json` + `posts.sqlite` (with `history`) |
-| `refresh.sh` | clipboard -> parse -> merge -> export -> commit -> push |
+| `refresh.sh` | capture file (or clipboard) -> parse -> merge -> export -> commit -> push |
+| `capture-extension/` | private Chrome extension: scrolls the activity page back to a date and saves it to `~/Downloads/activity-page-<today>.html` |
 | `posts.json` | one record per item, nested (mentions, hashtags, attachments, quoted post) |
 | `posts.sqlite` | the same, normalised into tables |
 | `export_analytics.py` | `posts.json` -> `analytics-data.js` (compact rows for the dashboard) |
@@ -57,8 +58,9 @@ python3 build_store.py                                           # all captures 
 python3 export_analytics.py                                      # posts.json -> analytics-data.js
 ```
 
-To add a newer capture: open the All activity page, scroll until the oldest post you want is
-loaded, select all, copy, then save the clipboard's HTML flavour with
+To add a newer capture by hand: run the extension (see Refreshing) or, without it, open the
+All activity page, scroll until the oldest post you want is loaded, select all, copy, then save
+the clipboard's HTML flavour with
 
 ```bash
 osascript -e 'the clipboard as «class HTML»' | sed 's/^«data HTML//; s/»$//' | xxd -r -p | gzip -c > raw/activity-page-YYYY-MM-DD.html.gz
@@ -73,20 +75,39 @@ Live at https://carlodemarchis-stack.github.io/li-stats-xq2li59l/ (public GitHub
 
 ### Refreshing
 
-1. Open https://www.linkedin.com/in/carlodemarchis/recent-activity/all/ in the browser,
-   scroll down past the last post already in the store (older posts are kept from earlier
-   captures, so a short scroll is enough), then Select All and Copy.
+1. Open https://www.linkedin.com/in/carlodemarchis/recent-activity/all/ in Chrome and press
+   ⌘⇧L (the LinkedIn Activity Capture extension, see below). Pick the date to scroll back to
+   (default 35 days ago; older posts are kept from earlier captures, so a short reach is enough)
+   and click Capture. Keep the popup open: it scrolls the feed until a post at or before that
+   date is loaded, then saves the page as `~/Downloads/activity-page-<today>.html` and reports
+   how many posts it got.
 2. Run:
 
 ```bash
 ./refresh.sh
 ```
 
-It reads the HTML flavour of the clipboard into `raw/activity-page-<today>.html.gz`, parses it
-into `captures/<today>.json`, merges every capture into `posts.json` / `posts.sqlite`
-(`build_store.py`: union of all captures keyed by `activity_id`, freshest counts win, every
-capture's counts kept in `history`), regenerates `analytics-data.js`, commits and pushes. The
-page updates about a minute later.
+With no argument it takes the newest `activity-page-*.html` in `~/Downloads`; a path can also be
+given (`./refresh.sh ~/Downloads/activity-page-2026-11-01.html`). With no file at all it falls
+back to the clipboard (scroll, Select All, Copy, as before). The capture is gzipped into
+`raw/activity-page-<date>.html.gz` (date from the file name), parsed into `captures/<date>.json`,
+every capture is merged into `posts.json` / `posts.sqlite` (`build_store.py`: union of all
+captures keyed by `activity_id`, freshest counts win, every capture's counts kept in
+`history`), `analytics-data.js` is regenerated, then commit and push. The page updates about a
+minute later.
+
+#### Installing the capture extension
+
+Once per Chrome profile: open `chrome://extensions`, turn on Developer mode, click
+"Load unpacked" and pick the `capture-extension/` folder of this repo. It is private to this
+profile (nothing is published to the Web Store) and asks for no site permissions: it only acts
+on the tab it is invoked on. If ⌘⇧L is taken, change it at `chrome://extensions/shortcuts`.
+To install it on another machine, clone the repo or zip the folder (`zip -r capture-extension.zip
+capture-extension`), unzip there and Load unpacked the same way.
+
+The extension stops scrolling at the target date, after 150 scrolls, or when the page stops
+growing (four scrolls with no new posts). It expands nothing on the page; the full post text is
+already in the markup.
 
 ## Analytics page
 
@@ -101,6 +122,8 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   orange without, green for quote reposts, a gold ring on boosted posts, plain reposts hollow on
   the baseline (click a dot to open the post on LinkedIn); best posts table, sortable by any column.
 - Series, sponsors (subject of the post vs. footer only) and "what travels" (average impressions by format).
+- Post length in six segments (under 300 to 2,400+ characters): posts per segment next to average
+  impressions per segment, engagement in the tooltip and table.
 - Who I tag (people / companies / showcase pages, with my own pages hidden by default), hashtags.
 - Day of week and hour of day (Europe/Rome) of publication.
 - Every chart has a Table button with the same numbers; the page follows the OS light/dark

@@ -109,6 +109,7 @@ td a:hover{border-color:var(--ink)}
   <div class="card c4" id="c-series"></div>
   <div class="card c4" id="c-disc"></div>
   <div class="card c4" id="c-format"></div>
+  <div class="card" id="c-length"></div>
   <div class="card c6" id="c-mentions"></div>
   <div class="card c6" id="c-tags"></div>
   <div class="card c6" id="c-dow"></div>
@@ -354,6 +355,20 @@ function render(){
   const fmtGroups = [['With article', p => p.article], ['Without article', p => !p.article], ['Native video', p => p.media === 'video'], ['Images', p => p.media === 'images'], ['Document', p => p.attachments.includes('document')], ['Link card', p => p.attachments.includes('link')], ['Sponsor as subject', p => p.subject.length > 0], ['Boosted', p => p.boosted], ['Not boosted', p => !p.boosted], ['Edited', p => p.edited], ['Quote repost', p => p.kind.startsWith('quote')]];
   const fr = fmtGroups.map(([label, f]) => { const g = withImp.filter(f); return {label, n:g.length, imp:g.reduce((s,p) => s+p.imp,0), nImp:g.length, eng:g.reduce((s,p) => s+eng(p),0)}; }).filter(o => o.n);
   card('c-format', 'What travels', 'average impressions per post by format', b => hbars(b, fr.map(o => ({label:o.label, value:o.imp/o.nImp, valueLabel: fmt(o.imp/o.nImp) + '  (' + o.n + ')', tip: () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.imp/o.nImp)], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]]})), {labelW:120}), {cols:gCols, rows:fr});
+
+  // post length segments
+  { const SEGS = [['Under 300', 0, 300], ['300 to 699', 300, 700], ['700 to 1,199', 700, 1200], ['1,200 to 1,799', 1200, 1800], ['1,800 to 2,399', 1800, 2400], ['2,400 and up', 2400, 1e9]];
+    const ls = SEGS.map(([label, lo, hi]) => { const g = ps.filter(p => p.chars >= lo && p.chars < hi), gi = g.filter(p => p.imp != null);
+      return {label, n:g.length, nImp:gi.length, imp:gi.reduce((s,p) => s+p.imp, 0), eng:gi.reduce((s,p) => s+eng(p), 0), rx:g.reduce((s,p) => s+p.rx, 0), cm:g.reduce((s,p) => s+p.cm, 0)}; });
+    const tipOf = o => () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Avg reactions', o.n ? (o.rx/o.n).toFixed(1) : '–'], ['Avg comments', o.n ? (o.cm/o.n).toFixed(1) : '–'], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]];
+    card('c-length', 'Post length', 'characters in the post body (LinkedIn allows 3,000) · hover for reach and engagement', b => {
+      const row = el('div'); row.style.cssText = 'display:flex;gap:28px;flex-wrap:wrap';
+      const a = el('div'), c = el('div'); a.style.cssText = c.style.cssText = 'flex:1;min-width:280px';
+      a.append(el('div', {class:'sub'}, 'Posts per segment')); c.append(el('div', {class:'sub'}, 'Average impressions per segment'));
+      row.append(a, c); b.append(row);
+      hbars(a, ls.map(o => ({label:o.label, value:o.n, tip:tipOf(o)})), {labelW:120});
+      hbars(c, ls.map(o => ({label:o.label, value:o.nImp ? o.imp/o.nImp : 0, tip:tipOf(o)})), {labelW:120});
+    }, {cols:[{key:'label', label:'Characters'}, {key:'n', label:'Posts', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'arx', label:'Avg reactions', num:true, render:o => o.n ? (o.rx/o.n).toFixed(1) : '–'}, {key:'acm', label:'Avg comments', num:true, render:o => o.n ? (o.cm/o.n).toFixed(1) : '–'}, {key:'er', label:'Eng. rate', num:true, render:o => pct(o.imp ? o.eng/o.imp : null)}], rows:ls}); }
 
   // mentions
   { const colors = {person:'var(--s1)', company:'var(--s2)', showcase:'var(--s3)', school:'var(--s3)'};
