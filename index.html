@@ -86,6 +86,10 @@ th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--grid);vertic
 th{color:var(--muted);font-weight:500;font-size:12px;cursor:pointer;user-select:none;white-space:nowrap;position:sticky;top:0;background:var(--surface);z-index:1}
 .tile .v a{color:inherit;text-decoration:none;border-bottom:1px solid var(--axis)}
 .tile .v.small{font-size:15px;line-height:1.3;font-weight:600}
+.oldest{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:10px 14px;margin:-4px 0 14px;font-size:13px}
+.oldest .k{color:var(--muted);font-size:12px}
+.oldest a{color:var(--ink);font-weight:600;text-decoration:none;border-bottom:1px solid var(--axis)}
+.oldest .d{color:var(--ink2)}
 th[aria-sort]:not([aria-sort="none"]){color:var(--ink)}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 td a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--axis)}
@@ -406,8 +410,10 @@ function render(){
     for (const t of [500, 2000, 5000, 10000].filter(t => t < maxI*1.05)) { g.append(svgEl('line', {x1:padL, x2:W-padR, y1:y(t), y2:y(t)})); const tx = svgEl('text', {x:padL-6, y:y(t)+4, 'text-anchor':'end'}); tx.textContent = short(t); svg.append(tx); }
     svg.append(g); svg.append(svgEl('line', {class:'axis', x1:padL, x2:W-padR, y1:y(0), y2:y(0)}));
     // month ticks
-    let m = ps[ps.length-1].date.slice(0,7); const last = ps[0].date.slice(0,7);
-    while (m <= last) { const d = m + '-01'; if (new Date(d+'T00:00:00Z') >= t0) { const tx = svgEl('text', {x:x(d), y:H-8, 'text-anchor':'middle'}); tx.textContent = monthLabel(d) + (m.endsWith('-01') ? ' ' + m.slice(0,4) : ''); svg.append(tx); } const dt = new Date(d + 'T00:00:00Z'); dt.setUTCMonth(dt.getUTCMonth()+1); m = dt.toISOString().slice(0,7); }
+    let m = ps[ps.length-1].date.slice(0,7); const last = ps[0].date.slice(0,7); let mi = 0;
+    const months = []; while (m <= last) { months.push(m); const dt = new Date(m + '-01T00:00:00Z'); dt.setUTCMonth(dt.getUTCMonth()+1); m = dt.toISOString().slice(0,7); }
+    const every = Math.max(1, Math.ceil(months.length / ((W - padL - padR) / 52)));
+    for (const mm of months) { const d = mm + '-01'; if (mi++ % every === 0 && new Date(d+'T00:00:00Z') >= t0) { const tx = svgEl('text', {x:x(d), y:H-8, 'text-anchor':'middle'}); tx.textContent = monthLabel(d) + (mm.endsWith('-01') ? ' ’' + mm.slice(2,4) : ''); svg.append(tx); } }
     for (const p of withImp) {
       const g2 = svgEl('g'); const cx = x(p.date), cy = y(p.imp);
       if (p.boosted) g2.append(svgEl('circle', {cx, cy, r:7.5, fill:'none', stroke:'var(--gold)', 'stroke-width':1.5}));
@@ -444,13 +450,12 @@ function render(){
       const tot = k => rows.reduce((s,r) => s + r[k], 0), moved = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).length;
       const mt = el('div', {class:'minitiles'});
       for (const [k,v,d] of [['Posts compared', fmt(rows.length), `${moved} moved`], ['Impressions gained', '+' + fmt(tot('dImp')), A + ' to ' + B], ['Reactions', '+' + fmt(tot('dRx')), ''], ['Comments', '+' + fmt(tot('dCm')), ''], ['Reposts', '+' + fmt(tot('dRp')), '']]) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); mt.append(t); }
-      { const movers = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp); const oldest = movers.length ? movers.reduce((m, r) => r.date < m.date ? r : m) : null;
-        const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, 'Oldest post still moving'));
-        if (oldest) { const v = el('div', {class:'v small'}); const a = el('a', {href: oldest.url || '#', target:'_blank', rel:'noopener'}, oldest.title.length > 60 ? oldest.title.slice(0, 59) + '…' : oldest.title); v.append(a); const age = Math.round((new Date(B) - new Date(oldest.date)) / 864e5);
-          t.append(v, el('div', {class:'d'}, `${oldest.date} · ${age} days old · ${oldest.dImp >= 0 ? '+' : ''}${fmt(oldest.dImp)} impr., +${oldest.dRx + oldest.dCm + oldest.dRp} engagements`)); }
-        else t.append(el('div', {class:'v small'}, '–'));
-        mt.append(t); }
       c.append(mt);
+      { const movers = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp); const oldest = movers.length ? movers.reduce((m, r) => r.date < m.date ? r : m) : null;
+        if (oldest) { const o = el('div', {class:'oldest'}); const age = Math.round((new Date(B) - new Date(oldest.date)) / 864e5);
+          o.append(el('span', {class:'k'}, 'Oldest post still moving'), el('a', {href: oldest.url || '#', target:'_blank', rel:'noopener'}, oldest.title),
+                   el('span', {class:'d'}, `published ${oldest.date}, ${age} days old · ${oldest.dImp >= 0 ? '+' : ''}${fmt(oldest.dImp)} impressions, +${oldest.dRx} reactions, +${oldest.dCm} comments, +${oldest.dRp} reposts`));
+          c.append(o); } }
       if (A >= B) c.append(el('div', {class:'empty'}, 'Pick an earlier capture first and a later one second.'));
       else if (!rows.length) c.append(el('div', {class:'empty'}, 'No post of the current selection is in both captures.'));
       else {
