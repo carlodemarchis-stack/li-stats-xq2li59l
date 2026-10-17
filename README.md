@@ -112,8 +112,13 @@ To install it on another machine, clone the repo or zip the folder (`zip -r capt
 capture-extension`), unzip there and Load unpacked the same way.
 
 The extension stops scrolling at the target date, after 150 scrolls, or when the page stops
-growing (four scrolls with no new posts). It expands nothing on the page; the full post text is
-already in the markup.
+growing (five rounds with no new posts, about 50 s). It expands nothing on the page; the full
+post text is already in the markup. The feed loads ten posts per page request and LinkedIn
+answers some of those with a 503; the page retries them with a backoff, but only if it is not
+scrolled again meanwhile, so the extension waits for each page to arrive and rests between
+scrolls (about 3 s per ten posts; a full year is roughly two minutes). If a capture still ends
+with "page stopped growing" short of the target, run it again: a page reload starts a fresh
+pagination, and build_store.py merges whatever each capture reached.
 
 ## Analytics page
 

@@ -59,22 +59,29 @@ async function captureActivity(targetDate, maxScrolls) {
     return document.scrollingElement || document.documentElement;
   };
 
-  let scrolls = 0, stale = 0, lastH = -1, lastN = -1, reason;
+  // The feed loads 10 posts per page request. Those requests 503 now and then and
+  // the page retries them with a backoff, but only if it is not hammered: scrolling
+  // every 1.5 s stalled for good at 140-240 posts, waiting for each page and resting
+  // between scrolls went past 360. So: scroll, wait for growth (up to 8 s), rest
+  // 2.5 s; on no growth, nudge (up and back down) and give it five more rounds.
+  let scrolls = 0, stale = 0, reason;
   for (;;) {
     const o = oldest();
     if (o && o <= targetDate) { reason = 'reached target date'; break; }
     if (scrolls >= maxScrolls) { reason = 'scroll cap'; break; }
     const sc = scroller();
+    const n = items();
+    if (stale) { sc.scrollTo(0, sc.scrollHeight - 800); await sleep(300); }
     sc.scrollTo(0, sc.scrollHeight);
     scrolls++;
-    await sleep(1500);
-    const h = sc.scrollHeight, n = items();
-    if (h === lastH && n === lastN) {
-      if (++stale >= 4) { reason = 'page stopped growing'; break; }
+    let waited = 0;
+    while (items() === n && waited < 8000) { await sleep(500); waited += 500; }
+    if (items() === n) {
+      if (++stale >= 5) { reason = 'page stopped growing'; break; }
     } else {
       stale = 0;
     }
-    lastH = h; lastN = n;
+    await sleep(2500);
   }
 
   const html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
