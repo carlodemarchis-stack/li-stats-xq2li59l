@@ -152,6 +152,8 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
 - Day of week and hour of day (Europe/Rome) of publication.
 - Links in the text (none, one, two or more external links in the body) and hashtags (none, 1 to 3,
   4 to 6, 7 or more): posts per group next to average impressions, engagement in the tooltip and table.
+- People tagged and companies tagged (none, 1 to 2, 3 to 5, 6 or more distinct handles, my own pages
+  excluded), same layout.
 - Every chart has a Table button with the same numbers; the page follows the OS light/dark
   setting and has a Theme toggle.
 

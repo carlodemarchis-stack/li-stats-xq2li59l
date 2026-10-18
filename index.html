@@ -147,6 +147,8 @@ td a:hover{border-color:var(--ink)}
   <div class="card c6" id="c-hour"></div>
   <div class="card c6" id="c-links"></div>
   <div class="card c6" id="c-hashtags"></div>
+  <div class="card c6" id="c-people"></div>
+  <div class="card c6" id="c-companies"></div>
 </div>
 <div id="tip"></div>
 
@@ -528,6 +530,10 @@ function render(){
     }, {cols:[{key:'label', label:''}, {key:'n', label:'Posts', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'arx', label:'Avg reactions', num:true, render:o => o.n ? (o.rx/o.n).toFixed(1) : '–'}, {key:'acm', label:'Avg comments', num:true, render:o => o.n ? (o.cm/o.n).toFixed(1) : '–'}, {key:'er', label:'Eng. rate', num:true, render:o => pct(o.imp ? o.eng/o.imp : null)}], rows:gs});
   };
   groupCard('c-links', 'Links in the text', 'external links written in the post body (not the article card)', [['No link', p => !p.links], ['One link', p => p.links === 1], ['Two or more', p => p.links >= 2]], 100);
+  const nTagged = (p, types) => new Set(p.mentions.filter(([n, t]) => types.includes(t) && !OWN_PAGES.has(n)).map(([n]) => n)).size;
+  const countGroups = f => [['None', p => f(p) === 0], ['1 to 2', p => f(p) >= 1 && f(p) <= 2], ['3 to 5', p => f(p) >= 3 && f(p) <= 5], ['6 or more', p => f(p) >= 6]];
+  groupCard('c-people', 'People tagged', 'distinct people mentioned in the post, myself excluded', countGroups(p => nTagged(p, ['person'])), 100);
+  groupCard('c-companies', 'Companies tagged', 'distinct company and showcase pages mentioned, my own pages excluded', countGroups(p => nTagged(p, ['company', 'showcase', 'school'])), 100);
   groupCard('c-hashtags', 'Hashtags', 'number of hashtags in the post', [['None', p => p.tags.length === 0], ['1 to 3', p => p.tags.length >= 1 && p.tags.length <= 3], ['4 to 6', p => p.tags.length >= 4 && p.tags.length <= 6], ['7 or more', p => p.tags.length >= 7]], 100);
 
   // mentions
