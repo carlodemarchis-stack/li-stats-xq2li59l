@@ -150,6 +150,8 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   toggle that overrides the main Format filter for that card only.
 - Who I tag (people / companies / showcase pages, with my own pages hidden by default), hashtags.
 - Day of week and hour of day (Europe/Rome) of publication.
+- Links in the text (none, one, two or more external links in the body) and hashtags (none, 1 to 3,
+  4 to 6, 7 or more): posts per group next to average impressions, engagement in the tooltip and table.
 - Every chart has a Table button with the same numbers; the page follows the OS light/dark
   setting and has a Theme toggle.
 

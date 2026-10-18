@@ -145,6 +145,8 @@ td a:hover{border-color:var(--ink)}
   <div class="card c6" id="c-tags"></div>
   <div class="card c6" id="c-dow"></div>
   <div class="card c6" id="c-hour"></div>
+  <div class="card c6" id="c-links"></div>
+  <div class="card c6" id="c-hashtags"></div>
 </div>
 <div id="tip"></div>
 
@@ -510,6 +512,23 @@ function render(){
       hbars(a, ls.map(o => ({label:o.label, value:o.n, tip:tipOf(o)})), {labelW:120});
       hbars(c, ls.map(o => ({label:o.label, value:o.nImp ? o.imp/o.nImp : 0, tip:tipOf(o)})), {labelW:120});
     }, {cols:[{key:'label', label:'Characters'}, {key:'n', label:'Posts', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'arx', label:'Avg reactions', num:true, render:o => o.n ? (o.rx/o.n).toFixed(1) : '–'}, {key:'acm', label:'Avg comments', num:true, render:o => o.n ? (o.cm/o.n).toFixed(1) : '–'}, {key:'er', label:'Eng. rate', num:true, render:o => pct(o.imp ? o.eng/o.imp : null)}], rows:ls}); }
+
+  // links in the text / hashtags: posts per group next to average impressions
+  const groupCard = (id, title, sub, groups, labelW) => {
+    const gs = groups.map(([label, f]) => { const g = ps.filter(f), gi = g.filter(p => p.imp != null);
+      return {label, n:g.length, nImp:gi.length, imp:gi.reduce((s,p) => s+p.imp, 0), eng:gi.reduce((s,p) => s+eng(p), 0), rx:g.reduce((s,p) => s+p.rx, 0), cm:g.reduce((s,p) => s+p.cm, 0)}; });
+    const tipOf = o => () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Avg reactions', o.n ? (o.rx/o.n).toFixed(1) : '–'], ['Avg comments', o.n ? (o.cm/o.n).toFixed(1) : '–'], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]];
+    card(id, title, sub, b => {
+      const row = el('div'); row.style.cssText = 'display:flex;gap:28px;flex-wrap:wrap';
+      const a = el('div'), c = el('div'); a.style.cssText = c.style.cssText = 'flex:1;min-width:220px';
+      a.append(el('div', {class:'sub'}, 'Posts')); c.append(el('div', {class:'sub'}, 'Average impressions'));
+      row.append(a, c); b.append(row);
+      hbars(a, gs.map(o => ({label:o.label, value:o.n, tip:tipOf(o)})), {labelW});
+      hbars(c, gs.map(o => ({label:o.label, value:o.nImp ? o.imp/o.nImp : 0, tip:tipOf(o)})), {labelW});
+    }, {cols:[{key:'label', label:''}, {key:'n', label:'Posts', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'arx', label:'Avg reactions', num:true, render:o => o.n ? (o.rx/o.n).toFixed(1) : '–'}, {key:'acm', label:'Avg comments', num:true, render:o => o.n ? (o.cm/o.n).toFixed(1) : '–'}, {key:'er', label:'Eng. rate', num:true, render:o => pct(o.imp ? o.eng/o.imp : null)}], rows:gs});
+  };
+  groupCard('c-links', 'Links in the text', 'external links written in the post body (not the article card)', [['No link', p => !p.links], ['One link', p => p.links === 1], ['Two or more', p => p.links >= 2]], 100);
+  groupCard('c-hashtags', 'Hashtags', 'number of hashtags in the post', [['None', p => p.tags.length === 0], ['1 to 3', p => p.tags.length >= 1 && p.tags.length <= 3], ['4 to 6', p => p.tags.length >= 4 && p.tags.length <= 6], ['7 or more', p => p.tags.length >= 7]], 100);
 
   // mentions
   { const colors = {person:'var(--s1)', company:'var(--s2)', showcase:'var(--s3)', school:'var(--s3)'};
