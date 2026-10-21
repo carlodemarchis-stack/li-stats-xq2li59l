@@ -92,6 +92,7 @@ th{color:var(--muted);font-weight:500;font-size:12px;cursor:pointer;user-select:
 .oldest .d{color:var(--ink2)}
 th[aria-sort]:not([aria-sort="none"]){color:var(--ink)}
 td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.date{white-space:nowrap;color:var(--ink2);font-variant-numeric:tabular-nums}
 td a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--axis)}
 td a:hover{border-color:var(--ink)}
 .tag{display:inline-block;font-size:11px;color:var(--ink2);border:1px solid var(--border);border-radius:5px;padding:0 5px;margin-left:4px;vertical-align:1px}
@@ -179,6 +180,8 @@ const OWN_PAGES = new Set([ME,'A guy with a scarf','Retention Zone','10 things t
   'FACTORY63','A guy with a scarf asks a question to...']);
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const fmt = n => n == null ? '–' : Math.round(n).toLocaleString('en-GB');
+const THIS_YEAR = (D.captured || '').slice(0,4);
+const fmtDate = d => { if (!d) return '–'; const dt = new Date(d + 'T00:00:00Z'); const s = dt.getUTCDate() + ' ' + dt.toLocaleString('en-GB', {month:'short', timeZone:'UTC'}); return d.slice(0,4) === THIS_YEAR ? s : s + ' ’' + d.slice(2,4); };
 const pct = n => n == null || !isFinite(n) ? '–' : (n*100).toFixed(1) + '%';
 const eng = p => p.rx + p.cm + p.rp;
 const er = p => p.imp ? eng(p)/p.imp : null;
@@ -288,7 +291,7 @@ function renderTable(body, cols, rows, sortable){
   const wrap = el('div', {class:'tablewrap'}), t = el('table'), tr = el('tr');
   for (const c of cols) { const th = el('th', {class: c.num ? 'num' : ''}, c.label); if (sortable) { th.setAttribute('aria-sort', state.sort === c.key ? (state.sortDir < 0 ? 'descending' : 'ascending') : 'none'); th.addEventListener('click', () => { if (state.sort === c.key) state.sortDir *= -1; else { state.sort = c.key; state.sortDir = c.num ? -1 : 1; } render(); }); } tr.append(th); }
   const thead = el('thead'); thead.append(tr); t.append(thead); const tbody = el('tbody'); t.append(tbody);
-  for (const r of rows) { const row = el('tr'); for (const c of cols) { const td = el('td', {class: c.num ? 'num' : ''}); const v = c.render ? c.render(r) : r[c.key]; if (v instanceof Node) td.append(v); else td.textContent = c.num && typeof v === 'number' ? fmt(v) : (v ?? '–'); row.append(td); } tbody.append(row); }
+  for (const r of rows) { const row = el('tr'); for (const c of cols) { const td = el('td', {class: c.num ? 'num' : (c.cls || '')}); const v = c.render ? c.render(r) : r[c.key]; if (v instanceof Node) td.append(v); else td.textContent = c.num && typeof v === 'number' ? fmt(v) : (v ?? '–'); row.append(td); } tbody.append(row); }
   if (!rows.length) wrap.append(el('div', {class:'empty'}, 'Nothing in this selection')); else wrap.append(t);
   body.append(wrap);
 }
@@ -368,7 +371,7 @@ function kindTag(p){ const f = document.createDocumentFragment(); f.append(postL
 // ---------- render
 function render(){
   const ps = filtered(), withImp = ps.filter(p => p.imp != null);
-  $('#subtitle').textContent = `${ALL.length} ${SP ? 'posts mentioning ' + SP : 'items'} captured ${D.captured} · showing ${ps.length}` + (ps.length ? ` from ${ps[ps.length-1].date} to ${ps[0].date}` : '');
+  $('#subtitle').textContent = `${ALL.length} ${SP ? 'posts mentioning ' + SP : 'items'} captured ${fmtDate(D.captured)} · showing ${ps.length}` + (ps.length ? ` from ${fmtDate(ps[ps.length-1].date)} to ${fmtDate(ps[0].date)}` : '');
 
   // search results
   { const c = $('#c-results');
@@ -380,7 +383,7 @@ function render(){
       const list = ps.slice(0, 60);
       for (const p of list) {
         const r = el('div', {class:'r'});
-        r.append(el('div', {class:'d'}, p.date));
+        r.append(el('div', {class:'d'}, fmtDate(p.date)));
         const t = el('div', {class:'t'}); t.append(kindTag(p)); r.append(t);
         r.append(el('div', {class:'m'}, p.imp != null ? `${fmt(p.imp)} impr. · ${p.rx} reactions · ${p.cm} comments` : `${p.rx} reactions`));
         r.append(snippetFor(p, terms)); c.append(r);
@@ -459,12 +462,12 @@ function render(){
       svg.append(g2);
     }
     b.append(svg);
-  }, {cols:[{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'media', label:'Format'}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}], rows:ps});
+  }, {cols:[{key:'date', label:'Date', cls:'date', render:p => fmtDate(p.date)}, {key:'title', label:'Post', render:kindTag}, {key:'media', label:'Format'}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}], rows:ps});
 
   // latest ten posts
   { const c = $('#c-latest'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Latest posts'), el('span', {class:'sub'}, 'the ten most recent in this selection, newest first')); c.append(head);
     const rows = ps.slice().sort((a,b) => (b.ts || b.date).localeCompare(a.ts || a.date)).slice(0, 10).map(p => ({...p, er:er(p)}));
-    renderTable(c, [{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows); }
+    renderTable(c, [{key:'date', label:'Date', cls:'date', render:p => fmtDate(p.date)}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows); }
 
   // growth between captures
   { const c = $('#c-growth'); c.replaceChildren();
@@ -498,14 +501,14 @@ function render(){
         const tw = el('div'); tw.append(el('div', {class:'sub'}, `Total impressions of the ${cohort.length} posts present in every capture from ${A} to ${B}, by capture date`)); c.append(tw);
         vbars(tw, trend.map(t => ({...t, tip: () => [['Impressions', fmt(t.value)], ['Reactions', fmt(t.rx)], ['Posts in cohort', String(t.n)]]})), {height:150, labelEvery:1, aria:'Cohort impressions by capture'});
         c.append(el('div', {class:'sub', style:'margin:10px 0 4px'}, 'Top movers by impressions gained'));
-        renderTable(c, [{key:'date', label:'Published'}, {key:'title', label:'Post', render:kindTag}, {key:'impA', label:'Before', num:true}, {key:'impB', label:'After', num:true}, {key:'dImp', label:'Gained', num:true, render:r => (r.dImp >= 0 ? '+' : '') + fmt(r.dImp)}, {key:'dRx', label:'Reactions', num:true, render:r => '+' + r.dRx}, {key:'dCm', label:'Comments', num:true, render:r => '+' + r.dCm}, {key:'dRp', label:'Reposts', num:true, render:r => '+' + r.dRp}], rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).slice(0, 15));
+        renderTable(c, [{key:'date', label:'Published', cls:'date', render:p => fmtDate(p.date)}, {key:'title', label:'Post', render:kindTag}, {key:'impA', label:'Before', num:true}, {key:'impB', label:'After', num:true}, {key:'dImp', label:'Gained', num:true, render:r => (r.dImp >= 0 ? '+' : '') + fmt(r.dImp)}, {key:'dRx', label:'Reactions', num:true, render:r => '+' + r.dRx}, {key:'dCm', label:'Comments', num:true, render:r => '+' + r.dCm}, {key:'dRp', label:'Reposts', num:true, render:r => '+' + r.dRp}], rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).slice(0, 15));
       }
     } }
 
   // best posts (always a table)
   { const c = $('#c-best'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Best posts'), el('span', {class:'sub'}, 'top 25 · click a column to sort')); c.append(head);
     const key = state.sort, rows = withImp.map(p => ({...p, eng:eng(p), er:er(p)})).sort((a,b) => { const va = a[key] ?? -1, vb = b[key] ?? -1; return (va > vb ? 1 : va < vb ? -1 : 0) * state.sortDir; }).slice(0,25);
-    renderTable(c, [{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows, true); }
+    renderTable(c, [{key:'date', label:'Date', cls:'date', render:p => fmtDate(p.date)}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows, true); }
 
   // series / disclosures / format
   const groupStats = (getKeys) => { const m = new Map(); for (const p of ps) for (const k of getKeys(p)) { const o = m.get(k) || {label:k, n:0, imp:0, nImp:0, eng:0}; o.n++; if (p.imp != null) { o.imp += p.imp; o.nImp++; o.eng += eng(p); } m.set(k, o); } return [...m.values()].sort((a,b) => b.n - a.n); };
