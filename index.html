@@ -159,11 +159,11 @@ td a:hover{border-color:var(--ink)}
 // plain script tag when fetch is not allowed (opening the page from Finder over file://).
 window.__liReady = (async () => {
   try {
-    const r = await fetch('analytics-data.js', {cache: 'no-cache'});
+    const r = await fetch((window.LI_PAGE && window.LI_PAGE.data) || 'analytics-data.js', {cache: 'no-cache'});
     if (!r.ok) throw new Error(r.status);
     (0, eval)(await r.text());
   } catch (e) {
-    await new Promise((res, rej) => { const s = document.createElement('script'); s.src = 'analytics-data.js?v=' + Date.now(); s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+    await new Promise((res, rej) => { const s = document.createElement('script'); s.src = ((window.LI_PAGE && window.LI_PAGE.data) || 'analytics-data.js') + '?v=' + Date.now(); s.onload = res; s.onerror = rej; document.head.appendChild(s); });
   }
 })();
 </script>
@@ -171,6 +171,7 @@ window.__liReady = (async () => {
 window.__liReady.then(function(){
 'use strict';
 const D = window.LI_DATA, ALL = D.posts;
+const PAGE = window.LI_PAGE || null, SP = PAGE ? PAGE.sponsor : null;
 const ME = 'Carlo De Marchis';
 const OWN_PAGES = new Set([ME,'A guy with a scarf','Retention Zone','10 things to consider','10 Things To Consider',
   'Becoming a Better B2B Tech Vendor in Sports and Media','Untangling AI','The One Man Brand','Make LinkedIn Better for Creators',
@@ -216,6 +217,13 @@ function matchTerm(p, t){
 function matchesQuery(p, terms){ return terms.every(t => matchTerm(p, t) !== t.neg); }
 const state = { q:'', range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], lenArticle:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
 const seriesNames = [...new Set(ALL.flatMap(p => p.series))].sort();
+if (PAGE) {
+  document.querySelector('header h1').textContent = PAGE.title;
+  const sel = $('#sponsor'); sel.replaceChildren(el('option', {value:''}, 'All mentions'), el('option', {value:'subject'}, 'About ' + SP), el('option', {value:'footer'}, 'Footer mention only'));
+  sel.previousElementSibling.textContent = 'Mention';
+  const hint = $('#qhint'); hint.textContent = 'Everything below follows the search. has: video, images, article, document, link, boosted · kind: post, quote, repost · imp>5000, chars<300, date:2026-07';
+  if (PAGE.intro) { const p = el('p', {class:'sub', style:'max-width:1240px;margin:-6px auto 12px'}, PAGE.intro); document.querySelector('header').after(p); }
+}
 for (const s of seriesNames) $('#series').append(el('option', {value:s}, s));
 $('#filters').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
@@ -245,7 +253,8 @@ function filtered(opts = {}){
   if (state.format === 'plain' && !opts.ignoreArticle) ps = ps.filter(p => !p.article);
   if (state.format === 'boosted') ps = ps.filter(p => p.boosted);
   if (['video','images','document'].includes(state.format)) ps = ps.filter(p => p.media === state.format);
-  if (state.sponsor === 'any') ps = ps.filter(p => p.subject.length);
+  if (PAGE) { if (state.sponsor === 'subject') ps = ps.filter(p => p.subject.includes(SP)); else if (state.sponsor === 'footer') ps = ps.filter(p => !p.subject.includes(SP)); }
+  else if (state.sponsor === 'any') ps = ps.filter(p => p.subject.length);
   else if (state.sponsor === 'none') ps = ps.filter(p => !p.subject.length);
   else if (state.sponsor) ps = ps.filter(p => p.subject.includes(state.sponsor));
   return ps;
@@ -354,12 +363,12 @@ function snippetFor(p, terms){
   return s;
 }
 function postLink(p){ const a = el('a', {href: p.url || '#', target:'_blank', rel:'noopener'}, p.title || '(no text)'); return a; }
-function kindTag(p){ const f = document.createDocumentFragment(); f.append(postLink(p)); if (p.article) f.append(el('span', {class:'tag'}, 'article')); if (p.attachments.includes('document')) f.append(el('span', {class:'tag'}, 'document')); if (p.media === 'video') f.append(el('span', {class:'tag'}, 'video')); if (p.media === 'images') f.append(el('span', {class:'tag'}, p.images > 1 ? p.images + ' images' : 'image')); for (const sname of p.subject) f.append(el('span', {class:'tag'}, 'about ' + sname)); if (p.boosted) f.append(el('span', {class:'tag'}, 'boosted')); if (p.kind.startsWith('quote')) f.append(el('span', {class:'tag'}, p.kind === 'quote_own' ? 'quote (own)' : 'quote')); if (p.kind === 'repost_other') f.append(el('span', {class:'tag'}, 'repost of ' + p.author)); return f; }
+function kindTag(p){ const f = document.createDocumentFragment(); f.append(postLink(p)); if (p.article) f.append(el('span', {class:'tag'}, 'article')); if (p.attachments.includes('document')) f.append(el('span', {class:'tag'}, 'document')); if (p.media === 'video') f.append(el('span', {class:'tag'}, 'video')); if (p.media === 'images') f.append(el('span', {class:'tag'}, p.images > 1 ? p.images + ' images' : 'image')); for (const sname of p.subject) if (!SP || sname === SP) f.append(el('span', {class:'tag'}, 'about ' + sname)); if (p.boosted) f.append(el('span', {class:'tag'}, 'boosted')); if (p.kind.startsWith('quote')) f.append(el('span', {class:'tag'}, p.kind === 'quote_own' ? 'quote (own)' : 'quote')); if (p.kind === 'repost_other') f.append(el('span', {class:'tag'}, 'repost of ' + p.author)); return f; }
 
 // ---------- render
 function render(){
   const ps = filtered(), withImp = ps.filter(p => p.imp != null);
-  $('#subtitle').textContent = `${ALL.length} items captured ${D.captured} · showing ${ps.length}` + (ps.length ? ` from ${ps[ps.length-1].date} to ${ps[0].date}` : '');
+  $('#subtitle').textContent = `${ALL.length} ${SP ? 'posts mentioning ' + SP : 'items'} captured ${D.captured} · showing ${ps.length}` + (ps.length ? ` from ${ps[ps.length-1].date} to ${ps[0].date}` : '');
 
   // search results
   { const c = $('#c-results');
@@ -438,7 +447,7 @@ function render(){
       g2.append(svgEl('circle', {cx, cy, r:5, fill: dotColor(p), stroke:'var(--surface)', 'stroke-width':2}));
       g2.append(svgEl('circle', {cx, cy, r:12, fill:'transparent'}));
       g2.addEventListener('pointerenter', () => g2.firstChild.setAttribute('r', 7)); g2.addEventListener('pointerleave', () => g2.firstChild.setAttribute('r', 5));
-      hover(g2, p.title, () => [['Date', p.date], ['Impressions', fmt(p.imp)], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Engagement', pct(er(p))], ['Format', p.media + (p.boosted ? ', boosted' : '') + (p.subject.length ? ', about ' + p.subject.join(', ') : '')]]);
+      hover(g2, p.title, () => [['Date', p.date], ['Impressions', fmt(p.imp)], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Engagement', pct(er(p))], ['Format', p.media + (p.boosted ? ', boosted' : '') + (p.subject.filter(s => !SP || s === SP).length ? ', about ' + p.subject.filter(s => !SP || s === SP).join(', ') : '')]]);
       g2.style.cursor = 'pointer'; g2.addEventListener('click', () => p.url && window.open(p.url, '_blank'));
       svg.append(g2);
     }
@@ -505,13 +514,13 @@ function render(){
   const ser = groupStats(p => p.series.length ? p.series : ['(no series)']);
   card('c-series', 'Series', 'posts per series · hover for reach', b => hbars(b, gRows(ser), {labelW:170}), {cols:gCols, rows:ser});
   { const sp = new Map();
-    for (const p of ps) for (const x of p.sponsors) { const o = sp.get(x.name) || {label:x.name, body:0, footer:0, bodyImp:0, bodyN:0}; o[x.where]++; if (x.where === 'body' && p.imp != null) { o.bodyImp += p.imp; o.bodyN++; } sp.set(x.name, o); }
+    for (const p of ps) for (const x of p.sponsors) { if (SP && x.name !== SP) continue; const o = sp.get(x.name) || {label:x.name, body:0, footer:0, bodyImp:0, bodyN:0}; o[x.where]++; if (x.where === 'body' && p.imp != null) { o.bodyImp += p.imp; o.bodyN++; } sp.set(x.name, o); }
     const rows = [...sp.values()].sort((a,b) => (b.body+b.footer) - (a.body+a.footer));
-    card('c-disc', 'Sponsors', 'subject of the post vs. disclosure footer only', b => {
+    card('c-disc', SP ? SP + ' in the post' : 'Sponsors', SP ? 'subject of the post vs. disclosure footer only' : 'subject of the post vs. disclosure footer only', b => {
       legend(b, [{name:'Sponsor is the subject', color:'var(--s1)'}, {name:'Footer only', color:'var(--s2)'}]);
       hbars(b, rows.map(o => ({label:o.label, value:o.body + o.footer, valueLabel:`${o.body} + ${o.footer}`, segments:[{value:o.body, color:'var(--s1)'}, {value:o.footer, color:'var(--s2)'}], tip: () => [['Subject of the post', String(o.body)], ['Footer only', String(o.footer)], ['Avg impressions when subject', fmt(o.bodyN ? o.bodyImp/o.bodyN : null)]]})), {labelW:150});
     }, {cols:[{key:'label', label:'Sponsor'}, {key:'body', label:'Subject', num:true}, {key:'footer', label:'Footer only', num:true}, {key:'avg', label:'Avg impr. (subject)', num:true, render:o => fmt(o.bodyN ? o.bodyImp/o.bodyN : null)}], rows}); }
-  const fmtGroups = [['With article', p => p.article], ['Without article', p => !p.article], ['Native video', p => p.media === 'video'], ['Images', p => p.media === 'images'], ['Document', p => p.attachments.includes('document')], ['Link card', p => p.attachments.includes('link')], ['Sponsor as subject', p => p.subject.length > 0], ['Boosted', p => p.boosted], ['Not boosted', p => !p.boosted], ['Edited', p => p.edited], ['Quote repost', p => p.kind.startsWith('quote')]];
+  const fmtGroups = [['With article', p => p.article], ['Without article', p => !p.article], ['Native video', p => p.media === 'video'], ['Images', p => p.media === 'images'], ['Document', p => p.attachments.includes('document')], ['Link card', p => p.attachments.includes('link')], [SP ? 'About ' + SP : 'Sponsor as subject', p => SP ? p.subject.includes(SP) : p.subject.length > 0], ['Boosted', p => p.boosted], ['Not boosted', p => !p.boosted], ['Edited', p => p.edited], ['Quote repost', p => p.kind.startsWith('quote')]];
   const fr = fmtGroups.map(([label, f]) => { const g = withImp.filter(f); return {label, n:g.length, imp:g.reduce((s,p) => s+p.imp,0), nImp:g.length, eng:g.reduce((s,p) => s+eng(p),0)}; }).filter(o => o.n);
   card('c-format', 'What travels', 'average impressions per post by format', b => hbars(b, fr.map(o => ({label:o.label, value:o.imp/o.nImp, valueLabel: fmt(o.imp/o.nImp) + '  (' + o.n + ')', tip: () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.imp/o.nImp)], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]]})), {labelW:120}), {cols:gCols, rows:fr});
 

@@ -28,3 +28,25 @@ for p in d['posts']:
 js = 'window.LI_DATA = ' + json.dumps({'captured': d['captured_at'], 'captures': d.get('captures', [d['captured_at']]), 'posts': out}, ensure_ascii=False) + ';\n'
 open('analytics-data.js', 'w', encoding='utf-8').write(js)
 print(len(out), 'posts ->', 'analytics-data.js', len(js)//1024, 'KB')
+
+# ---- sponsor pages: same dashboard, data limited to posts that mention the sponsor
+import os
+if os.path.exists('pages.json'):
+    tpl = open('index.html', encoding='utf-8').read()
+    for pg in json.load(open('pages.json', encoding='utf-8')):
+        S = pg['sponsor']
+        sub = []
+        for p in out:
+            if not any(x['name'] == S for x in p['sponsors']): continue
+            q = dict(p)   # keep only this sponsor's flags in the shared file
+            q['sponsors'] = [x for x in p['sponsors'] if x['name'] == S]
+            q['subject'] = [s for s in p['subject'] if s == S]
+            q['disc'] = [s for s in p['disc'] if s == S]
+            sub.append(q)
+        data = 'window.LI_DATA = ' + json.dumps({'captured': d['captured_at'], 'captures': d.get('captures', [d['captured_at']]), 'posts': sub}, ensure_ascii=False) + ';\n'
+        open(f"data-{pg['slug']}.js", 'w', encoding='utf-8').write(data)
+        cfg = {'sponsor': S, 'title': pg['title'], 'intro': pg.get('intro', ''), 'data': f"data-{pg['slug']}.js"}
+        html = tpl.replace('<title>LinkedIn Analytics</title>', f"<title>{pg['title']}</title>\n<script>window.LI_PAGE = {json.dumps(cfg, ensure_ascii=False)};</script>", 1)
+        assert 'window.LI_PAGE' in html
+        open(f"{pg['slug']}.html", 'w', encoding='utf-8').write(html)
+        print(f"{len(sub):4} posts -> {pg['slug']}.html + data-{pg['slug']}.js")

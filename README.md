@@ -120,6 +120,17 @@ scrolls (about 3 s per ten posts; a full year is roughly two minutes). If a capt
 with "page stopped growing" short of the target, run it again: a page reload starts a fresh
 pagination, and build_store.py merges whatever each capture reached.
 
+## Sponsor pages
+
+`pages.json` lists one page per sponsor (id, sponsor name, an unguessable `slug`, title, intro).
+`export_analytics.py` rebuilds them on every refresh: `<slug>.html` is `index.html` with a
+`window.LI_PAGE` config injected, and `data-<slug>.js` holds only the posts that mention that
+sponsor (body or footer), with the other sponsors' flags removed. On those pages the Sponsor filter
+becomes a Mention switch (All mentions / About <sponsor> / Footer mention only), the other
+sponsors' names and tags are hidden, and the rest of the dashboard is unchanged. Share the slug URL
+with the sponsor; nothing links to it from the main page. To add a page, add an entry to
+`pages.json` with a fresh random slug and run the export.
+
 ## Analytics page
 
 `index.html` is a local dashboard over the store. Open it straight from Finder (double-click;
