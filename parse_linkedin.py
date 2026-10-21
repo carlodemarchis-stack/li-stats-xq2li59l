@@ -245,9 +245,25 @@ def parse_item(item, idx):
             continue
         href = a.get('href', '')
         txt = a.get_text(' ', strip=True)
-        if '/pulse/' in href and href not in seen and txt:
-            seen.add(href)
-            title = re.sub(r'^A guy with a scarf\s*', '', txt)
+        if '/pulse/' in href and href.split('?')[0] not in seen:
+            title = txt
+            if not title:
+                # newer layout: the title sits next to the link, not inside it
+                node = a
+                for _ in range(5):
+                    node = node.parent
+                    if node is None or node is item: break
+                    lines = [l.strip() for l in node.get_text('\n').split('\n') if l.strip()]
+                    lines = [l for l in lines if l not in ('A guy with a scarf', ME, 'View my services') and len(l) > 8]
+                    if lines: title = lines[0]; break
+            if not title:
+                img = item.find('img', src=re.compile('article-cover'))
+                title = (img.get('alt') or '').strip() if img else ''
+            if not title:
+                slug = re.sub(r'-carlo-de-marchis-\w+/?$', '', href.split('/pulse/')[1])
+                title = slug.replace('-', ' ').capitalize()
+            seen.add(href.split('?')[0])
+            title = re.sub(r'^A guy with a scarf\s*', '', title)
             title = re.sub(r'\s*Carlo De Marchis$', '', title)
             atts.append({'type': 'article', 'title': title, 'url': href})
         elif 'safety/go/' in href and href not in seen and txt and 'linkedin.com' not in decode_external(href):
