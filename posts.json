@@ -17,7 +17,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7518579343791689728",
-   "impressions": 60,
+   "impressions": 114,
    "reactions": 3,
    "comments": 1,
    "reposts": 3,
@@ -25,7 +25,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": null,
-   "age_label": null,
+   "age_label": "1h",
    "edited": false,
    "mentions": [
     {
@@ -99,7 +99,7 @@
    "history": [
     {
      "captured": "2026-10-21",
-     "impressions": 60,
+     "impressions": 114,
      "reactions": 3,
      "comments": 1,
      "reposts": 3
@@ -118,7 +118,7 @@
    "boost_label": "Manage boost",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518244550776086528",
-   "impressions": 3017,
+   "impressions": 3057,
    "reactions": 21,
    "comments": 1,
    "reposts": 1,
@@ -126,7 +126,7 @@
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": null,
-   "age_label": "22h",
+   "age_label": "23h",
    "edited": false,
    "mentions": [
     {
@@ -265,7 +265,7 @@
    "history": [
     {
      "captured": "2026-10-21",
-     "impressions": 3017,
+     "impressions": 3057,
      "reactions": 21,
      "comments": 1,
      "reposts": 1
@@ -284,7 +284,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7517846192756584448",
-   "impressions": 1069,
+   "impressions": 1073,
    "reactions": 27,
    "comments": 4,
    "reposts": 0,
@@ -390,7 +390,7 @@
    "history": [
     {
      "captured": "2026-10-21",
-     "impressions": 1069,
+     "impressions": 1073,
      "reactions": 27,
      "comments": 4,
      "reposts": 0
@@ -1675,7 +1675,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512874527614377984",
-   "impressions": 1055,
+   "impressions": 1056,
    "reactions": 4,
    "comments": 2,
    "reposts": 2,
@@ -1753,7 +1753,7 @@
     },
     {
      "captured": "2026-10-21",
-     "impressions": 1055,
+     "impressions": 1056,
      "reactions": 4,
      "comments": 2,
      "reposts": 2
@@ -2075,7 +2075,7 @@
     "author_url": "https://www.linkedin.com/in/carlodemarchis/",
     "age_label": null,
     "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7511015039785496576/",
-    "text": "🤖 What a Broadcaster, a Content Platform and a Video Infrastructure Vendor Say About Building a Sports Media Stack for AI"
+    "text": "🤖 What a Broadcaster, a Content Platform and a Video Infrastructure Vendor Say About Building a Sports Media Stack for AI\n\nSean Hunter of Fox, Daniel Kirschner of Greenfly and Chris Wilson of MediaKind on the panel I moderated at SportsPro AI and Tech 2026.\n\nYesterday I noticed a lot of sports people explaining AI and a lot of AI people explaining sports, so I picked a broadcaster, a content operations platform and a video infrastructure vendor and asked each to stay in their own field.\nSean said the data team at Fox now works directly with journalists and commentators, and data scientists \"exist in greater numbers even than before.\" Fox shipped an ElevenLabs feature for the World Cup where fans put questions to Colin Cowherd, a \"catch me up with the highlights\" video pipeline, and announced agentic ad buying at Cannes Lions. His warning on AI features: \"if you just sort of stick a chat box onto an existing product, no one knows what that's for.\"\nDaniel, on the idea that AI makes building easier: \"you can build a lot more and a lot more complex things and a lot more effective things.\" He compared it to spreadsheets, which people expected to end accountants. Greenfly says 25,000 athletes use its app. His view of Europe against the US: Europe asks where to store content, and the US asks how to make money on it.\nChris described how MediaKind, now combined with Harmonic, exposes its platform through MCP so that \"Greenfly can plug in their agent and drive our video pipe,\" and Fox can do the same. On the pace of change: \"Some of those models will not be here in three months,\" so the value is in being able to swap them and fail fast.\nI closed on a sour note, since nobody has cracked fan engagement yet. Daniel's reply: \"I don't think it's a solvable problem.\" Sean agreed. And everyone means something different when they say fan engagement.\n\nA guy with a scarf"
    },
    "kind": "quote_own",
    "attachments": [
