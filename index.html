@@ -135,6 +135,7 @@ td a:hover{border-color:var(--ink)}
   <div class="card c8" id="c-weekly"></div>
   <div class="card c4" id="c-posts-week"></div>
   <div class="card" id="c-dots"></div>
+  <div class="card" id="c-latest"></div>
   <div class="card" id="c-growth"></div>
   <div class="card" id="c-best"></div>
   <div class="card c4" id="c-series"></div>
@@ -450,6 +451,11 @@ function render(){
     }
     b.append(svg);
   }, {cols:[{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'media', label:'Format'}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}], rows:ps});
+
+  // latest ten posts
+  { const c = $('#c-latest'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Latest posts'), el('span', {class:'sub'}, 'the ten most recent in this selection, newest first')); c.append(head);
+    const rows = ps.slice().sort((a,b) => (b.ts || b.date).localeCompare(a.ts || a.date)).slice(0, 10).map(p => ({...p, er:er(p)}));
+    renderTable(c, [{key:'date', label:'Date'}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows); }
 
   // growth between captures
   { const c = $('#c-growth'); c.replaceChildren();

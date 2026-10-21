@@ -135,6 +135,7 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
 - Filters (one row, scope everything below): date range, my posts vs. everything incl. reposts,
   series, format (article, native video, images, document, boosted), sponsor (as subject of the post).
 - Stat tiles: posts, impressions, reactions, comments, reposts, engagement rate.
+- Latest posts: the ten most recent in the current selection, newest first.
 - Impressions per week and posts per week; every post as a dot over time: blue with article,
   orange without, green for quote reposts, a gold ring on boosted posts, plain reposts hollow on
   the baseline (click a dot to open the post on LinkedIn); best posts table, sortable by any column.
