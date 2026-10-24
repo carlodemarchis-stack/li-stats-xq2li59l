@@ -4,9 +4,10 @@
   "2026-10-17",
   "2026-10-21",
   "2026-10-22",
-  "2026-10-23"
+  "2026-10-23",
+  "2026-10-24"
  ],
- "captured_at": "2026-10-23",
+ "captured_at": "2026-10-24",
  "count": 354,
  "posts": [
   {
@@ -19,9 +20,9 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7519380361538260992",
-   "impressions": 30,
-   "reactions": 5,
-   "comments": 1,
+   "impressions": 558,
+   "reactions": 11,
+   "comments": 2,
    "reposts": 2,
    "reposted_by_me": false,
    "author": "Carlo De Marchis",
@@ -100,9 +101,16 @@
      "reactions": 5,
      "comments": 1,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 558,
+     "reactions": 11,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7519380362020679682"
   },
   {
@@ -115,7 +123,7 @@
    "boost_label": "Manage boost",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518972221936148480",
-   "impressions": 7439,
+   "impressions": 10308,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -208,9 +216,16 @@
      "reactions": 3,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 10308,
+     "reactions": 3,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7518972280912175104"
   },
   {
@@ -223,8 +238,8 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7518579343791689728",
-   "impressions": 789,
-   "reactions": 9,
+   "impressions": 820,
+   "reactions": 10,
    "comments": 4,
    "reposts": 3,
    "reposted_by_me": false,
@@ -323,9 +338,16 @@
      "reactions": 9,
      "comments": 4,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 820,
+     "reactions": 10,
+     "comments": 4,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7518579344240250880"
   },
   {
@@ -338,8 +360,8 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518244550776086528",
-   "impressions": 3868,
-   "reactions": 31,
+   "impressions": 3938,
+   "reactions": 33,
    "comments": 2,
    "reposts": 1,
    "reposted_by_me": false,
@@ -503,9 +525,16 @@
      "reactions": 31,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 3938,
+     "reactions": 33,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7518244551468314625"
   },
   {
@@ -518,7 +547,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7517846192756584448",
-   "impressions": 1169,
+   "impressions": 1194,
    "reactions": 27,
    "comments": 4,
    "reposts": 0,
@@ -642,9 +671,16 @@
      "reactions": 27,
      "comments": 4,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 1194,
+     "reactions": 27,
+     "comments": 4,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7517846358607986689"
   },
   {
@@ -657,7 +693,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7516763986231726080",
-   "impressions": 772,
+   "impressions": 793,
    "reactions": 11,
    "comments": 1,
    "reposts": 1,
@@ -761,9 +797,16 @@
      "reactions": 11,
      "comments": 1,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 793,
+     "reactions": 11,
+     "comments": 1,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7516763986965667840"
   },
   {
@@ -776,7 +819,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7516404140835688448",
-   "impressions": 446,
+   "impressions": 455,
    "reactions": 8,
    "comments": 2,
    "reposts": 1,
@@ -904,9 +947,16 @@
      "reactions": 8,
      "comments": 2,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 455,
+     "reactions": 8,
+     "comments": 2,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7516404142286893056"
   },
   {
@@ -919,7 +969,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7516165683290955776",
-   "impressions": 956,
+   "impressions": 965,
    "reactions": 9,
    "comments": 0,
    "reposts": 1,
@@ -1000,9 +1050,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 965,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7516165686491082752"
   },
   {
@@ -1015,7 +1072,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7516040872270983168",
-   "impressions": 11616,
+   "impressions": 11626,
    "reactions": 30,
    "comments": 3,
    "reposts": 4,
@@ -1154,9 +1211,16 @@
      "reactions": 30,
      "comments": 3,
      "reposts": 4
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 11626,
+     "reactions": 30,
+     "comments": 3,
+     "reposts": 4
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7516040873026101248"
   },
   {
@@ -1245,9 +1309,16 @@
      "reactions": 9,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": null,
+     "reactions": 9,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "x:dc2e24f4416cf0c5"
   },
   {
@@ -1260,7 +1331,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7515773247498678273",
-   "impressions": 521,
+   "impressions": 525,
    "reactions": 7,
    "comments": 0,
    "reposts": 1,
@@ -1329,9 +1400,16 @@
      "reactions": 7,
      "comments": 0,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 525,
+     "reactions": 7,
+     "comments": 0,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7515773250577215488"
   },
   {
@@ -1344,7 +1422,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7515758709508284418",
-   "impressions": 194,
+   "impressions": 200,
    "reactions": 3,
    "comments": 1,
    "reposts": 3,
@@ -1443,9 +1521,16 @@
      "reactions": 3,
      "comments": 1,
      "reposts": 3
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 200,
+     "reactions": 3,
+     "comments": 1,
+     "reposts": 3
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7515758810125283329"
   },
   {
@@ -1458,8 +1543,8 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7515222319754297344",
-   "impressions": 1080,
-   "reactions": 19,
+   "impressions": 1100,
+   "reactions": 20,
    "comments": 7,
    "reposts": 0,
    "reposted_by_me": false,
@@ -1621,9 +1706,16 @@
      "reactions": 19,
      "comments": 7,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 1100,
+     "reactions": 20,
+     "comments": 7,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7515286387135459328"
   },
   {
@@ -1705,9 +1797,16 @@
      "reactions": 4,
      "comments": 2,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 1276,
+     "reactions": 4,
+     "comments": 2,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7514358860472684544"
   },
   {
@@ -1720,7 +1819,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7513707652833759233",
-   "impressions": 540,
+   "impressions": 554,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -1847,9 +1946,16 @@
      "reactions": 3,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 554,
+     "reactions": 3,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7513707653429104640"
   },
   {
@@ -1946,9 +2052,16 @@
      "reactions": 6,
      "comments": 4,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 195,
+     "reactions": 6,
+     "comments": 4,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7513500228126175233"
   },
   {
@@ -1961,7 +2074,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7513164018170114048",
-   "impressions": 8554,
+   "impressions": 8568,
    "reactions": 29,
    "comments": 2,
    "reposts": 20,
@@ -2076,9 +2189,16 @@
      "reactions": 29,
      "comments": 2,
      "reposts": 20
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 8568,
+     "reactions": 29,
+     "comments": 2,
+     "reposts": 20
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7513164018946326528"
   },
   {
@@ -2091,8 +2211,8 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512874527614377984",
-   "impressions": 1063,
-   "reactions": 4,
+   "impressions": 1065,
+   "reactions": 3,
    "comments": 2,
    "reposts": 2,
    "reposted_by_me": false,
@@ -2187,9 +2307,16 @@
      "reactions": 4,
      "comments": 2,
      "reposts": 2
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 1065,
+     "reactions": 3,
+     "comments": 2,
+     "reposts": 2
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7512874528348274688"
   },
   {
@@ -2202,7 +2329,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512412948133359616",
-   "impressions": 2505,
+   "impressions": 2506,
    "reactions": 33,
    "comments": 3,
    "reposts": 1,
@@ -2297,9 +2424,16 @@
      "reactions": 33,
      "comments": 3,
      "reposts": 1
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 2506,
+     "reactions": 33,
+     "comments": 3,
+     "reposts": 1
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7512412948917710849"
   },
   {
@@ -2312,7 +2446,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7512128816803414016",
-   "impressions": 228,
+   "impressions": 229,
    "reactions": 4,
    "comments": 0,
    "reposts": 0,
@@ -2375,9 +2509,16 @@
      "reactions": 4,
      "comments": 0,
      "reposts": 0
+    },
+    {
+     "captured": "2026-10-24",
+     "impressions": 229,
+     "reactions": 4,
+     "comments": 0,
+     "reposts": 0
     }
    ],
-   "last_captured": "2026-10-23",
+   "last_captured": "2026-10-24",
    "key": "7512128817939918849"
   },
   {
