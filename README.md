@@ -131,6 +131,18 @@ sponsors' names and tags are hidden, and the rest of the dashboard is unchanged.
 with the sponsor; nothing links to it from the main page. To add a page, add an entry to
 `pages.json` with a fresh random slug and run the export.
 
+## Per-post analytics (video views, watch time, saves, sends)
+
+The activity page has no video views. LinkedIn shows them on each post's own analytics page
+(`/analytics/post-summary/urn:li:activity:<id>/`), which is server-rendered and can be fetched from
+any logged-in linkedin.com tab. `fetch_post_analytics.js` does that for a list of activity ids and
+prints compact rows; `merge_post_analytics.py "<rows>" [date]` stores them in `post_analytics.json`
+(latest values plus a history per fetch date) and rebuilds the store, the export and the pages.
+`build_store.py` attaches the latest values to each post (`post_analytics`, and the
+`video_views`, `watch_time_s`, `avg_watch_s`, `saves`, `sends`, `analytics_fetched` columns in SQLite).
+The dashboard shows them in the Video performance card, a Video views column in the post tables
+and the dot tooltip. Refresh them now and then; they are not part of `refresh.sh`.
+
 ## Analytics page
 
 `index.html` is a local dashboard over the store. Open it straight from Finder (double-click;

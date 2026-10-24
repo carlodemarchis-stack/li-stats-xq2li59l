@@ -22,6 +22,7 @@ for p in d['posts']:
         'sponsors': p.get('sponsors', []), 'subject': p.get('sponsor_subject', []),
         'media': p.get('media_type'), 'images': p.get('image_count', 0),
         'links': len(p.get('external_links', [])),
+        'pa': ({k: p['post_analytics'].get(k) for k in ('video_views','watch_time_s','avg_watch_s','saves','sends','fetched')} if p.get('post_analytics') else None),
         'hist': [[h['captured'], h['impressions'], h['reactions'], h['comments'], h['reposts']] for h in p.get('history', [])],
         'quoted': (p['quoted_post'] or {}).get('author'),
     })

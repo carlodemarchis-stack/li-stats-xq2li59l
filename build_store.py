@@ -42,6 +42,11 @@ def main():
             p['last_captured'] = day
             p['key'] = k
             merged[k] = p
+    pa_path = os.path.join(HERE, 'post_analytics.json')
+    pa = json.load(open(pa_path, encoding='utf-8'))['posts'] if os.path.exists(pa_path) else {}
+    for r in merged.values():
+        a = pa.get(str(r.get('activity_id')))
+        r['post_analytics'] = a['latest'] if a else None
     recs = sorted(merged.values(), key=lambda r: (r.get('posted_at_utc') or r['posted_date'] or ''), reverse=True)
     for i, r in enumerate(recs):
         r['idx'] = i
@@ -61,7 +66,7 @@ def main():
       text TEXT, text_chars INTEGER, reactions INTEGER, comments INTEGER, reposts INTEGER,
       impressions INTEGER, boost_label TEXT, was_boosted INTEGER, has_article INTEGER,
       quoted_author TEXT, quoted_text TEXT, quoted_url TEXT, first_captured TEXT, last_captured TEXT,
-      media_type TEXT, image_count INTEGER);
+      media_type TEXT, image_count INTEGER, video_views INTEGER, watch_time_s INTEGER, avg_watch_s INTEGER, saves INTEGER, sends INTEGER, analytics_fetched TEXT);
     CREATE TABLE sponsors(post_idx INTEGER, name TEXT, place TEXT);
     CREATE TABLE history(post_idx INTEGER, captured TEXT, impressions INTEGER, reactions INTEGER, comments INTEGER, reposts INTEGER);
     CREATE TABLE mentions(post_idx INTEGER, name TEXT, type TEXT, url TEXT);
@@ -73,14 +78,15 @@ def main():
     ''')
     for r in recs:
         q = r['quoted_post'] or {}
-        con.execute('INSERT INTO posts VALUES (' + ','.join('?'*30) + ')', (
+        con.execute('INSERT INTO posts VALUES (' + ','.join('?'*36) + ')', (
             r['idx'], r['key'], r.get('activity_id'), r.get('activity_urn'), r.get('content_urn'),
             r.get('post_url'), r.get('posted_at_utc'), r.get('posted_date'), int(r['date_is_approx']),
             r['age_label'], int(r['edited']), r['kind'], r['author'], r['posted_with'],
             r['text'], r['text_chars'], r['reactions'], r['comments'], r['reposts'],
             r['impressions'], r['boost_label'], int(r['was_boosted']), int(r['has_article']),
             q.get('author'), q.get('text'), q.get('url'), r['first_captured'], r['last_captured'],
-            r.get('media_type'), r.get('image_count')))
+            r.get('media_type'), r.get('image_count'),
+            *( [r['post_analytics'].get(k) for k in ('video_views','watch_time_s','avg_watch_s','saves','sends')] + [r['post_analytics']['fetched']] if r.get('post_analytics') else [None]*6 )))
         con.executemany('INSERT INTO sponsors VALUES (?,?,?)', [(r['idx'], x['name'], x['where']) for x in r.get('sponsors', [])])
         con.executemany('INSERT INTO history VALUES (?,?,?,?,?,?)',
                         [(r['idx'], h['captured'], h['impressions'], h['reactions'], h['comments'], h['reposts']) for h in r['history']])

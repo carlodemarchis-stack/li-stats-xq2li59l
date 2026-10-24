@@ -144,6 +144,7 @@ td a:hover{border-color:var(--ink)}
   <div class="card c4" id="c-series"></div>
   <div class="card c4" id="c-disc"></div>
   <div class="card c4" id="c-format"></div>
+  <div class="card" id="c-video"></div>
   <div class="card" id="c-length"></div>
   <div class="card c6" id="c-mentions"></div>
   <div class="card c6" id="c-tags"></div>
@@ -186,6 +187,7 @@ const THIS_YEAR = (D.captured || '').slice(0,4);
 const fmtDate = d => { if (!d) return '–'; const dt = new Date(d + 'T00:00:00Z'); const s = dt.getUTCDate() + ' ' + dt.toLocaleString('en-GB', {month:'short', timeZone:'UTC'}); return d.slice(0,4) === THIS_YEAR ? s : s + ' ’' + d.slice(2,4); };
 const dotColor = p => p.kind !== 'post' ? 'var(--s3)' : p.article ? 'var(--s1)' : 'var(--s2)';
 const dateCell = p => { const f = document.createDocumentFragment(); f.append(fmtDate(p.date)); const d = document.createElement('i'); d.className = 'pdot' + (p.boosted ? ' boost' : ''); d.style.background = dotColor(p); d.title = (p.kind !== 'post' ? 'Quote repost' : p.article ? 'With newsletter article' : 'Without article') + (p.boosted ? ', boosted' : ''); f.append(d); return f; };
+const fmtDur = s => s == null ? '–' : s >= 3600 ? `${Math.floor(s/3600)}h ${Math.round((s%3600)/60)}m` : s >= 60 ? `${Math.floor(s/60)}m ${s%60}s` : `${s}s`;
 const pct = n => n == null || !isFinite(n) ? '–' : (n*100).toFixed(1) + '%';
 const eng = p => p.rx + p.cm + p.rp;
 const er = p => p.imp ? eng(p)/p.imp : null;
@@ -453,7 +455,7 @@ function render(){
       g2.append(svgEl('circle', {cx, cy, r:5, fill: dotColor(p), stroke:'var(--surface)', 'stroke-width':2}));
       g2.append(svgEl('circle', {cx, cy, r:12, fill:'transparent'}));
       g2.addEventListener('pointerenter', () => g2.firstChild.setAttribute('r', 7)); g2.addEventListener('pointerleave', () => g2.firstChild.setAttribute('r', 5));
-      hover(g2, p.title, () => [['Date', p.date], ['Impressions', fmt(p.imp)], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Engagement', pct(er(p))], ['Format', p.media + (p.boosted ? ', boosted' : '') + (p.subject.filter(s => !SP || s === SP).length ? ', about ' + p.subject.filter(s => !SP || s === SP).join(', ') : '')]]);
+      hover(g2, p.title, () => [['Date', p.date], ['Impressions', fmt(p.imp)], ['Reactions', String(p.rx)], ['Comments', String(p.cm)], ['Reposts', String(p.rp)], ['Engagement', pct(er(p))], ...(p.pa && p.pa.video_views != null ? [['Video views', fmt(p.pa.video_views) + ' · avg ' + fmtDur(p.pa.avg_watch_s)]] : []), ['Format', p.media + (p.boosted ? ', boosted' : '') + (p.subject.filter(s => !SP || s === SP).length ? ', about ' + p.subject.filter(s => !SP || s === SP).join(', ') : '')]]);
       g2.style.cursor = 'pointer'; g2.addEventListener('click', () => p.url && window.open(p.url, '_blank'));
       svg.append(g2);
     }
@@ -470,7 +472,7 @@ function render(){
   // latest ten posts
   { const c = $('#c-latest'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Latest posts'), el('span', {class:'sub'}, 'the ten most recent in this selection, newest first')); c.append(head);
     const rows = ps.slice().sort((a,b) => (b.ts || b.date).localeCompare(a.ts || a.date)).slice(0, 10).map(p => ({...p, er:er(p)}));
-    renderTable(c, [{key:'date', label:'Date', cls:'date', render:dateCell}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows); }
+    renderTable(c, [{key:'date', label:'Date', cls:'date', render:dateCell}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'vv', label:'Video views', num:true, render:p => p.pa && p.pa.video_views != null ? fmt(p.pa.video_views) : '–'}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows); }
 
   // growth between captures
   { const c = $('#c-growth'); c.replaceChildren();
@@ -510,8 +512,8 @@ function render(){
 
   // best posts (always a table)
   { const c = $('#c-best'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Best posts'), el('span', {class:'sub'}, 'top 25 · click a column to sort')); c.append(head);
-    const key = state.sort, rows = withImp.map(p => ({...p, eng:eng(p), er:er(p)})).sort((a,b) => { const va = a[key] ?? -1, vb = b[key] ?? -1; return (va > vb ? 1 : va < vb ? -1 : 0) * state.sortDir; }).slice(0,25);
-    renderTable(c, [{key:'date', label:'Date', cls:'date', render:dateCell}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows, true); }
+    const key = state.sort, rows = withImp.map(p => ({...p, eng:eng(p), er:er(p), vv: p.pa ? p.pa.video_views : null})).sort((a,b) => { const va = a[key] ?? -1, vb = b[key] ?? -1; return (va > vb ? 1 : va < vb ? -1 : 0) * state.sortDir; }).slice(0,25);
+    renderTable(c, [{key:'date', label:'Date', cls:'date', render:dateCell}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'vv', label:'Video views', num:true, render:p => p.pa && p.pa.video_views != null ? fmt(p.pa.video_views) : '–'}, {key:'rx', label:'Reactions', num:true}, {key:'cm', label:'Comments', num:true}, {key:'rp', label:'Reposts', num:true}, {key:'er', label:'Eng. rate', num:true, render:p => pct(p.er)}, {key:'chars', label:'Chars', num:true}], rows, true); }
 
   // series / disclosures / format
   const groupStats = (getKeys) => { const m = new Map(); for (const p of ps) for (const k of getKeys(p)) { const o = m.get(k) || {label:k, n:0, imp:0, nImp:0, eng:0}; o.n++; if (p.imp != null) { o.imp += p.imp; o.nImp++; o.eng += eng(p); } m.set(k, o); } return [...m.values()].sort((a,b) => b.n - a.n); };
@@ -529,6 +531,19 @@ function render(){
   const fmtGroups = [['With article', p => p.article], ['Without article', p => !p.article], ['Native video', p => p.media === 'video'], ['Images', p => p.media === 'images'], ['Document', p => p.attachments.includes('document')], ['Link card', p => p.attachments.includes('link')], [SP ? 'About ' + SP : 'Sponsor as subject', p => SP ? p.subject.includes(SP) : p.subject.length > 0], ['Boosted', p => p.boosted], ['Not boosted', p => !p.boosted], ['Edited', p => p.edited], ['Quote repost', p => p.kind.startsWith('quote')]];
   const fr = fmtGroups.map(([label, f]) => { const g = withImp.filter(f); return {label, n:g.length, imp:g.reduce((s,p) => s+p.imp,0), nImp:g.length, eng:g.reduce((s,p) => s+eng(p),0)}; }).filter(o => o.n);
   card('c-format', 'What travels', 'average impressions per post by format', b => hbars(b, fr.map(o => ({label:o.label, value:o.imp/o.nImp, valueLabel: fmt(o.imp/o.nImp) + '  (' + o.n + ')', tip: () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.imp/o.nImp)], ['Engagement', pct(o.imp ? o.eng/o.imp : null)]]})), {labelW:120}), {cols:gCols, rows:fr});
+
+  // video performance (from the per-post analytics pages)
+  { const vids = ps.filter(p => p.pa && p.pa.video_views != null).sort((a,b) => b.pa.video_views - a.pa.video_views);
+    const tot = k => vids.reduce((s,p) => s + (p.pa[k] || 0), 0);
+    const fetched = vids.length ? vids.map(p => p.pa.fetched).sort().pop() : null;
+    card('c-video', 'Video performance', `native video posts, from LinkedIn's per-post analytics${fetched ? ' (fetched ' + fmtDate(fetched) + ')' : ''}`, b => {
+      if (!vids.length) { b.append(el('div', {class:'empty'}, 'No video post with analytics in this selection')); return; }
+      const mt = el('div', {class:'minitiles'});
+      for (const [k,v,d] of [['Videos', String(vids.length), ''], ['Video views', fmt(tot('video_views')), `${pct(tot('video_views') / Math.max(1, vids.reduce((s,p) => s + (p.imp||0), 0)))} of impressions`], ['Watch time', fmtDur(tot('watch_time_s')), ''], ['Avg watch per view', fmtDur(Math.round(tot('watch_time_s') / Math.max(1, tot('video_views')))), ''], ['Saves', fmt(tot('saves')), `${fmt(tot('sends'))} sends`]]) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); mt.append(t); }
+      b.append(mt);
+      legend(b, [{name:'Video views', color:'var(--s1)'}]);
+      hbars(b, vids.slice(0, 25).map(p => ({label: fmtDate(p.date) + ' · ' + p.title, value: p.pa.video_views, tip: () => [['Video views', fmt(p.pa.video_views)], ['Impressions', fmt(p.imp)], ['View rate', pct(p.imp ? p.pa.video_views / p.imp : null)], ['Watch time', fmtDur(p.pa.watch_time_s)], ['Average watch', fmtDur(p.pa.avg_watch_s)], ['Saves', String(p.pa.saves ?? '–')], ['Sends', String(p.pa.sends ?? '–')]]})), {labelW:260});
+    }, {cols:[{key:'date', label:'Date', cls:'date', render:dateCell}, {key:'title', label:'Post', render:kindTag}, {key:'imp', label:'Impressions', num:true}, {key:'vv', label:'Video views', num:true, render:p => fmt(p.pa.video_views)}, {key:'vr', label:'View rate', num:true, render:p => pct(p.imp ? p.pa.video_views / p.imp : null)}, {key:'wt', label:'Watch time', num:true, render:p => fmtDur(p.pa.watch_time_s)}, {key:'aw', label:'Avg watch', num:true, render:p => fmtDur(p.pa.avg_watch_s)}, {key:'sv', label:'Saves', num:true, render:p => String(p.pa.saves ?? '–')}, {key:'sd', label:'Sends', num:true, render:p => String(p.pa.sends ?? '–')}], rows:vids}); }
 
   // post length segments
   { const SEGS = [['Under 300', 0, 300], ['300 to 699', 300, 700], ['700 to 1,199', 700, 1200], ['1,200 to 1,799', 1200, 1800], ['1,800 to 2,399', 1800, 2400], ['2,400 and up', 2400, 1e9]];
