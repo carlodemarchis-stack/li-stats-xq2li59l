@@ -105,6 +105,9 @@ td a:hover{border-color:var(--ink)}
 #tip .r{display:flex;gap:8px;justify-content:space-between}
 #tip .r span:first-child{opacity:.75}
 .empty{color:var(--muted);padding:30px 0;text-align:center}
+.section{grid-column:span 12;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin:14px 0 -2px;padding-top:14px;border-top:1px solid var(--grid)}
+.section h2{font-size:17px}
+.cdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-left:8px;vertical-align:0}
 </style>
 </head>
 <body>
@@ -116,8 +119,8 @@ td a:hover{border-color:var(--ink)}
 </header>
 
 <div class="searchrow">
-  <input id="q" type="search" placeholder="Search posts: words, &quot;exact phrase&quot;, -exclude, #tag, @name, has:video, about:dolby, series:dataviz, kind:quote" autocomplete="off" spellcheck="false">
-  <span class="hint" id="qhint">Everything below follows the search. <code>has:</code> video, images, article, document, link, boosted · <code>about:</code> dolby, cleeng, mercury · <code>kind:</code> post, quote, repost · <code>series:</code> 10things, retention, dataviz, ytft, episode, untangling · <code>imp>5000</code>, <code>chars<300</code>, <code>date:2026-07</code></span>
+  <input id="q" type="search" placeholder="Search posts: words, &quot;exact phrase&quot;, -exclude, #tag, @name, has:video, about:dolby, series:dataviz, kind:quote, kind:comment" autocomplete="off" spellcheck="false">
+  <span class="hint" id="qhint">Everything below follows the search. <code>has:</code> video, images, article, document, link, boosted · <code>about:</code> dolby, cleeng, mercury · <code>kind:</code> post, quote, repost, comment · <code>on:</code> own, person, company (comments) · <code>series:</code> 10things, retention, dataviz, ytft, episode, untangling · <code>imp>5000</code>, <code>chars<300</code>, <code>date:2026-07</code></span>
 </div>
 <div class="card results" id="c-results" style="max-width:1240px;margin:0 auto 14px;display:none"></div>
 <div class="filters" id="filters">
@@ -155,6 +158,15 @@ td a:hover{border-color:var(--ink)}
   <div class="card c6" id="c-hashtags"></div>
   <div class="card c6" id="c-people"></div>
   <div class="card c6" id="c-companies"></div>
+  <div class="section" id="s-comments"><h2>My comments</h2><span class="sub" id="cm-sub">comments I left on posts, with the reach LinkedIn shows for each one</span></div>
+  <div class="tiles" id="cm-tiles"></div>
+  <div class="card c8" id="c-cm-week"></div>
+  <div class="card c4" id="c-cm-imp"></div>
+  <div class="card" id="c-cm-dots"></div>
+  <div class="card" id="c-cm-latest"></div>
+  <div class="card" id="c-cm-best"></div>
+  <div class="card c6" id="c-cm-who"></div>
+  <div class="card c6" id="c-cm-length"></div>
 </div>
 <div id="tip"></div>
 
@@ -175,7 +187,7 @@ window.__liReady = (async () => {
 <script>
 window.__liReady.then(function(){
 'use strict';
-const D = window.LI_DATA, ALL = D.posts;
+const D = window.LI_DATA, ALL = D.posts, CM = D.comments || [];
 const PAGE = window.LI_PAGE || null, SP = PAGE ? PAGE.sponsor : null;
 const ME = 'Carlo De Marchis';
 const OWN_PAGES = new Set([ME,'A guy with a scarf','Retention Zone','10 things to consider','10 Things To Consider',
@@ -202,6 +214,9 @@ const capturedTs = new Date(latest + 'T23:59:59Z');
 const CAPS = D.captures || [D.captured];
 const norm = s => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 for (const p of ALL) { p._text = norm(p.text); p._all = norm([p.text, p.qtext, p.mentions.map(m => m[0]).join(' '), p.tags.map(t => '#' + t).join(' '), p.author, p.quoted || ''].join('\n')); p._mentions = norm(p.mentions.map(m => m[0]).join('\n')); }
+for (const c of CM) { c._text = norm(c.text); c._all = norm([c.text, c.ptext, c.author, c.mentions.map(m => m[0]).join(' ')].join('\n')); c._mentions = norm(c.mentions.map(m => m[0]).join('\n')); c.title = (c.text || '').split('\n').find(l => l.trim()) || '(no text)'; c.title = c.title.length > 110 ? c.title.slice(0, 109) + '…' : c.title; }
+const cmColor = c => c.mine ? 'var(--s1)' : ['company','showcase','school'].includes(c.atype) ? 'var(--s3)' : 'var(--s2)';
+const cmTarget = c => c.mine ? 'my own post' : ['company','showcase','school'].includes(c.atype) ? 'a company page' : 'a person';
 const SERIES_ALIAS = {'10things':'10 Things To Consider', '10 things':'10 Things To Consider', retention:'Retention Zone', dataviz:'Dataviz', ytft:'YouTube Football Tracker', youtube:'YouTube Football Tracker', episode:'Episode', ep:'Episode', untangling:'Untangling AI', ai:'Untangling AI'};
 const SPONSOR_ALIAS = {dolby:'Dolby OptiView', optiview:'Dolby OptiView', cleeng:'Cleeng', mercury:'Mercury Intermedia', quicksilver:'Mercury Intermedia'};
 function parseQuery(q){
@@ -213,7 +228,8 @@ function matchTerm(p, t){
   const v = t.val;
   if (t.field === 'has') return ({video: p.media === 'video', images: p.media === 'images', image: p.media === 'images', article: p.article, document: p.attachments.includes('document'), link: p.attachments.includes('link'), boosted: p.boosted, quote: !!p.quoted})[v] ?? false;
   if (t.field === 'about' || t.field === 'sponsor') return p.subject.includes(SPONSOR_ALIAS[v] || t.raw);
-  if (t.field === 'kind') return v === 'repost' ? p.kind !== 'post' : p.kind === v || (v === 'quote' && p.kind.startsWith('quote'));
+  if (t.field === 'kind') return v === 'comment' || v === 'comments' ? false : v === 'repost' ? p.kind !== 'post' : p.kind === v || (v === 'quote' && p.kind.startsWith('quote'));
+  if (t.field === 'on') return false;
   if (t.field === 'series') { const s = SERIES_ALIAS[v]; return p.series.some(x => s ? x === s : norm(x).includes(v)); }
   if (t.field === 'chars') { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? p.chars < n : op === '<=' ? p.chars <= n : op === '>' ? p.chars > n : p.chars >= n; }
   if (t.field === 'imp' || t.field === 'impressions') { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm || p.imp == null) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? p.imp < n : op === '<=' ? p.imp <= n : op === '>' ? p.imp > n : p.imp >= n; }
@@ -225,7 +241,29 @@ function matchTerm(p, t){
   return p._all.includes(v);
 }
 function matchesQuery(p, terms){ return terms.every(t => matchTerm(p, t) !== t.neg); }
-const state = { q:'', range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], lenArticle:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, tables:new Set() };
+const numCmp = (v, x) => { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm || x == null) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? x < n : op === '<=' ? x <= n : op === '>' ? x > n : x >= n; };
+function matchCommentTerm(c, t){
+  const v = t.val;
+  if (t.field === 'kind') return v === 'comment' || v === 'comments';
+  if (t.field === 'on') return v === 'own' || v === 'mine' ? c.mine : v === 'others' ? !c.mine : v === 'company' ? !c.mine && ['company','showcase','school'].includes(c.atype) : v === 'person' ? !c.mine && c.atype === 'person' : false;
+  if (t.field === 'about' || t.field === 'sponsor') return c.sponsors.includes(SPONSOR_ALIAS[v] || t.raw);
+  if (t.field === 'has' || t.field === 'series' || t.field === 'tag') return false;
+  if (t.field === 'chars') return numCmp(v, c.chars);
+  if (t.field === 'imp' || t.field === 'impressions') return numCmp(v, c.imp);
+  if (t.field === 'date' || t.field === 'year' || t.field === 'month') return c.date.startsWith(v);
+  if (!t.field && v.startsWith('#')) return false;
+  if (!t.field && v.startsWith('@')) return c._mentions.includes(v.slice(1)) || norm(c.author).includes(v.slice(1));
+  if (t.field === 'mention' || t.field === 'with') return c._mentions.includes(v);
+  return c._all.includes(v);
+}
+function filteredComments(){
+  let cs = CM;
+  if (state.q) { const terms = parseQuery(state.q); cs = cs.filter(c => terms.every(t => matchCommentTerm(c, t) !== t.neg)); }
+  if (state.range !== 'all') { const from = new Date(capturedTs - state.range*864e5).toISOString().slice(0,10); cs = cs.filter(c => c.date >= from); }
+  if (!PAGE) { if (state.sponsor === 'any') cs = cs.filter(c => c.sponsors.length); else if (state.sponsor === 'none') cs = cs.filter(c => !c.sponsors.length); else if (state.sponsor) cs = cs.filter(c => c.sponsors.includes(state.sponsor)); }
+  return cs;
+}
+const state = { q:'', range:'all', kind:'mine', series:'', format:'', sponsor:'', capA: CAPS[Math.max(0, CAPS.length-2)], capB: CAPS[CAPS.length-1], lenArticle:'', sort:'imp', sortDir:-1, mentionType:'', hideOwn:true, cmWho:'', cmSort:'imp', cmSortDir:-1, tables:new Set() };
 const seriesNames = [...new Set(ALL.flatMap(p => p.series))].sort();
 if (PAGE) {
   document.querySelector('header h1').textContent = PAGE.title;
@@ -294,9 +332,9 @@ function card(id, title, sub, drawChart, tableSpec){
   const body = el('div'); c.append(body);
   if (showTable) renderTable(body, tableSpec.cols, tableSpec.rows); else drawChart(body);
 }
-function renderTable(body, cols, rows, sortable){
+function renderTable(body, cols, rows, sortable, sk = 'sort', sd = 'sortDir'){
   const wrap = el('div', {class:'tablewrap'}), t = el('table'), tr = el('tr');
-  for (const c of cols) { const th = el('th', {class: c.num ? 'num' : ''}, c.label); if (sortable) { th.setAttribute('aria-sort', state.sort === c.key ? (state.sortDir < 0 ? 'descending' : 'ascending') : 'none'); th.addEventListener('click', () => { if (state.sort === c.key) state.sortDir *= -1; else { state.sort = c.key; state.sortDir = c.num ? -1 : 1; } render(); }); } tr.append(th); }
+  for (const c of cols) { const th = el('th', {class: c.num ? 'num' : ''}, c.label); if (sortable) { th.setAttribute('aria-sort', state[sk] === c.key ? (state[sd] < 0 ? 'descending' : 'ascending') : 'none'); th.addEventListener('click', () => { if (state[sk] === c.key) state[sd] *= -1; else { state[sk] = c.key; state[sd] = c.num ? -1 : 1; } render(); }); } tr.append(th); }
   const thead = el('thead'); thead.append(tr); t.append(thead); const tbody = el('tbody'); t.append(tbody);
   for (const r of rows) { const row = el('tr'); for (const c of cols) { const td = el('td', {class: c.num ? 'num' : (c.cls || '')}); const v = c.render ? c.render(r) : r[c.key]; if (v instanceof Node) td.append(v); else td.textContent = c.num && typeof v === 'number' ? fmt(v) : (v ?? '–'); row.append(td); } tbody.append(row); }
   if (!rows.length) wrap.append(el('div', {class:'empty'}, 'Nothing in this selection')); else wrap.append(t);
@@ -373,12 +411,15 @@ function snippetFor(p, terms){
   return s;
 }
 function postLink(p){ const a = el('a', {href: p.url || '#', target:'_blank', rel:'noopener'}, p.title || '(no text)'); return a; }
+function cmDateCell(c){ const f = document.createDocumentFragment(); f.append(fmtDate(c.date)); const d = el('i', {class:'cdot'}); d.style.background = cmColor(c); d.title = 'On ' + cmTarget(c); f.append(d); return f; }
+function cmTag(c){ const f = document.createDocumentFragment(); f.append(el('a', {href: c.url || '#', target:'_blank', rel:'noopener'}, c.title)); f.append(el('span', {class:'tag'}, c.mine ? 'own post' : 'on ' + (c.author || '?'))); for (const sname of c.sponsors) if (!SP || sname === SP) f.append(el('span', {class:'tag'}, 'about ' + sname)); if (c.edited) f.append(el('span', {class:'tag'}, 'edited')); return f; }
+const cmPostCell = c => { const a = el('a', {href: c.purl || '#', target:'_blank', rel:'noopener'}, (c.ptext || '').split('\n').find(l => l.trim()) || (c.author ? c.author + '’s post' : 'post')); a.textContent = a.textContent.length > 80 ? a.textContent.slice(0, 79) + '…' : a.textContent; return a; };
 function kindTag(p){ const f = document.createDocumentFragment(); f.append(postLink(p)); if (p.article) f.append(el('span', {class:'tag'}, 'article')); if (p.attachments.includes('document')) f.append(el('span', {class:'tag'}, 'document')); if (p.media === 'video') f.append(el('span', {class:'tag'}, 'video')); if (p.media === 'images') f.append(el('span', {class:'tag'}, p.images > 1 ? p.images + ' images' : 'image')); for (const sname of p.subject) if (!SP || sname === SP) f.append(el('span', {class:'tag'}, 'about ' + sname)); if (p.boosted) f.append(el('span', {class:'tag'}, 'boosted')); if (p.kind.startsWith('quote')) f.append(el('span', {class:'tag'}, p.kind === 'quote_own' ? 'quote (own)' : 'quote')); if (p.kind === 'repost_other') f.append(el('span', {class:'tag'}, 'repost of ' + p.author)); return f; }
 
 // ---------- render
 function render(){
-  const ps = filtered(), withImp = ps.filter(p => p.imp != null);
-  $('#subtitle').textContent = `${ALL.length} ${SP ? 'posts mentioning ' + SP : 'items'} captured ${fmtDate(D.captured)} · showing ${ps.length}` + (ps.length ? ` from ${fmtDate(ps[ps.length-1].date)} to ${fmtDate(ps[0].date)}` : '');
+  const ps = filtered(), withImp = ps.filter(p => p.imp != null), cs = filteredComments();
+  $('#subtitle').textContent = `${ALL.length} ${SP ? 'posts mentioning ' + SP : 'items'} captured ${fmtDate(D.captured)} · showing ${ps.length}` + (ps.length ? ` from ${fmtDate(ps[ps.length-1].date)} to ${fmtDate(ps[0].date)}` : '') + (CM.length ? ` · ${CM.length} comments, showing ${cs.length}` : '');
 
   // search results
   { const c = $('#c-results');
@@ -386,7 +427,7 @@ function render(){
     else {
       c.style.display = ''; c.replaceChildren();
       const terms = parseQuery(state.q).filter(t => !t.neg && !t.field && !t.val.startsWith('#') && !t.val.startsWith('@'));
-      const head = el('div', {class:'head'}); head.append(el('h2', {}, `${ps.length} post${ps.length === 1 ? '' : 's'} match`), el('span', {class:'sub'}, `“${state.q}” · ${fmt(ps.reduce((s,p) => s + (p.imp||0), 0))} impressions together · the filters and charts below are scoped to these posts`)); c.append(head);
+      const head = el('div', {class:'head'}); head.append(el('h2', {}, `${ps.length} post${ps.length === 1 ? '' : 's'}` + (CM.length ? ` and ${cs.length} comment${cs.length === 1 ? '' : 's'}` : '') + ' match'), el('span', {class:'sub'}, `“${state.q}” · ${fmt(ps.reduce((s,p) => s + (p.imp||0), 0))} post impressions together` + (cs.length ? `, ${fmt(cs.reduce((s,c) => s + (c.imp||0), 0))} comment impressions` : '') + ' · the filters and charts below are scoped to these')); c.append(head);
       const list = ps.slice(0, 60);
       for (const p of list) {
         const r = el('div', {class:'r'});
@@ -396,6 +437,18 @@ function render(){
         r.append(snippetFor(p, terms)); c.append(r);
       }
       if (ps.length > list.length) c.append(el('div', {class:'sub', style:'padding:8px 0'}, `Showing the first ${list.length}. Narrow the search or use the tables below.`));
+      if (cs.length) {
+        c.append(el('div', {class:'sub', style:'padding:12px 0 4px;font-weight:600;color:var(--ink)'}, `${cs.length} comment${cs.length === 1 ? '' : 's'}`));
+        const clist = cs.slice(0, 30);
+        for (const cm of clist) {
+          const r = el('div', {class:'r'});
+          { const dd = el('div', {class:'d'}); dd.append(cmDateCell(cm)); r.append(dd); }
+          const t = el('div', {class:'t'}); t.append(cmTag(cm)); r.append(t);
+          r.append(el('div', {class:'m'}, cm.imp != null ? `${fmt(cm.imp)} impr. · ${cm.rx} reactions` : `${cm.rx} reactions`));
+          r.append(snippetFor(cm, terms)); c.append(r);
+        }
+        if (cs.length > clist.length) c.append(el('div', {class:'sub', style:'padding:8px 0'}, `Showing the first ${clist.length} comments. Narrow the search or use the comment tables below.`));
+      }
       try { const u = new URL(location.href); u.searchParams.set('q', state.q); history.replaceState(null, '', u); } catch (e) {}
     }
     if (!state.q) { try { const u = new URL(location.href); if (u.searchParams.has('q')) { u.searchParams.delete('q'); history.replaceState(null, '', u); } } catch (e) {} }
@@ -620,6 +673,110 @@ function render(){
     const hrs = Array.from({length:24}, (_,h) => ({label:String(h).padStart(2,'0'), n:0, imp:0, nImp:0}));
     for (const p of ps) if (p.ts) { const o = hrs[romeHour(p.ts) % 24]; o.n++; if (p.imp != null) { o.imp += p.imp; o.nImp++; } }
     card('c-hour', 'Hour of day', 'Europe/Rome time of publication', b => vbars(b, hrs.map(o => ({label:o.label, value:o.n, title:o.label + ':00', tip: () => [['Posts', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)]]})), {height:170, labelEvery:3}), {cols:[{key:'label', label:'Hour'}, {key:'n', label:'Posts', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}], rows:hrs}); }
+
+  // ---------- my comments (hidden until a comments capture exists)
+  for (const id of ['s-comments','cm-tiles','c-cm-week','c-cm-imp','c-cm-dots','c-cm-latest','c-cm-best','c-cm-who','c-cm-length']) $('#' + id).style.display = CM.length ? '' : 'none';
+  if (CM.length) renderComments(cs, ps);
+}
+
+function renderComments(cs, ps){
+  const withImp = cs.filter(c => c.imp != null), isCo = c => !c.mine && c.atype !== 'person';
+  const avgImp = arr => { const w = arr.filter(c => c.imp != null); return w.length ? w.reduce((s,c) => s + c.imp, 0)/w.length : null; };
+  $('#cm-sub').textContent = `${CM.length} comments${SP ? ' mentioning ' + SP : ''} captured ${fmtDate(D.comments_captured)} · showing ${cs.length}` + (cs.length ? ` from ${fmtDate(cs[cs.length-1].date)} to ${fmtDate(cs[0].date)}` : '') + ' · they follow the search, the Range and the Sponsor filter';
+
+  // tiles
+  const sum = k => cs.reduce((s,c) => s + (c[k]||0), 0);
+  const imps = withImp.map(c => c.imp).sort((a,b) => a-b), median = imps.length ? imps[Math.floor(imps.length/2)] : null;
+  const days = cs.length ? Math.max(1, (new Date(cs[0].date) - new Date(cs[cs.length-1].date))/864e5 + 1) : 1;
+  const own = cs.filter(c => c.mine), people = cs.filter(c => !c.mine && c.atype === 'person'), cos = cs.filter(isCo);
+  const tiles = [
+    ['Comments', fmt(cs.length), `${(cs.length/days*7).toFixed(1)} per week`],
+    ['Comment impressions', fmt(sum('imp')), `${fmt(median)} median per comment`],
+    ['Comment reactions', fmt(sum('rx')), `${(sum('rx')/Math.max(1,cs.length)).toFixed(1)} per comment`],
+    ['On my own posts', fmt(own.length), `${pct(cs.length ? own.length/cs.length : null)} of comments · ${fmt(avgImp(own))} avg impressions`],
+    ['On people’s posts', fmt(people.length), `${fmt(avgImp(people))} avg impressions`],
+    ['On company pages', fmt(cos.length), `${fmt(avgImp(cos))} avg impressions`],
+  ];
+  const T = $('#cm-tiles'); T.replaceChildren();
+  for (const [k,v,d] of tiles) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); T.append(t); }
+
+  // per week: posts (as filtered above) stacked with comments; comment impressions beside it
+  const weeks = new Map(), dates = [...ps.map(p => p.date), ...cs.map(c => c.date)].sort();
+  if (dates.length) { let w = weekStart(dates[0]); const end = weekStart(dates[dates.length-1]); while (w <= end) { weeks.set(w, {week:w, posts:0, comments:0, imp:0, rx:0, total:0}); const d = new Date(w + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate()+7); w = d.toISOString().slice(0,10); } }
+  for (const p of ps) weeks.get(weekStart(p.date)).posts++;
+  for (const c of cs) { const o = weeks.get(weekStart(c.date)); o.comments++; o.imp += c.imp || 0; o.rx += c.rx; }
+  const wk = [...weeks.values()]; for (const o of wk) o.total = o.posts + o.comments;
+  const lbl = (o, i) => (i === 0 || o.week.slice(5,7) !== wk[i-1].week.slice(5,7)) ? monthLabel(o.week) : '';
+  const wkCols = [{key:'week', label:'Week of'}, {key:'posts', label:'Posts', num:true}, {key:'comments', label:'Comments', num:true}, {key:'imp', label:'Comment impr.', num:true}, {key:'rx', label:'Comment reactions', num:true}];
+  card('c-cm-week', 'Posts and comments per week', 'posts as filtered above, stacked with my comments', b => {
+    legend(b, [{name:'Posts', color:'var(--s1)'}, {name:'Comments', color:'var(--s2)'}]);
+    vbars(b, wk.map((o,i) => ({label:lbl(o,i), posts:o.posts, comments:o.comments, total:o.total, title:'Week of ' + o.week, tip: () => [['Posts', String(o.posts)], ['Comments', String(o.comments)], ['Comment impressions', fmt(o.imp)], ['Comment reactions', fmt(o.rx)]]})), {height:200, labelEvery:1, stacked:[{key:'posts', color:'var(--s1)'}, {key:'comments', color:'var(--s2)'}], aria:'Posts and comments per week'});
+  }, {cols:wkCols, rows:wk});
+  card('c-cm-imp', 'Comment impressions per week', '', b => vbars(b, wk.map((o,i) => ({label:lbl(o,i), value:o.imp, color:'var(--s2)', title:'Week of ' + o.week, tip: () => [['Comment impressions', fmt(o.imp)], ['Comments', String(o.comments)], ['Reactions', fmt(o.rx)]]})), {height:200, labelEvery:1, aria:'Comment impressions per week'}), {cols:wkCols, rows:wk});
+
+  // every comment as a dot
+  const cmCols = [{key:'date', label:'Date', cls:'date', render:cmDateCell}, {key:'title', label:'Comment', render:cmTag}, {key:'author', label:'On the post', render:cmPostCell}, {key:'imp', label:'Impressions', num:true}, {key:'rx', label:'Reactions', num:true}, {key:'chars', label:'Chars', num:true}];
+  const cmTip = c => () => [['Date', c.date], ['Impressions', fmt(c.imp)], ['Reactions', String(c.rx)], ['On', c.mine ? 'my own post' : (c.author || '?') + (c.atype && c.atype !== 'person' ? ' (' + c.atype + ')' : '')], ['Post', ((c.ptext || '').split('\n').find(l => l.trim()) || '').slice(0, 90)]];
+  card('c-cm-dots', 'Every comment', 'impressions per comment over time, square-root scale · hover for the comment, click to open it', b => {
+    legend(b, [{name:'On my own post', color:'var(--s1)'}, {name:'On a person’s post', color:'var(--s2)'}, {name:'On a company page', color:'var(--s3)'}]);
+    if (!withImp.length) { b.append(el('div', {class:'empty'}, 'Nothing in this selection')); return; }
+    const H = 240, padL = 44, padR = 10, padT = 10, padB = 26, W = Math.max(320, b.clientWidth || 900);
+    const svg = svgEl('svg', {viewBox:`0 0 ${W} ${H}`, role:'img', 'aria-label':'Impressions per comment'});
+    const t0 = new Date(cs[cs.length-1].date + 'T00:00:00Z') - 864e5*2, t1 = new Date(cs[0].date + 'T00:00:00Z') - 0 + 864e5*2;
+    const maxI = Math.max(...withImp.map(c => c.imp)), sq = Math.sqrt(maxI);
+    const x = d => padL + (W-padL-padR) * (new Date(d + 'T00:00:00Z') - t0)/(t1-t0), y = v => padT + (H-padT-padB) * (1 - Math.sqrt(v)/sq);
+    const g = svgEl('g', {class:'grid'});
+    for (const t of [100, 500, 2000, 5000, 10000, 20000].filter(t => t < maxI*1.05)) { g.append(svgEl('line', {x1:padL, x2:W-padR, y1:y(t), y2:y(t)})); const tx = svgEl('text', {x:padL-6, y:y(t)+4, 'text-anchor':'end'}); tx.textContent = short(t); svg.append(tx); }
+    svg.append(g); svg.append(svgEl('line', {class:'axis', x1:padL, x2:W-padR, y1:y(0), y2:y(0)}));
+    let m = cs[cs.length-1].date.slice(0,7); const last = cs[0].date.slice(0,7); let mi = 0;
+    const months = []; while (m <= last) { months.push(m); const dt = new Date(m + '-01T00:00:00Z'); dt.setUTCMonth(dt.getUTCMonth()+1); m = dt.toISOString().slice(0,7); }
+    const every = Math.max(1, Math.ceil(months.length / ((W - padL - padR) / 52)));
+    for (const mm of months) { const d = mm + '-01'; if (mi++ % every === 0 && new Date(d+'T00:00:00Z') >= t0) { const tx = svgEl('text', {x:x(d), y:H-8, 'text-anchor':'middle'}); tx.textContent = monthLabel(d) + (mm.endsWith('-01') ? ' ’' + mm.slice(2,4) : ''); svg.append(tx); } }
+    for (const c of withImp) {
+      const g2 = svgEl('g'); const cx = x(c.date), cy = y(c.imp);
+      g2.append(svgEl('circle', {cx, cy, r:4.5, fill: cmColor(c), stroke:'var(--surface)', 'stroke-width':1.5}));
+      g2.append(svgEl('circle', {cx, cy, r:11, fill:'transparent'}));
+      g2.addEventListener('pointerenter', () => g2.firstChild.setAttribute('r', 6.5)); g2.addEventListener('pointerleave', () => g2.firstChild.setAttribute('r', 4.5));
+      hover(g2, c.title, cmTip(c));
+      g2.style.cursor = 'pointer'; g2.addEventListener('click', () => c.url && window.open(c.url, '_blank'));
+      svg.append(g2);
+    }
+    b.append(svg);
+  }, {cols:cmCols, rows:cs});
+
+  // latest ten / best comments
+  { const c = $('#c-cm-latest'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Latest comments'), el('span', {class:'sub'}, 'the ten most recent in this selection, newest first')); c.append(head);
+    renderTable(c, cmCols, cs.slice().sort((a,b) => b.ts.localeCompare(a.ts)).slice(0, 10)); }
+  { const c = $('#c-cm-best'); c.replaceChildren(); const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Best comments'), el('span', {class:'sub'}, 'top 25 by impressions · click a column to sort')); c.append(head);
+    const key = state.cmSort, rows = withImp.slice().sort((a,b) => { const va = a[key] ?? -1, vb = b[key] ?? -1; return (va > vb ? 1 : va < vb ? -1 : 0) * state.cmSortDir; }).slice(0, 25);
+    renderTable(c, cmCols, rows, true, 'cmSort', 'cmSortDir'); }
+
+  // who I comment on
+  { const colors = {own:'var(--s1)', person:'var(--s2)', company:'var(--s3)', showcase:'var(--s3)', school:'var(--s3)'};
+    const m = new Map();
+    for (const c of cs) { if (state.cmWho === 'own' && !c.mine) continue; if (state.cmWho === 'person' && (c.mine || c.atype !== 'person')) continue; if (state.cmWho === 'company' && !isCo(c)) continue;
+      const k = c.mine ? 'me' : (c.author || '?') + '|' + c.atype; const o = m.get(k) || {label: c.mine ? ME + ' (own posts)' : c.author || '?', type: c.mine ? 'own' : c.atype || 'person', n:0, imp:0, nImp:0, rx:0}; o.n++; if (c.imp != null) { o.imp += c.imp; o.nImp++; } o.rx += c.rx; m.set(k, o); }
+    const rows = [...m.values()].sort((a,b) => b.n - a.n || b.imp - a.imp);
+    card('c-cm-who', 'Who I comment on', 'comments per post author · hover for reach', b => {
+      const ctl = el('div', {class:'legend'});
+      for (const [v, lab] of [['', 'All'], ['own', 'My own posts'], ['person', 'People'], ['company', 'Company pages']]) { const bt = el('button', {'aria-pressed': state.cmWho === v}, lab); bt.style.cssText = 'padding:2px 8px;font-size:12px'; bt.addEventListener('click', () => { state.cmWho = v; render(); }); ctl.append(bt); }
+      b.append(ctl);
+      legend(b, [{name:'My own posts', color:'var(--s1)'}, {name:'Person', color:'var(--s2)'}, {name:'Company page', color:'var(--s3)'}]);
+      hbars(b, rows.slice(0, 25).map(o => ({label:o.label, value:o.n, color:colors[o.type] || 'var(--s2)', tip: () => [['Comments', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Total impressions', fmt(o.imp)], ['Reactions', fmt(o.rx)]]})), {labelW:200});
+    }, {cols:[{key:'label', label:'Post author'}, {key:'type', label:'Type'}, {key:'n', label:'Comments', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'imp', label:'Total impr.', num:true}, {key:'rx', label:'Reactions', num:true}], rows}); }
+
+  // comment length segments
+  { const SEGS = [['Under 100', 0, 100], ['100 to 199', 100, 200], ['200 to 399', 200, 400], ['400 to 699', 400, 700], ['700 and up', 700, 1e9]];
+    const ls = SEGS.map(([label, lo, hi]) => { const g = cs.filter(c => c.chars >= lo && c.chars < hi), gi = g.filter(c => c.imp != null); return {label, n:g.length, nImp:gi.length, imp:gi.reduce((s,c) => s + c.imp, 0), rx:g.reduce((s,c) => s + c.rx, 0)}; });
+    const tipOf = o => () => [['Comments', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Avg reactions', o.n ? (o.rx/o.n).toFixed(1) : '–']];
+    card('c-cm-length', 'Comment length', 'characters in the comment · hover for reach', b => {
+      const row = el('div'); row.style.cssText = 'display:flex;gap:28px;flex-wrap:wrap';
+      const a = el('div'), c = el('div'); a.style.cssText = c.style.cssText = 'flex:1;min-width:220px';
+      a.append(el('div', {class:'sub'}, 'Comments per segment')); c.append(el('div', {class:'sub'}, 'Average impressions per segment'));
+      row.append(a, c); b.append(row);
+      hbars(a, ls.map(o => ({label:o.label, value:o.n, color:'var(--s2)', tip:tipOf(o)})), {labelW:100});
+      hbars(c, ls.map(o => ({label:o.label, value:o.nImp ? o.imp/o.nImp : 0, color:'var(--s2)', tip:tipOf(o)})), {labelW:100});
+    }, {cols:[{key:'label', label:'Characters'}, {key:'n', label:'Comments', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'arx', label:'Avg reactions', num:true, render:o => o.n ? (o.rx/o.n).toFixed(1) : '–'}], rows:ls}); }
 }
 render();
 let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(render, 150); });
