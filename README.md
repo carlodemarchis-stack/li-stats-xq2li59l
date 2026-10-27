@@ -42,12 +42,16 @@ Item kinds:
 | `raw/activity-page-2026-10-16.txt` | the same, plain-text flavour |
 | `parse_linkedin.py` | parser: one HTML capture -> `captures/<date>.json` |
 | `captures/*.json` | one file per capture, the merge input |
-| `build_store.py` | merges all captures -> `posts.json` + `posts.sqlite` (with `history`) |
-| `refresh.sh` | capture file (or clipboard) -> parse -> merge -> export -> commit -> push |
-| `capture-extension/` | private Chrome extension: scrolls the activity page back to a date and saves it to `~/Downloads/activity-page-<today>.html` |
+| `raw/comments-page-<date>.html.gz` | captures of the Comments activity page (see [My comments](#my-comments)) |
+| `parse_comments.py` | parser: one comments capture -> `captures-comments/<date>.json` |
+| `captures-comments/*.json` | one file per comments capture |
+| `build_store.py` | merges all captures -> `posts.json` + `posts.sqlite` (with `history`), and all comments captures -> `comments.json` + the `comments` tables |
+| `refresh.sh` | capture file (or clipboard) -> parse -> merge -> export -> commit -> push; takes either kind of capture |
+| `capture-extension/` | private Chrome extension: scrolls the activity page (or the Comments page) back to a date and saves it to `~/Downloads/activity-page-<today>.html` (`comments-page-<today>.html`) |
 | `posts.json` | one record per item, nested (mentions, hashtags, attachments, quoted post) |
-| `posts.sqlite` | the same, normalised into tables |
-| `export_analytics.py` | `posts.json` -> `analytics-data.js` (compact rows for the dashboard) |
+| `comments.json` | one record per comment of mine, with per-capture history |
+| `posts.sqlite` | the same, normalised into tables (posts and comments) |
+| `export_analytics.py` | `posts.json` + `comments.json` -> `analytics-data.js` (compact rows for the dashboard) |
 | `index.html` + `analytics-data.js` | the local analytics dashboard |
 
 Rebuild everything from the raw captures with:
@@ -93,14 +97,17 @@ Live at https://carlodemarchis-stack.github.io/li-stats-xq2li59l/ (public GitHub
 ./refresh.sh
 ```
 
-With no argument it takes the newest `activity-page-*.html` in `~/Downloads`; a path can also be
-given (`./refresh.sh ~/Downloads/activity-page-2026-11-01.html`). With no file at all it falls
-back to the clipboard (scroll, Select All, Copy, as before). The capture is gzipped into
-`raw/activity-page-<date>.html.gz` (date from the file name), parsed into `captures/<date>.json`,
-every capture is merged into `posts.json` / `posts.sqlite` (`build_store.py`: union of all
-captures keyed by `activity_id`, freshest counts win, every capture's counts kept in
-`history`), `analytics-data.js` is regenerated, then commit and push. The page updates about a
-minute later.
+With no argument it takes the newest `activity-page-*.html` or `comments-page-*.html` in
+`~/Downloads`; a path can also be given (`./refresh.sh ~/Downloads/activity-page-2026-11-01.html`).
+With no file at all it falls back to the clipboard (scroll, Select All, Copy, as before). The kind
+of capture comes from the file name, else from the markup (a comments page carries
+`urn:li:comment:`). A posts capture is gzipped into `raw/activity-page-<date>.html.gz` (date from
+the file name), parsed into `captures/<date>.json`, every capture is merged into `posts.json` /
+`posts.sqlite` (`build_store.py`: union of all captures keyed by `activity_id`, freshest counts
+win, every capture's counts kept in `history`); a comments capture goes the same way through
+`raw/comments-page-<date>.html.gz`, `parse_comments.py`, `captures-comments/<date>.json` and
+`comments.json`. Then `analytics-data.js` and the sponsor pages are regenerated, commit and push.
+The page updates about a minute later.
 
 #### Installing the capture extension
 
@@ -119,6 +126,53 @@ scrolled again meanwhile, so the extension waits for each page to arrive and res
 scrolls (about 3 s per ten posts; a full year is roughly two minutes). If a capture still ends
 with "page stopped growing" short of the target, run it again: a page reload starts a fresh
 pagination, and build_store.py merges whatever each capture reached.
+
+## My comments
+
+The Comments tab of the activity page (https://www.linkedin.com/in/carlodemarchis/recent-activity/comments/)
+lists every comment I left, each card showing the commented post (author, text, counts) and then
+my comment with its age, reactions and impressions. The same extension captures it: open that
+page, press ⌘⇧L, pick how far back to scroll (the store options read the published
+`comments.json`), Capture. The file lands as `~/Downloads/comments-page-<today>.html` and
+`./refresh.sh` handles it like a posts capture (see Refreshing). The feed loads ten comments per
+page request at the same pace as the posts feed; the extension stops at the target date, after
+150 scrolls, or when the page stops growing, and only the last three cards are scanned for the
+date on each round (serialising the whole page every round froze the tab past ~250 cards).
+
+`parse_comments.py` writes one record per card to `captures-comments/<date>.json`;
+`build_store.py` merges every comments capture keyed by `comment_id` (freshest record wins,
+impressions and reactions per capture kept in `history`) into `comments.json` and the `comments`,
+`comments_history`, `comments_mentions` tables of `posts.sqlite`. The posts output is untouched.
+
+### Comment fields (comments.json / table `comments`)
+
+| field | notes |
+|---|---|
+| `idx` | 0 = newest comment |
+| `comment_id`, `comment_urn` | from `urn:li:comment:(activity:<post>,<comment>)` in the card markup |
+| `comment_url` | the post URL with `?commentUrn=`, opens the post with the comment highlighted |
+| `commented_at_utc`, `commented_date` | decoded from the comment id (top 41 bits = ms since epoch), exact to the second |
+| `post_activity_id`, `post_url`, `post_posted_at_utc`, `post_posted_date` | the commented post, dated from its activity id |
+| `age_label`, `edited` | what the page showed ("2h", "3w") and whether the comment was edited |
+| `text`, `text_chars` | the comment body, line breaks preserved |
+| `reactions`, `impressions` | the comment's own counts as shown on the page ("N reactions", "N impressions"); impressions null when not shown |
+| `post_author`, `post_author_url`, `post_author_type` | who wrote the commented post: `person`, `company`, `showcase`, `school` |
+| `post_is_mine` (alias `on_own_post`) | the commented post is one of mine (a reply under my own post) |
+| `post_text` | the first 400 characters of the commented post |
+| `post_reactions`, `post_comments`, `post_reposts` | the post's counts on the card |
+| `mentions[]`, `hashtags[]` | profiles tagged and hashtags typed in the comment |
+| `first_captured`, `last_captured`, `history[]` | which captures contained the comment; impressions and reactions per capture |
+
+In the dashboard the comments live in the **My comments** section at the bottom (hidden until
+the first comments capture): tiles (comments, comment impressions and reactions, on my own posts
+vs people vs company pages), posts and comments per week stacked, comment impressions per week,
+every comment as a dot over time (blue on my own posts, orange on people's, green on company
+pages; click to open), the latest ten, the best 25 by impressions, who I comment on most (with
+My own posts / People / Company pages buttons), and comment length segments. Every card has a
+Table view. The section follows the search bar, the Range filter and the Sponsor filter; the
+search matches comment text, the commented post's snippet and its author, with `kind:comment`
+to match only comments and `on:own|person|company|others` for where the comment was left. The
+sponsor pages carry the comments whose text, commented post or post author names the sponsor.
 
 ## Sponsor pages
 
@@ -153,8 +207,10 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   matching passage highlighted. Plain words match the post text, quoted post, mentions and hashtags
   (accent-insensitive, all words must match); `"exact phrase"`, `-exclude`, `#tag`, `@name`,
   `has:video|images|article|document|link|boosted`, `about:dolby|cleeng|mercury` (sponsor as subject),
-  `kind:post|quote|repost`, `series:10things|retention|dataviz|ytft|episode|untangling`,
-  `imp>5000`, `chars<300`, `date:2026-07`. The query is kept in the URL (`?q=`), so a search can be bookmarked.
+  `kind:post|quote|repost|comment`, `series:10things|retention|dataviz|ytft|episode|untangling`,
+  `imp>5000`, `chars<300`, `date:2026-07`; `on:own|person|company` for comments. Comments match on
+  their text, the commented post's snippet and its author, and are listed under the posts in the
+  results. The query is kept in the URL (`?q=`), so a search can be bookmarked.
 - Filters (one row, scope everything below): date range, my posts vs. everything incl. reposts,
   series, format (article, native video, images, document, boosted), sponsor (as subject of the post).
 - Stat tiles: posts, impressions, reactions, comments, reposts, engagement rate.
@@ -180,6 +236,8 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   4 to 6, 7 or more): posts per group next to average impressions, engagement in the tooltip and table.
 - People tagged and companies tagged (none, 1 to 2, 3 to 5, 6 or more distinct handles, my own pages
   excluded), same layout.
+- My comments (see above): tiles, posts and comments per week, comment impressions per week, every
+  comment as a dot, latest and best comments, who I comment on, comment length.
 - Every chart has a Table button with the same numbers; the page follows the OS light/dark
   setting and has a Theme toggle.
 
@@ -221,8 +279,10 @@ SQLite side tables: `history`, `mentions`, `hashtags`, `attachments`, `external_
 
 - Images and videos are not captured (only the text and link cards). Image carousels show up on
   the page as unlabeled bullets.
-- Comment text, reaction breakdowns, follower counts per post, and the per-post analytics
-  (demographics, members reached) live behind the "View analytics" link and are not here.
+- Comments received on my posts (their text and authors), reaction breakdowns, follower counts
+  per post, and the per-post analytics (demographics, members reached) live behind the "View
+  analytics" link and are not here. My own comments on other posts come from the Comments page
+  (see My comments).
 - The page truncates nothing in the body, but "... more" on very long quoted posts may have
   been collapsed; `quoted_post.text` is what was rendered.
 
@@ -238,6 +298,14 @@ SELECT substr(posted_date,1,7) m, count(*) n, sum(impressions) imp FROM posts GR
 
 -- who I tag most
 SELECT name, count(*) n FROM mentions GROUP BY name ORDER BY n DESC LIMIT 30;
+
+-- my comments with the most reach, and whose posts they were on
+SELECT commented_date, impressions, reactions, post_author, substr(text,1,80) FROM comments
+WHERE impressions IS NOT NULL ORDER BY impressions DESC LIMIT 20;
+
+-- who I comment on most
+SELECT post_author, post_author_type, count(*) n, sum(impressions) imp FROM comments
+GROUP BY 1, 2 ORDER BY n DESC LIMIT 30;
 
 -- engagement rate
 SELECT posted_date, impressions, round(100.0*(reactions+comments+reposts)/impressions,2) er,

@@ -1,14 +1,17 @@
-// LinkedIn "All activity" capture, for linkedin-posts/refresh.sh.
+// LinkedIn "All activity" and "Comments" capture, for linkedin-posts/refresh.sh.
 //
 // On https://www.linkedin.com/in/carlodemarchis/recent-activity/all/ the popup asks
 // for a target date, scrolls the feed until a post at or before that date is loaded,
 // then saves the whole page as ~/Downloads/activity-page-<today>.html. The parser
 // (parse_linkedin.py) needs the full markup: expandable-text-box, the
 // Like/Comment/Repost button aria-labels and the "View analytics" links.
+// On .../recent-activity/comments/ the same capture scrolls until a comment at or
+// before the date is loaded (date from the comment URN) and saves
+// comments-page-<today>.html for parse_comments.py.
 
 const HOST = 'www.linkedin.com';
 const PATH = '/recent-activity/';
-const STORE_URL = 'https://carlodemarchis-stack.github.io/li-stats-xq2li59l/posts.json';
+const STORE_BASE = 'https://carlodemarchis-stack.github.io/li-stats-xq2li59l/';
 const DEFAULT_DAYS = 35;
 const MAX_SCROLLS = 150;
 
@@ -20,7 +23,8 @@ const hintEl = document.getElementById('hint');
 const goEl = document.getElementById('go');
 const msgEl = document.getElementById('msg');
 
-let store = null;   // { newest, oldest, captured } from the published posts.json
+let store = null;   // { newest, oldest, captured } from the published posts.json / comments.json
+let mode = 'posts'; // 'posts' on the All activity page, 'comments' on the Comments page
 
 function say(text, cls = '') {
   msgEl.textContent = text;
@@ -31,18 +35,34 @@ function say(text, cls = '') {
 // this file's scope is available in there. Returns the page HTML plus a summary; the
 // popup saves it with chrome.downloads (a page-side <a download> gets blocked by
 // Chrome's scripted-download rules), so the popup has to stay open until it is done.
-async function captureActivity(targetDate, maxScrolls) {
+async function captureActivity(targetDate, maxScrolls, mode) {
   const ITEM = 'div[role=listitem][componentkey^="update-card-focus"]';
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
   const items = () => document.querySelectorAll(ITEM).length;
 
-  // exact publish date from the activity URN: top 41 bits = ms since the epoch
+  // exact date from the URN: top 41 bits of the id = ms since the epoch. Posts: the
+  // activity id in the "View analytics" links; comments: the comment id in
+  // urn:li:comment:(activity:<post>,<comment>), which only appears in the markup, so
+  // only the last few cards are scanned (the feed is newest first; serialising the
+  // whole page on every round froze the tab past ~250 cards).
   const oldest = () => {
     let min = null;
-    for (const a of document.querySelectorAll('a[href*="analytics/post-summary/urn:li:activity:"]')) {
-      const m = (a.getAttribute('href') || '').match(/activity:(\d+)/);
-      if (!m) continue;
-      const d = new Date(Number(BigInt(m[1]) >> 22n)).toISOString().slice(0, 10);
+    const ids = [];
+    if (mode === 'comments') {
+      const re = /urn:li:comment:\(activity:\d+,(\d+)\)/g;
+      const cards = document.querySelectorAll(ITEM);
+      for (const card of [...cards].slice(-3)) {
+        let m; const html = card.outerHTML;
+        while ((m = re.exec(html))) ids.push(m[1]);
+      }
+    } else {
+      for (const a of document.querySelectorAll('a[href*="analytics/post-summary/urn:li:activity:"]')) {
+        const m = (a.getAttribute('href') || '').match(/activity:(\d+)/);
+        if (m) ids.push(m[1]);
+      }
+    }
+    for (const id of ids) {
+      const d = new Date(Number(BigInt(id) >> 22n)).toISOString().slice(0, 10);
       if (min === null || d < min) min = d;
     }
     return min;
@@ -88,7 +108,8 @@ async function captureActivity(targetDate, maxScrolls) {
   return { html, posts: items(), oldest: oldest(), scrolls, reason };
 }
 
-const todayFilename = () => `activity-page-${iso(new Date())}.html`;
+const todayFilename = () => `${mode === 'comments' ? 'comments' : 'activity'}-page-${iso(new Date())}.html`;
+const noun = () => mode === 'comments' ? 'comment' : 'post';
 
 // local calendar date, not UTC: toISOString() would roll back a day in the evening
 const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -113,24 +134,25 @@ function describe() {
   dateRowEl.hidden = rangeEl.value !== 'date';
   const t = targetDate();
   const what = {
-    'store-newest': 'only posts newer than the store, plus the first page',
-    'store-oldest': 'every post already in the store, to refresh impressions and reactions'
-  }[rangeEl.value] || 'posts from that date on';
+    'store-newest': `only ${noun()}s newer than the store, plus the first page`,
+    'store-oldest': `every ${noun()} already in the store, to refresh impressions and reactions`
+  }[rangeEl.value] || `${noun()}s from that date on`;
   if (!t) {
     hintEl.textContent = rangeEl.value.startsWith('store') ? 'store not loaded' : 'pick a date';
   } else {
-    hintEl.textContent = `until a post from ${t} or earlier is loaded: ${what}`;
+    hintEl.textContent = `until a ${noun()} from ${t} or earlier is loaded: ${what}`;
   }
   goEl.disabled = !t;
 }
 
-// newest / oldest post dates in the published store
+// newest / oldest post (or comment) dates in the published store
 async function loadStore() {
-  const res = await fetch(`${STORE_URL}?t=${Date.now()}`, { cache: 'no-store' });
+  const file = mode === 'comments' ? 'comments.json' : 'posts.json';
+  const res = await fetch(`${STORE_BASE}${file}?t=${Date.now()}`, { cache: 'no-store' });
   if (!res.ok) throw new Error(`store returned ${res.status}`);
   const data = await res.json();
-  const dates = data.posts.map((p) => p.posted_date).filter(Boolean).sort();
-  if (!dates.length) throw new Error('store has no dated posts');
+  const dates = (mode === 'comments' ? data.comments.map((c) => c.commented_date) : data.posts.map((p) => p.posted_date)).filter(Boolean).sort();
+  if (!dates.length) throw new Error(`store has no dated ${noun()}s`);
   return { newest: dates[dates.length - 1], oldest: dates[0], captured: data.captured_at };
 }
 
@@ -143,14 +165,14 @@ async function run(tab) {
     const [res] = await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: captureActivity,
-      args: [target, MAX_SCROLLS]
+      args: [target, MAX_SCROLLS, mode]
     });
     const r = res?.result;
     if (!r) throw new Error('no result from the page');
     const filename = todayFilename();
     const url = URL.createObjectURL(new Blob([r.html], { type: 'text/html' }));
     await chrome.downloads.download({ url, filename, saveAs: false });
-    say(`Saved ${filename}: ${r.posts} posts, oldest ${r.oldest || '?'} (${r.reason}, ${r.scrolls} scrolls). ` +
+    say(`Saved ${filename}: ${r.posts} ${noun()}s, oldest ${r.oldest || '?'} (${r.reason}, ${r.scrolls} scrolls). ` +
         `Now run refresh.sh`, 'ok');
   } catch (e) {
     say('Capture failed: ' + e.message, 'err');
@@ -163,8 +185,9 @@ async function init() {
   if (!tab || !tab.url) return say('No active tab.', 'err');
   const u = new URL(tab.url);
   if (u.hostname !== HOST || !u.pathname.includes(PATH)) {
-    return say('Open your LinkedIn "All activity" page first (linkedin.com/in/…/recent-activity/all/).', 'err');
+    return say('Open your LinkedIn "All activity" or "Comments" page first (linkedin.com/in/…/recent-activity/all/ or …/comments/).', 'err');
   }
+  mode = /\/recent-activity\/comments\/?/.test(u.pathname) ? 'comments' : 'posts';
   urlEl.textContent = tab.url;
   const d = new Date();
   d.setDate(d.getDate() - DEFAULT_DAYS);
@@ -177,8 +200,8 @@ async function init() {
   say('Loading the store…');
   try {
     store = await loadStore();
-    rangeEl.options[0].textContent = `newest post in the store (${store.newest})`;
-    rangeEl.options[1].textContent = `oldest post in the store (${store.oldest})`;
+    rangeEl.options[0].textContent = `newest ${noun()} in the store (${store.newest})`;
+    rangeEl.options[1].textContent = `oldest ${noun()} in the store (${store.oldest})`;
     say(`Store captured ${store.captured}. Scrolls back, then saves the page to Downloads.`);
   } catch (e) {
     rangeEl.value = 'weeks';

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "LinkedIn Activity Capture",
-  "version": "1.1.1",
-  "description": "On your LinkedIn All activity page: scroll back to a date and save the page as activity-page-<today>.html for linkedin-posts/refresh.sh.",
+  "version": "1.2.0",
+  "description": "On your LinkedIn All activity or Comments page: scroll back to a date and save the page as activity-page-<today>.html or comments-page-<today>.html for linkedin-posts/refresh.sh.",
   "permissions": [
     "activeTab",
     "scripting",
@@ -18,7 +18,7 @@
         "default": "Ctrl+Shift+L",
         "mac": "Command+Shift+L"
       },
-      "description": "Capture the activity page"
+      "description": "Capture the activity or comments page"
     }
   }
 }

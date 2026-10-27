@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Merge every capture in captures/*.json into posts.json and posts.sqlite.
+"""Merge every capture in captures/*.json into posts.json and posts.sqlite,
+and every comments capture in captures-comments/*.json into comments.json and
+the `comments` / `comments_history` tables of the same posts.sqlite.
 
 Posts are keyed by activity_id (plain reposts, which have none, by a hash of
-author + text). The record comes from the latest capture that contains the
-post, so counts are the freshest seen; every capture's counts are kept in
-`history` so reach can be tracked over time.
+author + text), comments by comment_id. The record comes from the latest
+capture that contains the item, so counts are the freshest seen; every
+capture's counts are kept in `history` so reach can be tracked over time.
 """
 import glob, hashlib, json, os, sqlite3
 
@@ -100,8 +102,66 @@ def main():
                         [(r['idx'], e['text'], e['url']) for e in r['external_links']])
         con.executemany('INSERT INTO series VALUES (?,?)', [(r['idx'], s) for s in r['series']])
         con.executemany('INSERT INTO disclosures VALUES (?,?)', [(r['idx'], d) for d in r['disclosures']])
-    con.commit(); con.close()
+    con.commit()
+    merge_comments(con)
+    con.close()
     print(f'{len(recs)} posts from {len(files)} capture(s) -> posts.json, posts.sqlite')
+
+
+def merge_comments(con):
+    """captures-comments/*.json -> comments.json + comments tables. Same rules as posts:
+    union of all captures keyed by comment_id, freshest record wins, counts per capture
+    kept in history. No captures yet -> an empty comments.json and empty tables."""
+    files = sorted(glob.glob(os.path.join(HERE, 'captures-comments', '*.json')))
+    merged = {}
+    for f in files:
+        cap = json.load(open(f, encoding='utf-8'))
+        day = cap['captured_at']
+        for c in cap['comments']:
+            k = str(c['comment_id'])
+            snap = {'captured': day, 'impressions': c.get('impressions'), 'reactions': c.get('reactions')}
+            if k in merged:
+                old = merged[k]
+                c['first_captured'] = old['first_captured']
+                c['history'] = old['history'] + [snap]
+            else:
+                c['first_captured'] = day
+                c['history'] = [snap]
+            c['last_captured'] = day
+            c['key'] = k
+            merged[k] = c
+    recs = sorted(merged.values(), key=lambda r: r['commented_at_utc'], reverse=True)
+    for i, r in enumerate(recs):
+        r['idx'] = i
+    with open(os.path.join(HERE, 'comments.json'), 'w', encoding='utf-8') as f:
+        json.dump({'captures': [os.path.basename(x)[:-5] for x in files],
+                   'captured_at': max((r['last_captured'] for r in recs), default=None),
+                   'count': len(recs), 'comments': recs}, f, ensure_ascii=False, indent=1)
+    con.executescript('''
+    CREATE TABLE comments(
+      idx INTEGER PRIMARY KEY, key TEXT, comment_id INTEGER, comment_urn TEXT, comment_url TEXT,
+      post_activity_id INTEGER, post_url TEXT, commented_at_utc TEXT, commented_date TEXT,
+      age_label TEXT, edited INTEGER, text TEXT, text_chars INTEGER, reactions INTEGER, impressions INTEGER,
+      post_author TEXT, post_author_url TEXT, post_author_type TEXT, post_is_mine INTEGER,
+      post_text TEXT, post_reactions INTEGER, post_comments INTEGER, post_reposts INTEGER,
+      first_captured TEXT, last_captured TEXT);
+    CREATE TABLE comments_history(comment_idx INTEGER, captured TEXT, impressions INTEGER, reactions INTEGER);
+    CREATE TABLE comments_mentions(comment_idx INTEGER, name TEXT, type TEXT, url TEXT);
+    ''')
+    for r in recs:
+        con.execute('INSERT INTO comments VALUES (' + ','.join('?'*25) + ')', (
+            r['idx'], r['key'], r['comment_id'], r['comment_urn'], r['comment_url'],
+            r['post_activity_id'], r['post_url'], r['commented_at_utc'], r['commented_date'],
+            r['age_label'], int(bool(r['edited'])), r['text'], r['text_chars'], r['reactions'], r['impressions'],
+            r['post_author'], r['post_author_url'], r['post_author_type'], int(bool(r['post_is_mine'])),
+            r['post_text'], r['post_reactions'], r['post_comments'], r['post_reposts'],
+            r['first_captured'], r['last_captured']))
+        con.executemany('INSERT INTO comments_history VALUES (?,?,?,?)',
+                        [(r['idx'], h['captured'], h['impressions'], h['reactions']) for h in r['history']])
+        con.executemany('INSERT INTO comments_mentions VALUES (?,?,?,?)',
+                        [(r['idx'], m['name'], m['type'], m['url']) for m in r['mentions']])
+    con.commit()
+    print(f'{len(recs)} comments from {len(files)} capture(s) -> comments.json, posts.sqlite (comments)')
 
 
 if __name__ == '__main__':
