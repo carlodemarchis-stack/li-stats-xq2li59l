@@ -1,5 +1,5 @@
 {
- "source": "activity-page-2026-10-27.html.gz",
+ "source": "activity-page-2026-10-27.html.gz + activity-page-2026-10-27-2.html.gz",
  "captured_at": "2026-10-27",
  "count": 70,
  "posts": [
@@ -13,16 +13,16 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7520436581560705024",
-   "impressions": 18365,
-   "reactions": 20,
+   "impressions": 19787,
+   "reactions": 22,
    "comments": 2,
-   "reposts": 3,
+   "reposts": 4,
    "reposted_by_me": false,
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "20h",
-   "edited": false,
+   "age_label": "23h",
+   "edited": true,
    "mentions": [
     {
      "name": "The Football Association",
@@ -37,8 +37,8 @@
      "url": "https://lnkd.in/dtbfXY3v"
     }
    ],
-   "text": "😪 Yet another job opportunity that I will not be selected for... but that could be great from some in my network, so I decided to share for all of you\n\nThe FA is looking for a Chief Technology Officer, reporting to the CEO and sitting on the executive team at Wembley, with a remit that covers technology strategy, data, AI, infrastructure, enterprise systems and cybersecurity across an organisation that runs Wembley Stadium, St. George’s Park, the England teams and the FA Cup.\nThe role works closely with the Chief Digital Officer on the fan-facing product roadmap, and with EURO 2028 coming to the UK and Ireland it’s a big moment to take it on.\nFootball experience isn’t required, and the search is being run by Ivy Street, with applications closing on 13 November.\n\nThe Football Association\n\nhttps://lnkd.in/dtbfXY3v",
-   "text_chars": 823,
+   "text": "😪 Yet another job opportunity that I will not be selected for... but that could be great from some in my network, so I decided to share for all of you\n\nThe FA is looking for a Chief Technology Officer, reporting to the CEO and sitting on the executive team at Wembley, with a remit that covers technology strategy, data, AI, infrastructure, enterprise systems and cybersecurity across an organisation that runs Wembley Stadium, St. George’s Park, the England teams and the FA Cup.\nThe role works closely with the Chief Digital Officer on the fan-facing product roadmap, and with EURO 2028 coming to the UK and Ireland it’s a big moment to take it on.\nFootball experience isn’t required, and the search is being run by Ivy Street, with applications closing on 13 November.\n\nThe Football Association\n\nhttps://lnkd.in/dtbfXY3v\n\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 1074,
    "lnkd_links": [
     "https://lnkd.in/dtbfXY3v"
    ],
@@ -56,8 +56,20 @@
    "image_count": 0,
    "media_type": "link",
    "series": [],
-   "sponsors": [],
-   "disclosures": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
    "sponsor_subject": [],
    "date_is_approx": false
   },
@@ -71,7 +83,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7519380361538260992",
-   "impressions": 766,
+   "impressions": 774,
    "reactions": 12,
    "comments": 2,
    "reposts": 2,
@@ -155,7 +167,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518972221936148480",
-   "impressions": 10634,
+   "impressions": 10636,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -244,7 +256,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7518579343791689728",
-   "impressions": 880,
+   "impressions": 885,
    "reactions": 10,
    "comments": 4,
    "reposts": 3,
@@ -333,7 +345,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518244550776086528",
-   "impressions": 4046,
+   "impressions": 4053,
    "reactions": 36,
    "comments": 2,
    "reposts": 1,
@@ -487,7 +499,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7517846192756584448",
-   "impressions": 1226,
+   "impressions": 1227,
    "reactions": 29,
    "comments": 4,
    "reposts": 0,
@@ -679,7 +691,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7516404140835688448",
-   "impressions": 469,
+   "impressions": 470,
    "reactions": 8,
    "comments": 2,
    "reposts": 1,
@@ -774,57 +786,6 @@
   },
   {
    "idx": 8,
-   "boost_label": null,
-   "was_boosted": false,
-   "impressions": null,
-   "reactions": 9,
-   "comments": 0,
-   "reposts": 1,
-   "reposted_by_me": true,
-   "author": "Carlo De Marchis",
-   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
-   "posted_with": "A guy with a scarf",
-   "age_label": null,
-   "edited": false,
-   "mentions": [
-    {
-     "name": "Euroleague Basketball",
-     "type": "company",
-     "url": "https://www.linkedin.com/company/euroleague-basketball/"
-    },
-    {
-     "name": "David Cushnan",
-     "type": "person",
-     "url": "https://www.linkedin.com/in/davidcushnan/"
-    }
-   ],
-   "hashtags": [],
-   "external_links": [
-    {
-     "text": "https://lnkd.in/dRdV3FCN",
-     "url": "https://lnkd.in/dRdV3FCN"
-    }
-   ],
-   "text": "Euroleague Basketball is hiring a Streaming & Media Technology Director in Barcelona, which I spotted in David Cushnan's Leaders newsletter, and I'm sharing it because a few of the tech and ops people in my network could do this job well.\n\nYou'd own EuroLeague TV from ingest and encoding through CDN, DRM and playback, plus the media asset management, the automated content stack, the archive, content protection, geo-blocking and entitlements, onboarding of third-party content, distribution to partner platforms and the game-night incident process, with nobody reporting to you and the commercial side of partner deals handled by someone else.\nIf one of you gets the job, you owe me a dinner in Barcelona.\nhttps://lnkd.in/dRdV3FCN\n\nP.S.\nA note for whoever wrote the posting, with respect, because the role is described in a lot of detail. One of the requirements is being able to write clear technical requirements and then check what vendors deliver against them, so I read the page that way and couldn't find anything on Euroleague's side: no salary range, no package, no benefits, no word on hybrid, and the page goes from \"Your mission\" and \"Your profile\" straight to \"About us\". That's twenty bullets of responsibilities for a Director role and nothing about what you get back, and the good candidates will ask about that in the first call anyway.",
-   "text_chars": 1355,
-   "lnkd_links": [
-    "https://lnkd.in/dRdV3FCN"
-   ],
-   "quoted_post": null,
-   "kind": "repost_own",
-   "attachments": [],
-   "has_article": false,
-   "image_count": 1,
-   "media_type": "images",
-   "series": [],
-   "sponsors": [],
-   "disclosures": [],
-   "sponsor_subject": [],
-   "posted_date": "2026-10-14",
-   "date_is_approx": true
-  },
-  {
-   "idx": 9,
    "activity_id": 7516165686491082752,
    "activity_urn": "urn:li:activity:7516165686491082752",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7516165686491082752/",
@@ -880,7 +841,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 10,
+   "idx": 9,
    "activity_id": 7516040873026101248,
    "activity_urn": "urn:li:activity:7516040873026101248",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7516040873026101248/",
@@ -889,7 +850,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7516040872270983168",
-   "impressions": 11645,
+   "impressions": 11646,
    "reactions": 30,
    "comments": 3,
    "reposts": 4,
@@ -994,7 +955,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 11,
+   "idx": 10,
    "activity_id": 7515773250577215488,
    "activity_urn": "urn:li:activity:7515773250577215488",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7515773250577215488/",
@@ -1038,7 +999,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 12,
+   "idx": 11,
    "activity_id": 7515758810125283329,
    "activity_urn": "urn:li:activity:7515758810125283329",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7515758810125283329/",
@@ -1112,7 +1073,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 13,
+   "idx": 12,
    "activity_id": 7515286387135459328,
    "activity_urn": "urn:li:activity:7515286387135459328",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7515286387135459328/",
@@ -1121,7 +1082,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7515222319754297344",
-   "impressions": 1120,
+   "impressions": 1121,
    "reactions": 20,
    "comments": 7,
    "reposts": 0,
@@ -1250,7 +1211,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 14,
+   "idx": 13,
    "activity_id": 7514358860472684544,
    "activity_urn": "urn:li:activity:7514358860472684544",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7514358860472684544/",
@@ -1259,7 +1220,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7514358856806879232",
-   "impressions": 1279,
+   "impressions": 1280,
    "reactions": 4,
    "comments": 2,
    "reposts": 0,
@@ -1294,7 +1255,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 15,
+   "idx": 14,
    "activity_id": 7513707653429104640,
    "activity_urn": "urn:li:activity:7513707653429104640",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7513707653429104640/",
@@ -1396,7 +1357,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 16,
+   "idx": 15,
    "activity_id": 7513500228126175233,
    "activity_urn": "urn:li:activity:7513500228126175233",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7513500228126175233/",
@@ -1455,7 +1416,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 17,
+   "idx": 16,
    "activity_id": 7513164018946326528,
    "activity_urn": "urn:li:activity:7513164018946326528",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7513164018946326528/",
@@ -1545,7 +1506,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 18,
+   "idx": 17,
    "activity_id": 7512874528348274688,
    "activity_urn": "urn:li:activity:7512874528348274688",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7512874528348274688/",
@@ -1554,7 +1515,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512874527614377984",
-   "impressions": 1072,
+   "impressions": 1073,
    "reactions": 3,
    "comments": 2,
    "reposts": 2,
@@ -1616,7 +1577,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 19,
+   "idx": 18,
    "activity_id": 7512412948917710849,
    "activity_urn": "urn:li:activity:7512412948917710849",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7512412948917710849/",
@@ -1625,7 +1586,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512412948133359616",
-   "impressions": 2511,
+   "impressions": 2512,
    "reactions": 33,
    "comments": 3,
    "reposts": 1,
@@ -1686,7 +1647,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 20,
+   "idx": 19,
    "activity_id": 7512128817939918849,
    "activity_urn": "urn:li:activity:7512128817939918849",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7512128817939918849/",
@@ -1724,7 +1685,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 21,
+   "idx": 20,
    "activity_id": 7511333550453850112,
    "activity_urn": "urn:li:activity:7511333550453850112",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7511333550453850112/",
@@ -1821,7 +1782,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 22,
+   "idx": 21,
    "activity_id": 7511015251559989248,
    "activity_urn": "urn:li:activity:7511015251559989248",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7511015251559989248/",
@@ -1870,7 +1831,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 23,
+   "idx": 22,
    "activity_id": 7511015040490029056,
    "activity_urn": "urn:li:activity:7511015040490029056",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7511015040490029056/",
@@ -1940,7 +1901,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 24,
+   "idx": 23,
    "activity_id": 7510944227401330689,
    "activity_urn": "urn:li:activity:7510944227401330689",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510944227401330689/",
@@ -1989,7 +1950,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 25,
+   "idx": 24,
    "activity_id": 7510944005531025408,
    "activity_urn": "urn:li:activity:7510944005531025408",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510944005531025408/",
@@ -2149,7 +2110,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 26,
+   "idx": 25,
    "activity_id": 7510620663834054656,
    "activity_urn": "urn:li:activity:7510620663834054656",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510620663834054656/",
@@ -2232,7 +2193,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 27,
+   "idx": 26,
    "activity_id": 7510562273338257408,
    "activity_urn": "urn:li:activity:7510562273338257408",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510562273338257408/",
@@ -2281,7 +2242,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 28,
+   "idx": 27,
    "activity_id": 7510561238649614336,
    "activity_urn": "urn:li:activity:7510561238649614336",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510561238649614336/",
@@ -2325,7 +2286,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 29,
+   "idx": 28,
    "activity_id": 7510268530295185409,
    "activity_urn": "urn:li:activity:7510268530295185409",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510268530295185409/",
@@ -2376,7 +2337,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 30,
+   "idx": 29,
    "activity_id": 7510268023094747136,
    "activity_urn": "urn:li:activity:7510268023094747136",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510268023094747136/",
@@ -2460,7 +2421,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 31,
+   "idx": 30,
    "activity_id": 7510231417763762176,
    "activity_urn": "urn:li:activity:7510231417763762176",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7510231417763762176/",
@@ -2558,7 +2519,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 32,
+   "idx": 31,
    "activity_id": 7509562863842402304,
    "activity_urn": "urn:li:activity:7509562863842402304",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509562863842402304/",
@@ -2629,7 +2590,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 33,
+   "idx": 32,
    "activity_id": 7509517024306569216,
    "activity_urn": "urn:li:activity:7509517024306569216",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509517024306569216/",
@@ -2688,7 +2649,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 34,
+   "idx": 33,
    "activity_id": 7509210111282966529,
    "activity_urn": "urn:li:activity:7509210111282966529",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509210111282966529/",
@@ -2731,7 +2692,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 35,
+   "idx": 34,
    "activity_id": 7509169400957100033,
    "activity_urn": "urn:li:activity:7509169400957100033",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7509169400957100033/",
@@ -2769,7 +2730,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 36,
+   "idx": 35,
    "activity_id": 7508709813267304448,
    "activity_urn": "urn:li:activity:7508709813267304448",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7508709813267304448/",
@@ -2828,7 +2789,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 37,
+   "idx": 36,
    "activity_id": 7508475934778519552,
    "activity_urn": "urn:li:activity:7508475934778519552",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7508475934778519552/",
@@ -2866,7 +2827,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 38,
+   "idx": 37,
    "activity_id": 7508437128540749824,
    "activity_urn": "urn:li:activity:7508437128540749824",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7508437128540749824/",
@@ -2918,7 +2879,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 39,
+   "idx": 38,
    "activity_id": 7508257197106270208,
    "activity_urn": "urn:li:activity:7508257197106270208",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7508257197106270208/",
@@ -2967,7 +2928,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 40,
+   "idx": 39,
    "activity_id": 7507738528244527104,
    "activity_urn": "urn:li:activity:7507738528244527104",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7507738528244527104/",
@@ -3055,7 +3016,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 41,
+   "idx": 40,
    "activity_id": 7507192021854498816,
    "activity_urn": "urn:li:activity:7507192021854498816",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7507192021854498816/",
@@ -3101,7 +3062,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 42,
+   "idx": 41,
    "activity_id": 7506982134583091200,
    "activity_urn": "urn:li:activity:7506982134583091200",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7506982134583091200/",
@@ -3159,7 +3120,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 43,
+   "idx": 42,
    "activity_id": 7506958187539922944,
    "activity_urn": "urn:li:activity:7506958187539922944",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7506958187539922944/",
@@ -3203,7 +3164,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 44,
+   "idx": 43,
    "activity_id": 7506702019722772480,
    "activity_urn": "urn:li:activity:7506702019722772480",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7506702019722772480/",
@@ -3261,7 +3222,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 45,
+   "idx": 44,
    "activity_id": 7506251260820508673,
    "activity_urn": "urn:li:activity:7506251260820508673",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7506251260820508673/",
@@ -3327,7 +3288,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 46,
+   "idx": 45,
    "activity_id": 7505964663470194689,
    "activity_urn": "urn:li:activity:7505964663470194689",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7505964663470194689/",
@@ -3423,7 +3384,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 47,
+   "idx": 46,
    "activity_id": 7504570982913695744,
    "activity_urn": "urn:li:activity:7504570982913695744",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7504570982913695744/",
@@ -3492,7 +3453,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 48,
+   "idx": 47,
    "activity_id": 7504130549792436224,
    "activity_urn": "urn:li:activity:7504130549792436224",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7504130549792436224/",
@@ -3559,7 +3520,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 49,
+   "idx": 48,
    "activity_id": 7503761915937140736,
    "activity_urn": "urn:li:activity:7503761915937140736",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7503761915937140736/",
@@ -3628,7 +3589,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 50,
+   "idx": 49,
    "activity_id": 7503149183856685056,
    "activity_urn": "urn:li:activity:7503149183856685056",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7503149183856685056/",
@@ -3707,7 +3668,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 51,
+   "idx": 50,
    "activity_id": 7502985862939365376,
    "activity_urn": "urn:li:activity:7502985862939365376",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7502985862939365376/",
@@ -3788,7 +3749,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 52,
+   "idx": 51,
    "activity_id": 7502708793567313920,
    "activity_urn": "urn:li:activity:7502708793567313920",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7502708793567313920/",
@@ -3851,7 +3812,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 53,
+   "idx": 52,
    "activity_id": 7502632229454540800,
    "activity_urn": "urn:li:activity:7502632229454540800",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7502632229454540800/",
@@ -3927,7 +3888,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 54,
+   "idx": 53,
    "activity_id": 7502453456759275520,
    "activity_urn": "urn:li:activity:7502453456759275520",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7502453456759275520/",
@@ -3996,7 +3957,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 55,
+   "idx": 54,
    "activity_id": 7501929747254497281,
    "activity_urn": "urn:li:activity:7501929747254497281",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7501929747254497281/",
@@ -4097,7 +4058,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 56,
+   "idx": 55,
    "activity_id": 7501897611679883264,
    "activity_urn": "urn:li:activity:7501897611679883264",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7501897611679883264/",
@@ -4193,93 +4154,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 57,
-   "boost_label": null,
-   "was_boosted": false,
-   "impressions": null,
-   "reactions": 30,
-   "comments": 0,
-   "reposts": 3,
-   "reposted_by_me": true,
-   "author": "Dolby OptiView",
-   "author_url": "https://www.linkedin.com/company/dolbyoptiview/",
-   "posted_with": null,
-   "age_label": null,
-   "edited": false,
-   "mentions": [
-    {
-     "name": "Dan Coffey",
-     "type": "person",
-     "url": "https://www.linkedin.com/in/dancoffey/"
-    },
-    {
-     "name": "Dolby OptiView",
-     "type": "company",
-     "url": "https://www.linkedin.com/company/dolbyoptiview/"
-    },
-    {
-     "name": "Sander de Vries",
-     "type": "person",
-     "url": "https://www.linkedin.com/in/sanderdv/"
-    },
-    {
-     "name": "Southfields NL",
-     "type": "company",
-     "url": "https://www.linkedin.com/company/southfields-nl/"
-    },
-    {
-     "name": "Carlo De Marchis",
-     "type": "person",
-     "url": "https://www.linkedin.com/in/carlodemarchis/"
-    },
-    {
-     "name": "A guy with a scarf",
-     "type": "company",
-     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
-    }
-   ],
-   "hashtags": [
-    "livesports",
-    "webinar",
-    "monetization",
-    "personalization",
-    "ibc2026"
-   ],
-   "external_links": [
-    {
-     "text": "https://lnkd.in/gcjn4g-c",
-     "url": "https://lnkd.in/gcjn4g-c"
-    }
-   ],
-   "text": "🔔 Next week, tune into our live webinar on how to immerse, monetize, and personalize every live sports moment.\n\nIn this session, Dan Coffey (Director of Product, Dolby OptiView), Sander de Vries (Head of Media Technology & Change, Southfields NL), and Carlo De Marchis (Founder, A guy with a scarf) will share an exclusive first look at what's next from Dolby at IBC.\n\nWe’ll be previewing how we’re helping customers:\n- Understand how viewers engage with content and what keeps them watching\n- Act on those insights to drive higher ad revenue and deliver relevant experiences at the right moment\n- Deliver synchronized experiences that keep every fan in the same moment\n- Experience consistent, premium playback in Dolby Vision and Dolby Atmos across every device\n\n🗓️ Tuesday, September 8th\n⏰ 9am ET | 3pm CET\n🔗 RSVP now: https://lnkd.in/gcjn4g-c\n\n#livesports #webinar #monetization #personalization #IBC2026",
-   "text_chars": 908,
-   "lnkd_links": [
-    "https://lnkd.in/gcjn4g-c"
-   ],
-   "quoted_post": null,
-   "kind": "repost_other",
-   "attachments": [],
-   "has_article": false,
-   "image_count": 1,
-   "media_type": "images",
-   "series": [],
-   "sponsors": [
-    {
-     "name": "Dolby OptiView",
-     "where": "body"
-    }
-   ],
-   "disclosures": [
-    "Dolby OptiView"
-   ],
-   "sponsor_subject": [
-    "Dolby OptiView"
-   ],
-   "posted_date": "2026-09-03",
-   "date_is_approx": true
-  },
-  {
-   "idx": 58,
+   "idx": 56,
    "activity_id": 7501218579888091136,
    "activity_urn": "urn:li:activity:7501218579888091136",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7501218579888091136/",
@@ -4328,7 +4203,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 59,
+   "idx": 57,
    "activity_id": 7500821272503750656,
    "activity_urn": "urn:li:activity:7500821272503750656",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7500821272503750656/",
@@ -4393,7 +4268,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 60,
+   "idx": 58,
    "activity_id": 7500471053421453312,
    "activity_urn": "urn:li:activity:7500471053421453312",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7500471053421453312/",
@@ -4516,7 +4391,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 61,
+   "idx": 59,
    "activity_id": 7500163051917234176,
    "activity_urn": "urn:li:activity:7500163051917234176",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7500163051917234176/",
@@ -4563,7 +4438,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 62,
+   "idx": 60,
    "activity_id": 7500134873576177665,
    "activity_urn": "urn:li:activity:7500134873576177665",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7500134873576177665/",
@@ -4646,7 +4521,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 63,
+   "idx": 61,
    "activity_id": 7499371469223772160,
    "activity_urn": "urn:li:activity:7499371469223772160",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7499371469223772160/",
@@ -4714,7 +4589,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 64,
+   "idx": 62,
    "activity_id": 7498999466985762816,
    "activity_urn": "urn:li:activity:7498999466985762816",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7498999466985762816/",
@@ -4785,7 +4660,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 65,
+   "idx": 63,
    "activity_id": 7498644302512689152,
    "activity_urn": "urn:li:activity:7498644302512689152",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7498644302512689152/",
@@ -4843,7 +4718,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 66,
+   "idx": 64,
    "activity_id": 7498643759845437442,
    "activity_urn": "urn:li:activity:7498643759845437442",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7498643759845437442/",
@@ -4944,7 +4819,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 67,
+   "idx": 65,
    "activity_id": 7496803524266225664,
    "activity_urn": "urn:li:activity:7496803524266225664",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7496803524266225664/",
@@ -5028,7 +4903,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 68,
+   "idx": 66,
    "activity_id": 7496478345241710592,
    "activity_urn": "urn:li:activity:7496478345241710592",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7496478345241710592/",
@@ -5088,7 +4963,7 @@
    "date_is_approx": false
   },
   {
-   "idx": 69,
+   "idx": 67,
    "activity_id": 7496237241271287809,
    "activity_urn": "urn:li:activity:7496237241271287809",
    "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7496237241271287809/",
@@ -5140,6 +5015,143 @@
    "disclosures": [],
    "sponsor_subject": [],
    "date_is_approx": false
+  },
+  {
+   "idx": 68,
+   "boost_label": null,
+   "was_boosted": false,
+   "impressions": null,
+   "reactions": 9,
+   "comments": 0,
+   "reposts": 1,
+   "reposted_by_me": true,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": null,
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Euroleague Basketball",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/euroleague-basketball/"
+    },
+    {
+     "name": "David Cushnan",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/davidcushnan/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/dRdV3FCN",
+     "url": "https://lnkd.in/dRdV3FCN"
+    }
+   ],
+   "text": "Euroleague Basketball is hiring a Streaming & Media Technology Director in Barcelona, which I spotted in David Cushnan's Leaders newsletter, and I'm sharing it because a few of the tech and ops people in my network could do this job well.\n\nYou'd own EuroLeague TV from ingest and encoding through CDN, DRM and playback, plus the media asset management, the automated content stack, the archive, content protection, geo-blocking and entitlements, onboarding of third-party content, distribution to partner platforms and the game-night incident process, with nobody reporting to you and the commercial side of partner deals handled by someone else.\nIf one of you gets the job, you owe me a dinner in Barcelona.\nhttps://lnkd.in/dRdV3FCN\n\nP.S.\nA note for whoever wrote the posting, with respect, because the role is described in a lot of detail. One of the requirements is being able to write clear technical requirements and then check what vendors deliver against them, so I read the page that way and couldn't find anything on Euroleague's side: no salary range, no package, no benefits, no word on hybrid, and the page goes from \"Your mission\" and \"Your profile\" straight to \"About us\". That's twenty bullets of responsibilities for a Director role and nothing about what you get back, and the good candidates will ask about that in the first call anyway.",
+   "text_chars": 1355,
+   "lnkd_links": [
+    "https://lnkd.in/dRdV3FCN"
+   ],
+   "quoted_post": null,
+   "kind": "repost_own",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
+   "series": [],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "posted_date": "2026-10-14",
+   "date_is_approx": true
+  },
+  {
+   "idx": 69,
+   "boost_label": null,
+   "was_boosted": false,
+   "impressions": null,
+   "reactions": 30,
+   "comments": 0,
+   "reposts": 3,
+   "reposted_by_me": true,
+   "author": "Dolby OptiView",
+   "author_url": "https://www.linkedin.com/company/dolbyoptiview/",
+   "posted_with": null,
+   "age_label": null,
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Dan Coffey",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/dancoffey/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "Sander de Vries",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/sanderdv/"
+    },
+    {
+     "name": "Southfields NL",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/southfields-nl/"
+    },
+    {
+     "name": "Carlo De Marchis",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/carlodemarchis/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    }
+   ],
+   "hashtags": [
+    "livesports",
+    "webinar",
+    "monetization",
+    "personalization",
+    "ibc2026"
+   ],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/gcjn4g-c",
+     "url": "https://lnkd.in/gcjn4g-c"
+    }
+   ],
+   "text": "🔔 Next week, tune into our live webinar on how to immerse, monetize, and personalize every live sports moment.\n\nIn this session, Dan Coffey (Director of Product, Dolby OptiView), Sander de Vries (Head of Media Technology & Change, Southfields NL), and Carlo De Marchis (Founder, A guy with a scarf) will share an exclusive first look at what's next from Dolby at IBC.\n\nWe’ll be previewing how we’re helping customers:\n- Understand how viewers engage with content and what keeps them watching\n- Act on those insights to drive higher ad revenue and deliver relevant experiences at the right moment\n- Deliver synchronized experiences that keep every fan in the same moment\n- Experience consistent, premium playback in Dolby Vision and Dolby Atmos across every device\n\n🗓️ Tuesday, September 8th\n⏰ 9am ET | 3pm CET\n🔗 RSVP now: https://lnkd.in/gcjn4g-c\n\n#livesports #webinar #monetization #personalization #IBC2026",
+   "text_chars": 908,
+   "lnkd_links": [
+    "https://lnkd.in/gcjn4g-c"
+   ],
+   "quoted_post": null,
+   "kind": "repost_other",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView"
+   ],
+   "sponsor_subject": [
+    "Dolby OptiView"
+   ],
+   "posted_date": "2026-09-03",
+   "date_is_approx": true
   }
  ]
 }

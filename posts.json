@@ -21,16 +21,16 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7520436581560705024",
-   "impressions": 18365,
-   "reactions": 20,
+   "impressions": 19787,
+   "reactions": 22,
    "comments": 2,
-   "reposts": 3,
+   "reposts": 4,
    "reposted_by_me": false,
    "author": "Carlo De Marchis",
    "author_url": "https://www.linkedin.com/in/carlodemarchis/",
    "posted_with": "A guy with a scarf",
-   "age_label": "20h",
-   "edited": false,
+   "age_label": "23h",
+   "edited": true,
    "mentions": [
     {
      "name": "The Football Association",
@@ -45,8 +45,8 @@
      "url": "https://lnkd.in/dtbfXY3v"
     }
    ],
-   "text": "😪 Yet another job opportunity that I will not be selected for... but that could be great from some in my network, so I decided to share for all of you\n\nThe FA is looking for a Chief Technology Officer, reporting to the CEO and sitting on the executive team at Wembley, with a remit that covers technology strategy, data, AI, infrastructure, enterprise systems and cybersecurity across an organisation that runs Wembley Stadium, St. George’s Park, the England teams and the FA Cup.\nThe role works closely with the Chief Digital Officer on the fan-facing product roadmap, and with EURO 2028 coming to the UK and Ireland it’s a big moment to take it on.\nFootball experience isn’t required, and the search is being run by Ivy Street, with applications closing on 13 November.\n\nThe Football Association\n\nhttps://lnkd.in/dtbfXY3v",
-   "text_chars": 823,
+   "text": "😪 Yet another job opportunity that I will not be selected for... but that could be great from some in my network, so I decided to share for all of you\n\nThe FA is looking for a Chief Technology Officer, reporting to the CEO and sitting on the executive team at Wembley, with a remit that covers technology strategy, data, AI, infrastructure, enterprise systems and cybersecurity across an organisation that runs Wembley Stadium, St. George’s Park, the England teams and the FA Cup.\nThe role works closely with the Chief Digital Officer on the fan-facing product roadmap, and with EURO 2028 coming to the UK and Ireland it’s a big moment to take it on.\nFootball experience isn’t required, and the search is being run by Ivy Street, with applications closing on 13 November.\n\nThe Football Association\n\nhttps://lnkd.in/dtbfXY3v\n\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 1074,
    "lnkd_links": [
     "https://lnkd.in/dtbfXY3v"
    ],
@@ -64,18 +64,30 @@
    "image_count": 0,
    "media_type": "link",
    "series": [],
-   "sponsors": [],
-   "disclosures": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
    "sponsor_subject": [],
    "date_is_approx": false,
    "first_captured": "2026-10-27",
    "history": [
     {
      "captured": "2026-10-27",
-     "impressions": 18365,
-     "reactions": 20,
+     "impressions": 19787,
+     "reactions": 22,
      "comments": 2,
-     "reposts": 3
+     "reposts": 4
     }
    ],
    "last_captured": "2026-10-27",
@@ -92,7 +104,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7519380361538260992",
-   "impressions": 766,
+   "impressions": 774,
    "reactions": 12,
    "comments": 2,
    "reposts": 2,
@@ -183,7 +195,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 766,
+     "impressions": 774,
      "reactions": 12,
      "comments": 2,
      "reposts": 2
@@ -203,7 +215,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518972221936148480",
-   "impressions": 10634,
+   "impressions": 10636,
    "reactions": 3,
    "comments": 0,
    "reposts": 0,
@@ -306,7 +318,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 10634,
+     "impressions": 10636,
      "reactions": 3,
      "comments": 0,
      "reposts": 0
@@ -337,7 +349,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7518579343791689728",
-   "impressions": 880,
+   "impressions": 885,
    "reactions": 10,
    "comments": 4,
    "reposts": 3,
@@ -447,7 +459,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 880,
+     "impressions": 885,
      "reactions": 10,
      "comments": 4,
      "reposts": 3
@@ -467,7 +479,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7518244550776086528",
-   "impressions": 4046,
+   "impressions": 4053,
    "reactions": 36,
    "comments": 2,
    "reposts": 1,
@@ -642,7 +654,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 4046,
+     "impressions": 4053,
      "reactions": 36,
      "comments": 2,
      "reposts": 1
@@ -662,7 +674,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7517846192756584448",
-   "impressions": 1226,
+   "impressions": 1227,
    "reactions": 29,
    "comments": 4,
    "reposts": 0,
@@ -796,7 +808,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 1226,
+     "impressions": 1227,
      "reactions": 29,
      "comments": 4,
      "reposts": 0
@@ -961,7 +973,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7516404140835688448",
-   "impressions": 469,
+   "impressions": 470,
    "reactions": 8,
    "comments": 2,
    "reposts": 1,
@@ -1099,7 +1111,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 469,
+     "impressions": 470,
      "reactions": 8,
      "comments": 2,
      "reposts": 1
@@ -1230,7 +1242,7 @@
    "boost_label": "Boost again",
    "was_boosted": true,
    "content_urn": "urn:li:ugcPost:7516040872270983168",
-   "impressions": 11645,
+   "impressions": 11646,
    "reactions": 30,
    "comments": 3,
    "reposts": 4,
@@ -1379,7 +1391,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 11645,
+     "impressions": 11646,
      "reactions": 30,
      "comments": 3,
      "reposts": 4
@@ -1744,7 +1756,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7515222319754297344",
-   "impressions": 1120,
+   "impressions": 1121,
    "reactions": 20,
    "comments": 7,
    "reposts": 0,
@@ -1917,7 +1929,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 1120,
+     "impressions": 1121,
      "reactions": 20,
      "comments": 7,
      "reposts": 0
@@ -1937,7 +1949,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:share:7514358856806879232",
-   "impressions": 1279,
+   "impressions": 1280,
    "reactions": 4,
    "comments": 2,
    "reposts": 0,
@@ -2016,7 +2028,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 1279,
+     "impressions": 1280,
      "reactions": 4,
      "comments": 2,
      "reposts": 0
@@ -2452,7 +2464,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512874527614377984",
-   "impressions": 1072,
+   "impressions": 1073,
    "reactions": 3,
    "comments": 2,
    "reposts": 2,
@@ -2558,7 +2570,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 1072,
+     "impressions": 1073,
      "reactions": 3,
      "comments": 2,
      "reposts": 2
@@ -2578,7 +2590,7 @@
    "boost_label": "Boost",
    "was_boosted": false,
    "content_urn": "urn:li:ugcPost:7512412948133359616",
-   "impressions": 2511,
+   "impressions": 2512,
    "reactions": 33,
    "comments": 3,
    "reposts": 1,
@@ -2683,7 +2695,7 @@
     },
     {
      "captured": "2026-10-27",
-     "impressions": 2511,
+     "impressions": 2512,
      "reactions": 33,
      "comments": 3,
      "reposts": 1
