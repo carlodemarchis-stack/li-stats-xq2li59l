@@ -477,7 +477,7 @@ function render(){
 
   // growth between captures
   { const c = $('#c-growth'); c.replaceChildren();
-    const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Growth between captures'), el('span', {class:'sub'}, 'what the posts gained from one capture to the next · only posts present in both')); c.append(head);
+    const head = el('div', {class:'head'}); head.append(el('h2', {}, 'Growth between captures'), el('span', {class:'sub'}, 'what the posts gained from one capture to the next: existing posts compared on both dates, plus posts published in between')); c.append(head);
     if (CAPS.length < 2) { c.append(el('div', {class:'empty'}, 'One capture so far. Run refresh.sh again later and this section fills in.')); }
     else {
       const ctl = el('div', {class:'inline-ctl'});
@@ -489,8 +489,11 @@ function render(){
         rows.push({...p, impA:ha[1], impB:hb[1], dImp:hb[1]-ha[1], dRx:hb[2]-ha[2], dCm:hb[3]-ha[3], dRp:hb[4]-ha[4]}); }
       rows.sort((a,b) => b.dImp - a.dImp);
       const tot = k => rows.reduce((s,r) => s + r[k], 0), moved = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).length;
+      // posts published after capture A and present in B count as new
+      const fresh = ps.filter(p => p.date > A && p.hist.some(x => x[0] === B && x[1] != null));
+      const freshImp = fresh.reduce((s,p) => s + p.hist.find(x => x[0] === B)[1], 0), freshEng = fresh.reduce((s,p) => s + eng(p), 0);
       const mt = el('div', {class:'minitiles'});
-      for (const [k,v,d] of [['Posts compared', fmt(rows.length), `${moved} moved`], ['Impressions gained', '+' + fmt(tot('dImp')), A + ' to ' + B], ['Reactions', '+' + fmt(tot('dRx')), ''], ['Comments', '+' + fmt(tot('dCm')), ''], ['Reposts', '+' + fmt(tot('dRp')), '']]) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); mt.append(t); }
+      for (const [k,v,d] of [['Impressions gained', '+' + fmt(tot('dImp') + freshImp), `${fmtDate(A)} to ${fmtDate(B)} · existing posts +${fmt(tot('dImp'))}, new posts +${fmt(freshImp)}`], ['Existing posts compared', fmt(rows.length), `${moved} moved`], ['New posts', fmt(fresh.length), fresh.length ? `${fmt(freshImp)} impressions, ${fmt(freshEng)} engagements` : 'published after ' + fmtDate(A)], ['Reactions', '+' + fmt(tot('dRx') + fresh.reduce((s,p) => s + p.rx, 0)), ''], ['Comments', '+' + fmt(tot('dCm') + fresh.reduce((s,p) => s + p.cm, 0)), ''], ['Reposts', '+' + fmt(tot('dRp') + fresh.reduce((s,p) => s + p.rp, 0)), '']]) { const t = el('div', {class:'tile'}); t.append(el('div', {class:'k'}, k), el('div', {class:'v'}, v), el('div', {class:'d'}, d)); mt.append(t); }
       c.append(mt);
       { const movers = rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp); const oldest = movers.length ? movers.reduce((m, r) => r.date < m.date ? r : m) : null;
         if (oldest) { const o = el('div', {class:'oldest'}); const age = Math.round((new Date(B) - new Date(oldest.date)) / 864e5);
@@ -500,12 +503,16 @@ function render(){
       if (A >= B) c.append(el('div', {class:'empty'}, 'Pick an earlier capture first and a later one second.'));
       else if (!rows.length) c.append(el('div', {class:'empty'}, 'No post of the current selection is in both captures.'));
       else {
-        // trend: cohort total per capture, cohort = posts present (with impressions) in every capture from A to B
-        const span = CAPS.slice(CAPS.indexOf(A), CAPS.indexOf(B) + 1);
-        const cohort = ps.filter(p => span.every(d => p.hist.some(x => x[0] === d && x[1] != null)));
-        const trend = span.map(d => { const hs = cohort.map(p => p.hist.find(x => x[0] === d)); return {label:d.slice(5), title:d, value:hs.reduce((s,x) => s + x[1], 0), rx:hs.reduce((s,x) => s + x[2], 0), n:cohort.length}; });
-        const tw = el('div'); tw.append(el('div', {class:'sub'}, `Total impressions of the ${cohort.length} posts present in every capture from ${A} to ${B}, by capture date`)); c.append(tw);
-        vbars(tw, trend.map(t => ({...t, tip: () => [['Impressions', fmt(t.value)], ['Reactions', fmt(t.rx)], ['Posts in cohort', String(t.n)]]})), {height:150, labelEvery:1, aria:'Cohort impressions by capture'});
+        // trend: total impressions of every post in the selection at each capture date.
+        // A post counts with its last value captured on or before that date; a post already published
+        // but not yet captured counts with its first captured value; a post not yet published counts 0.
+        const valueAt = (p, d) => { const known = p.hist.filter(x => x[1] != null); if (!known.length) return [0, 'none']; const past = known.filter(x => x[0] <= d); if (past.length) return [past[past.length-1][1], past[past.length-1][0] === d ? 'captured' : 'carried']; return p.date <= d ? [known[0][1], 'backfilled'] : [0, 'unpublished']; };
+        const trend = CAPS.map(d => { const o = {label:d.slice(5), title:d, value:0, captured:0, carried:0, backfilled:0, n:0}; for (const p of ps) { const [v, how] = valueAt(p, d); o.value += v; if (how !== 'unpublished' && how !== 'none') { o.n++; o[how]++; } } return o; });
+        const gains = trend.slice(1).map((t, i) => ({...t, prevTitle: trend[i].title, gain: t.value - trend[i].value, days: Math.round((new Date(t.title) - new Date(trend[i].title)) / 864e5)}));
+        const tw = el('div'); tw.append(el('div', {class:'sub'}, `Impressions gained by all ${ps.length} posts in this selection between one capture and the next · a post not captured on a date keeps its last known value`)); c.append(tw);
+        if (gains.length) vbars(tw, gains.map(g => ({label:g.label, title:`${fmtDate(g.prevTitle)} to ${fmtDate(g.title)}`, value:Math.max(0, g.gain), tip: () => [['Gained', (g.gain >= 0 ? '+' : '') + fmt(g.gain)], ['Per day', (g.gain >= 0 ? '+' : '') + fmt(g.gain / Math.max(1, g.days))], ['Running total', fmt(g.value)], ['Posts counted', String(g.n)], ['Captured that day', String(g.captured)], ['Carried from an earlier capture', String(g.carried)]]})), {height:160, labelEvery:1, aria:'Impressions gained by capture interval'});
+        const last = trend[trend.length-1];
+        c.append(el('div', {class:'sub', style:'margin-top:4px'}, `Running total at the latest capture, ${fmtDate(last.title)}: ${fmt(last.value)} impressions across ${last.n} posts`));
         c.append(el('div', {class:'sub', style:'margin:10px 0 4px'}, 'Top movers by impressions gained'));
         renderTable(c, [{key:'date', label:'Published', cls:'date', render:dateCell}, {key:'title', label:'Post', render:kindTag}, {key:'impA', label:'Before', num:true}, {key:'impB', label:'After', num:true}, {key:'dImp', label:'Gained', num:true, render:r => (r.dImp >= 0 ? '+' : '') + fmt(r.dImp)}, {key:'dRx', label:'Reactions', num:true, render:r => '+' + r.dRx}, {key:'dCm', label:'Comments', num:true, render:r => '+' + r.dCm}, {key:'dRp', label:'Reposts', num:true, render:r => '+' + r.dRp}], rows.filter(r => r.dImp || r.dRx || r.dCm || r.dRp).slice(0, 15));
       }

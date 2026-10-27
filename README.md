@@ -167,8 +167,10 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   gained (impressions, reactions, comments, reposts), a bar per capture with the total impressions of
   the posts present in every capture of the range, and the top movers. `deltas.py` prints the same
   comparison in the terminal. Captures are keyed by date, so one snapshot per day; the totals are
-  only comparable for posts present in both captures, which is why a regular full capture (scroll
-  back to the oldest post you care about) is what makes the trend meaningful.
+  only comparable for posts present in both captures; the "Impressions gained" tile adds the
+  impressions of posts published between the two dates as new posts. The bar chart is the total of
+  all posts in the selection at each capture date (last known value carried forward, posts not yet
+  captured counted with their first value), so it tracks the whole store rather than a cohort.
 - Post length in six segments (under 300 to 2,400+ characters): posts per segment next to average
   impressions per segment, engagement in the tooltip and table. The card has its own With / Without article
   toggle that overrides the main Format filter for that card only.
