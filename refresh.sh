@@ -48,17 +48,19 @@ fi
 
 if [ "$KIND" = comments ]; then
   RAW="raw/comments-page-$DATE.html.gz"
-  mv "$TMP" "$RAW"
+  mv "$TMP" "$RAW"; chmod 644 "$RAW"
   N=$(gzip -dc "$RAW" | grep -oE 'urn:li:comment:\((activity|ugcPost):[0-9]+,[0-9]+\)' | sort -u | wc -l | tr -d ' ')
   if [ "$N" -eq 0 ]; then
     echo "This does not look like the LinkedIn comments page (no comments found)."; rm -f "$RAW"; exit 1
   fi
-  echo "Comments capture $DATE: $N comments"
-  python3 parse_comments.py "$RAW"
-  MSG="Refresh comments $DATE ($N comments in capture)"
+  echo "Comments capture $DATE: $N comment URNs (threads included)"
+  OUT=$(python3 parse_comments.py "$RAW") || exit 1
+  echo "$OUT"
+  N=$(echo "$OUT" | grep -oE '^[0-9]+' | head -1)
+  MSG="Refresh comments $DATE ($N of my comments in capture)"
 else
   RAW="raw/activity-page-$DATE.html.gz"
-  mv "$TMP" "$RAW"
+  mv "$TMP" "$RAW"; chmod 644 "$RAW"
   N=$(gzip -dc "$RAW" | grep -o 'post-summary/urn:li:activity' | wc -l | tr -d ' ')
   if [ "$N" -eq 0 ]; then
     echo "This does not look like the LinkedIn activity page (no posts found)."; rm -f "$RAW"; exit 1
