@@ -171,7 +171,9 @@ pages; click to open), the latest ten, the best 25 by impressions, who I comment
 My own posts / People / Company pages buttons), and comment length segments. Every card has a
 Table view. The section follows the search bar, the Range filter and the Sponsor filter; the
 search matches comment text, the commented post's snippet and its author, with `kind:comment`
-to match only comments and `on:own|person|company|others` for where the comment was left. The
+to match only comments and `on:own|person|company|others` for where the comment was left, or
+`on:<name>` (also `by:`) to match the original poster's name, e.g. `on:"Paola Marinone"`; clicking a
+bar in "Who I comment on" runs that search. The
 sponsor pages carry the comments whose text, commented post or post author names the sponsor.
 
 ## Sponsor pages
@@ -208,7 +210,7 @@ it loads `analytics-data.js` next to it, no server needed), or serve the folder 
   (accent-insensitive, all words must match); `"exact phrase"`, `-exclude`, `#tag`, `@name`,
   `has:video|images|article|document|link|boosted`, `about:dolby|cleeng|mercury` (sponsor as subject),
   `kind:post|quote|repost|comment`, `series:10things|retention|dataviz|ytft|episode|untangling`,
-  `imp>5000`, `chars<300`, `date:2026-07`; `on:own|person|company` for comments. Comments match on
+  `imp>5000`, `chars<300`, `date:2026-07`; `on:own|person|company` or `on:<poster name>` for comments. Comments match on
   their text, the commented post's snippet and its author, and are listed under the posts in the
   results. The query is kept in the URL (`?q=`), so a search can be bookmarked.
 - Filters (one row, scope everything below): date range, my posts vs. everything incl. reposts,

@@ -118,8 +118,8 @@ td a:hover{border-color:var(--ink)}
 </header>
 
 <div class="searchrow">
-  <input id="q" type="search" placeholder="Search posts: words, &quot;exact phrase&quot;, -exclude, #tag, @name, has:video, about:dolby, series:dataviz, kind:quote, kind:comment" autocomplete="off" spellcheck="false">
-  <span class="hint" id="qhint">Everything below follows the search. <code>has:</code> video, images, article, document, link, boosted · <code>about:</code> dolby, cleeng, mercury · <code>kind:</code> post, quote, repost, comment · <code>on:</code> own, person, company (comments) · <code>series:</code> 10things, retention, dataviz, ytft, episode, untangling · <code>imp>5000</code>, <code>chars<300</code>, <code>date:2026-07</code></span>
+  <input id="q" type="search" placeholder="Search posts: words, &quot;exact phrase&quot;, -exclude, #tag, @name, has:video, about:dolby, series:dataviz, kind:quote, kind:comment, on:&quot;Paola Marinone&quot;" autocomplete="off" spellcheck="false">
+  <span class="hint" id="qhint">Everything below follows the search. <code>has:</code> video, images, article, document, link, boosted · <code>about:</code> dolby, cleeng, mercury · <code>kind:</code> post, quote, repost, comment · <code>on:</code> own, person, company or a poster's name, e.g. <code>on:paola</code> (comments) · <code>series:</code> 10things, retention, dataviz, ytft, episode, untangling · <code>imp>5000</code>, <code>chars<300</code>, <code>date:2026-07</code></span>
 </div>
 <div class="card results" id="c-results" style="max-width:1240px;margin:0 auto 14px;display:none"></div>
 <div class="filters" id="filters">
@@ -228,7 +228,7 @@ function matchTerm(p, t){
   if (t.field === 'has') return ({video: p.media === 'video', images: p.media === 'images', image: p.media === 'images', article: p.article, document: p.attachments.includes('document'), link: p.attachments.includes('link'), boosted: p.boosted, quote: !!p.quoted})[v] ?? false;
   if (t.field === 'about' || t.field === 'sponsor') return p.subject.includes(SPONSOR_ALIAS[v] || t.raw);
   if (t.field === 'kind') return v === 'comment' || v === 'comments' ? false : v === 'repost' ? p.kind !== 'post' : p.kind === v || (v === 'quote' && p.kind.startsWith('quote'));
-  if (t.field === 'on') return false;
+  if (t.field === 'on' || t.field === 'by' || t.field === 'poster') return false;
   if (t.field === 'series') { const s = SERIES_ALIAS[v]; return p.series.some(x => s ? x === s : norm(x).includes(v)); }
   if (t.field === 'chars') { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? p.chars < n : op === '<=' ? p.chars <= n : op === '>' ? p.chars > n : p.chars >= n; }
   if (t.field === 'imp' || t.field === 'impressions') { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm || p.imp == null) return false; const n = +mm[2], op = mm[1] || '>='; return op === '<' ? p.imp < n : op === '<=' ? p.imp <= n : op === '>' ? p.imp > n : p.imp >= n; }
@@ -244,7 +244,7 @@ const numCmp = (v, x) => { const mm = /^([<>]=?)?(\d+)$/.exec(v); if (!mm || x =
 function matchCommentTerm(c, t){
   const v = t.val;
   if (t.field === 'kind') return v === 'comment' || v === 'comments';
-  if (t.field === 'on') return v === 'own' || v === 'mine' ? c.mine : v === 'others' ? !c.mine : v === 'company' ? !c.mine && ['company','showcase','school'].includes(c.atype) : v === 'person' ? !c.mine && c.atype === 'person' : false;
+  if (t.field === 'on' || t.field === 'by' || t.field === 'poster') return v === 'own' || v === 'mine' ? c.mine : v === 'others' ? !c.mine : v === 'company' ? !c.mine && ['company','showcase','school'].includes(c.atype) : v === 'person' ? !c.mine && c.atype === 'person' : norm(c.author || '').includes(v);
   if (t.field === 'about' || t.field === 'sponsor') return c.sponsors.includes(SPONSOR_ALIAS[v] || t.raw);
   if (t.field === 'has' || t.field === 'series' || t.field === 'tag') return false;
   if (t.field === 'chars') return numCmp(v, c.chars);
@@ -383,6 +383,7 @@ function hbars(body, rows, opts){
     g.append(svgEl('rect', {x:0, y:yy, width:W, height:rowH, fill:'transparent'}));
     g.addEventListener('pointerenter', () => g.style.opacity = .75); g.addEventListener('pointerleave', () => g.style.opacity = 1);
     hover(g, r.label, r.tip || (() => []));
+    if (r.onClick) { g.style.cursor = 'pointer'; g.addEventListener('click', r.onClick); }
     svg.append(g);
   });
   if (!rows.length) body.append(el('div', {class:'empty'}, 'Nothing in this selection')); else body.append(svg);
@@ -761,7 +762,9 @@ function renderComments(cs, ps){
       for (const [v, lab] of [['', 'All'], ['own', 'My own posts'], ['person', 'People'], ['company', 'Company pages']]) { const bt = el('button', {'aria-pressed': state.cmWho === v}, lab); bt.style.cssText = 'padding:2px 8px;font-size:12px'; bt.addEventListener('click', () => { state.cmWho = v; render(); }); ctl.append(bt); }
       b.append(ctl);
       legend(b, [{name:'My own posts', color:'var(--s1)'}, {name:'Person', color:'var(--s2)'}, {name:'Company page', color:'var(--s3)'}]);
-      hbars(b, rows.slice(0, 25).map(o => ({label:o.label, value:o.n, color:colors[o.type] || 'var(--s2)', tip: () => [['Comments', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Total impressions', fmt(o.imp)], ['Reactions', fmt(o.rx)]]})), {labelW:200});
+      b.append(el('div', {class:'sub', style:'margin:-4px 0 6px'}, 'Click a bar to list the comments on that poster (the search box gets on:"name")'));
+      const searchOn = o => () => { const q = o.type === 'own' ? 'kind:comment on:own' : `kind:comment on:"${o.label}"`; const qi = $('#q'); qi.value = q; state.q = q; render(); document.getElementById('c-cm-latest')?.scrollIntoView({block:'start'}); };
+      hbars(b, rows.slice(0, 25).map(o => ({label:o.label, value:o.n, color:colors[o.type] || 'var(--s2)', onClick: searchOn(o), tip: () => [['Comments', String(o.n)], ['Avg impressions', fmt(o.nImp ? o.imp/o.nImp : null)], ['Total impressions', fmt(o.imp)], ['Reactions', fmt(o.rx)], ['Click', 'list these comments']]})), {labelW:200});
     }, {cols:[{key:'label', label:'Post author'}, {key:'type', label:'Type'}, {key:'n', label:'Comments', num:true}, {key:'avg', label:'Avg impr.', num:true, render:o => fmt(o.nImp ? o.imp/o.nImp : null)}, {key:'imp', label:'Total impr.', num:true}, {key:'rx', label:'Reactions', num:true}], rows}); }
 
   // comment length segments
