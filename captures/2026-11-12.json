@@ -1,0 +1,1744 @@
+{
+ "source": "activity-page-2026-11-12.html.gz",
+ "captured_at": "2026-11-12",
+ "count": 20,
+ "posts": [
+  {
+   "idx": 0,
+   "activity_id": 7526569219589632003,
+   "activity_urn": "urn:li:activity:7526569219589632003",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526569219589632003/",
+   "posted_at_utc": "2026-11-12T08:58:58+00:00",
+   "posted_date": "2026-11-12",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7526569218885242880",
+   "impressions": 225,
+   "reactions": 7,
+   "comments": 1,
+   "reposts": 1,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "1h",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Streaming Media Magazine",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/streaming-media-magazine/"
+    },
+    {
+     "name": "Matt Stagg",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/mattstagg/"
+    },
+    {
+     "name": "Jon Giegengack",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/jongiegengack/"
+    },
+    {
+     "name": "Tony Marlow",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/tonymarlow/"
+    },
+    {
+     "name": "Tim Westcott",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/timwestcott/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "⚽ 📺 💻 📲 What the World Cup taught us about streaming live sport\nAt Streaming Media Magazine Connect with Matt Stagg, Jon Giegengack, Tony Marlow and Tim Westcott: how the 2026 World Cup was streamed and what comes next\nI wrote up my notes from the panel, and these are the points that stayed with me:\n🎤 Matt framed the hour from the fan's side: could people find the match, did the stream hold up at the crucial moment, and did their phone tell them about a goal before they saw it\n📺 Italy didn't qualify, so I watched more games than ever, often on a laptop and an iPad at once with my son, who picked the iPad every time because he could touch something during the match\n🔎 Jon's Hub Entertainment Research found World Cup fans more likely to report trouble finding a game, and he pointed to retention as the better measure, with Fox saying new Fox One and Tubi users beat its expectations\n🌍 Tim's Omdia numbers put streaming in context: 174 markets, 294 media partners and only 5% of them online-only, so most of the growth happened inside broadcasters' own apps\n📡 Tim also shared that YouTube saw 85% of its World Cup viewing between matches, which shows how much of the conversation now lives around the game\n⚡ Tony walked us through what Genius Sports calls augmentation, real-time stats around a shot on goal laid over the broadcast with a brand attached, and a moments engine that changes the ad depending on whether the goal was good or bad news for you\n🔔 The spoiler problem is still there, and a platform that knows I'm watching on the TV can stop its own app from pushing the goal to my phone some seconds early\n⏸️ Hydration-break ads got the headlines, but what annoyed me was joining a match on a second device and getting a 30-second pre-roll first, use the available tech and delay that!\n🎙️ Creators moved fastest, from Fox's Race to Glory campaign on TikTok to CazéTV in Brazil growing its viewing 114% on 2022\n🧱 Almost every tool we discussed comes from a specialist, and platforms that own their stack can plug those tools in when their strategy needs them\n📊 My one change for the next tournament is data visualisation built for fans, which I've been working on for six months\n\nMy take: the fan decides how to watch, across whatever screens are in the room, and nobody owns that journey. Before the next big tournament, the work that matters is making those screens agree with each other, letting people into the match before the ad, and giving fans choices worth picking, because the technology for all of it already exists.\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2793,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "What the World Cup taught us about streaming live sport",
+     "url": "https://www.linkedin.com/pulse/what-world-cup-taught-us-streaming-live-sport-carlo-de-marchis-okdqf/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 1,
+   "activity_id": 7526223374939742208,
+   "activity_urn": "urn:li:activity:7526223374939742208",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7526223374939742208/",
+   "posted_at_utc": "2026-11-11T10:04:43+00:00",
+   "posted_date": "2026-11-11",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:share:7526223373513863169",
+   "impressions": 418,
+   "reactions": 9,
+   "comments": 0,
+   "reposts": 3,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "1d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Matt Stagg",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/mattstagg/"
+    },
+    {
+     "name": "Jon Giegengack",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/jongiegengack/"
+    },
+    {
+     "name": "Tony Marlow",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/tonymarlow/"
+    },
+    {
+     "name": "Tim Westcott",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/timwestcott/"
+    }
+   ],
+   "hashtags": [
+    "sportsstreaming",
+    "sportsmedia",
+    "streamingmediaconnect"
+   ],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/e5t4jyTP",
+     "url": "https://lnkd.in/e5t4jyTP"
+    }
+   ],
+   "text": "LIVE TODAY at 6:30pm CET\n ⚽ 📺  💻 📲  Global Sports Streaming Industry Lessons From the 2026 World Cup\nMatt Stagg’s panel at Streaming Media Connect is this afternoon, and I’m joining Jon Giegengack, Tony Marlow and Tim Westcott to talk about what the 2026 World Cup taught us about streaming live sport.\nItaly didn’t qualify, so I had no team to suffer for and spent the tournament watching the experience as much as the football. I have zero passion for the streaming versus TV debate, because during a match fans use the TV, the phone, a tablet, the group chat and the notifications all at once, and what I care about is whether those screens stay in sync, so nobody gets a goal spoiled by a push alert or a WhatsApp message before they see it on the stream.\nI also want to talk about the ads during the hydration breaks and what they did to the rhythm of a match, which is a new kind of break that football fans aren’t used to, and at one point I was tempted to renew an old domain of mine about how hard it is to stream live sports.\nIf you watched the World Cup this summer, on any screen, what worked for you and what made you switch?\n\nRegister here: https://lnkd.in/e5t4jyTP\n\n#SportsStreaming #SportsMedia #StreamingMediaConnect",
+   "text_chars": 1233,
+   "lnkd_links": [
+    "https://lnkd.in/e5t4jyTP"
+   ],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
+   "series": [],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 2,
+   "activity_id": 7525952802020577280,
+   "activity_urn": "urn:li:activity:7525952802020577280",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525952802020577280/",
+   "posted_at_utc": "2026-11-10T16:09:33+00:00",
+   "posted_date": "2026-11-10",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7525952801190014976",
+   "impressions": 1092,
+   "reactions": 27,
+   "comments": 3,
+   "reposts": 2,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "1d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Andrea David Rizzi",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/andreadavidrizzi/"
+    },
+    {
+     "name": "Alessandra Sangalli",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/alessandra-sangalli-tiktok/"
+    },
+    {
+     "name": "Stefano Russo",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/stefanorusso1979/"
+    },
+    {
+     "name": "Federico Felletti",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/federico-felletti-4453aa24a/"
+    },
+    {
+     "name": "Ivan Ortenzi",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/ivanortenzi/"
+    },
+    {
+     "name": "Luisella Fusco",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/luisella-fusco-9425447a/"
+    },
+    {
+     "name": "Lorenzo Antognoli",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/lorenzo-antognoli-digital-technology-innovation-director/"
+    },
+    {
+     "name": "Monica Bertini",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/monica-bertini-51840134/"
+    },
+    {
+     "name": "Michele Ciccarese",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/micheleciccarese/"
+    },
+    {
+     "name": "Luisella Fusco",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/luisella-fusco-9425447a/"
+    },
+    {
+     "name": "Nino Ragosta",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/nino-ragosta/"
+    },
+    {
+     "name": "Massimo Caputi",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/massimo-caputi/"
+    },
+    {
+     "name": "Martina Limoni",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/martina-limoni-90842226/"
+    },
+    {
+     "name": "Federico De Nigro",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/federico-de-nigro-93845b62/"
+    },
+    {
+     "name": "Daniele Calonaci",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/daniele-calonaci-b436105/"
+    },
+    {
+     "name": "Jacopo Pulcini",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/jacopopulcini/"
+    },
+    {
+     "name": "YouTube Football Tracker",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/youtube-football-tracker/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/dru_mETE",
+     "url": "https://lnkd.in/dru_mETE"
+    }
+   ],
+   "text": "🏟️ ⚽ SFS26 in Torino: a morning at a sport conference in my city (for once)\nThe Social Football Summit came to Torino for the second time this year, at the Allianz Stadium, so after a few editions in Rome I finally got to an industry event without an airport. I spent the whole morning in the sessions and stayed through lunch to meet people, and I've written it all up in the newsletter, with my take on each panel and what I noticed from the floor.\n\nThe four sessions I followed:\n📱 Welcome to the attention economy: how much time Italians give to football, and who controls access to fans. With Sergio Amati (IAB), Riccardo Russo (Chiamarsi Bomber), Andrea David Rizzi (YouTube), Alessandra Sangalli (TikTok), Stefano Russo (YouGov Italia) and Federico Felletti.\n🤖 The AI game: an AI panel built on tools already in production, from anti-piracy to Inter's match analysis hub. With Ivan Ortenzi (SFS), Roberto Morucci (AWS), Luisella Fusco (Lega Serie A), Lorenzo Antognoli (Inter) and Luigi Capitanio (Deloitte).\n⚽ 90 minutes are no longer enough: Serie A's tools for talking to fans all week, from the referee camera to Fantacalcio and a collective CRM. With Monica Bertini (Sport Mediaset), Michele Ciccarese and Luisella Fusco (Lega Serie A), Nino Ragosta (Fantacalcio), Emiliano Garofalo (Haier Europe) and Francesco Furlan (Volkswagen).\n📒 Social networking before social media: football stickers: the deepest session of the morning, on physical objects and passion handed down between generations. With Massimo Caputi, Martina Limoni (Panini), Federico De Nigro (Universal Music Group), Daniele Calonaci (Stellantis/Jeep) and Jacopo Pulcini (Genoa CFC).\n\n📊 Several speakers told clubs to follow the data and to follow fans onto the platforms where they spend their time. If you work at a club, a league or a federation and want to see what your rivals are doing on YouTube, the YouTube Football Tracker covers 101 club and league channels every day. It's free, you just register with your email: https://lnkd.in/dru_mETE\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2277,
+   "lnkd_links": [
+    "https://lnkd.in/dru_mETE"
+   ],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "SFS26 in Torino: a morning at a sport conference in my city (for once)",
+     "url": "https://www.linkedin.com/pulse/sfs26-torino-morning-sport-conference-my-city-once-carlo-de-marchis-cn8wf/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 3,
+   "activity_id": 7525826572369555456,
+   "activity_urn": "urn:li:activity:7525826572369555456",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525826572369555456/",
+   "posted_at_utc": "2026-11-10T07:47:57+00:00",
+   "posted_date": "2026-11-10",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:share:7525826569165168640",
+   "impressions": 381,
+   "reactions": 5,
+   "comments": 4,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "2d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "SFS - Social Football Summit",
+     "type": "showcase",
+     "url": "https://www.linkedin.com/showcase/socialfootballsummit/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "🏟️ The SFS - Social Football Summit is at the Allianz Stadium in Torino (my city) this week, which means that for once I get to an industry event without an airport, a hotel or a taxi queue, and I sleep at home between the two days.\n\n🗓️ The programme has more than a hundred sessions across three main stages and a long list of side rooms, and since I now have Claude Code open on my laptop pretty much all day, I pulled the whole schedule into a small interactive page built for an audience of exactly one. The three stages sit side by side with time running down the page, it suggests what I should follow based on the work I do, and as soon as I star a session everything that overlaps it fades out, so the clashes are obvious and the decision stays with me. It took less time than reading the official schedule twice.\n💡 It made me think about the word personalisation. For years it described a platform watching our clicks and guessing what we wanted. What I am doing now is closer to \"give me the data and I will build my own view\", for one event, one day, one person, and then throw it away or keep it.\n🛠️ In the last few months, with a similar but often more sophisticated setup, I have built three websites and ten dataviz pages and multiple apps, and this planner is the smallest and probably the most useful of them all.\n❓ So here is my question for anyone building event platforms and fan products: are we heading into a time when the organiser publishes clean data and each of us builds the view we need? I can't speak for everyone else, but I am already doing it.\n\n 💻 If you are at SFS today, come and find me. I'll be the one with the scarf and the laptop open.\n\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 1926,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 4,
+   "activity_id": 7525591224238690305,
+   "activity_urn": "urn:li:activity:7525591224238690305",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525591224238690305/",
+   "posted_at_utc": "2026-11-09T16:12:46+00:00",
+   "posted_date": "2026-11-09",
+   "boost_label": "Boost again",
+   "was_boosted": true,
+   "content_urn": "urn:li:ugcPost:7525591223223447552",
+   "impressions": 5802,
+   "reactions": 13,
+   "comments": 3,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "2d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Leaders in Sport",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/leaders-executive-sport-ltd-/"
+    },
+    {
+     "name": "David Cushnan",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/davidcushnan/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [
+    {
+     "text": "aguywithascarf.com",
+     "url": "http://aguywithascarf.com"
+    },
+    {
+     "text": "aguywithascarf.com",
+     "url": "http://aguywithascarf.com"
+    }
+   ],
+   "text": "A guy with a scarf has a new home: \"aguywithascarf.com\"\n\nThe name came from a stage at Leaders in Sport Week in London, when David Cushnan introduced me as a guy with a scarf. The newsletter followed on 15 November 2022. Four years later there is a almost daily newsletter on LinkedIn, many recorded conversations, a research hub, a twelve-lesson course with a 200-page book, and ten interactive sport data experiences.\n\nWhat is on the page:\n😎 Who I work with and on what, in one sentence with two menus: executive teams on streaming economics, founders on product and platform strategy, boards on retention and monetisation.\n😎 Thirty-five years on the vendor side, Deltatre from 1988 to 2023, and what I do with them now: advisory, fractional roles, moderation, keynotes, content partnerships, the course, the data work.\n😎 The stage record, eight stages in twelve months, with dates and roles.\n😎 Every channel with its numbers. For getting in touch, a LinkedIn message reaches me the same day.\n\n ✏️ There is also a mark. Four bars in the colours of the scarf, solid on the left, breaking into particles on the right. That edge, what we know on the left and what is still forming on the right. Kind of my core focus.\n\nOne brand from here on, A guy with a scarf.\nHave a look and tell me what is missing: aguywithascarf.com",
+   "text_chars": 1321,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 4,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 5,
+   "activity_id": 7525081603715362816,
+   "activity_urn": "urn:li:activity:7525081603715362816",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7525081603715362816/",
+   "posted_at_utc": "2026-11-08T06:27:43+00:00",
+   "posted_date": "2026-11-08",
+   "boost_label": "Boost again",
+   "was_boosted": true,
+   "content_urn": "urn:li:ugcPost:7525081601450553344",
+   "impressions": 8120,
+   "reactions": 5,
+   "comments": 4,
+   "reposts": 1,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "2 others",
+   "age_label": "4d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "LinkedIn",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/linkedin/"
+    },
+    {
+     "name": "Tom Richardson",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/tomrichardson01/"
+    },
+    {
+     "name": "Mike Ligon",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/mikeligon/"
+    },
+    {
+     "name": "Rusty Mitchell",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/rustymitchell/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "Hey LinkedIn 👋 a few words about your Boost feature, from a first-time user.\n\nA client asked me to look into it, so I did what I always do and tested it on myself first, boosting one of my own posts. Full disclosure: I have never spent a cent promoting any of my channels, and campaign management portals are too much for my little brain, so I come to this with zero experience and low tolerance for complexity. 🧠\n\nThe good news first. The interface is clear. There is a Boost button on top of each new post, you set a few parameters, and the minimum of around €10 a day feels reasonable. Instagram works in a similar way and lets you go lower on the daily spend, but I have no complaints here. ✅ The one part I need to dig into properly is the target audience setup, because that is clearly where a boost is won or lost, and I only scratched the surface on this first run. 🎯\n\nNow the confusing part. 🤔\nApproval took well beyond 24 hours. For sports content, which is often time sensitive, an hour would be the target, a day is already a stretch.\nThen the odd bit: once the boost was approved, 19 hours before I took these screenshots, it spent the whole €30 in those hours and closed. I had set a 3-day duration. From where I sit, it looks like the 3 days started counting from when I submitted the request rather than from when you approved it, so most of my campaign window went by while the post was sitting in the queue. 📉\n\nThe numbers are not bad, €5.88 per thousand impressions and 89% of reach outside my network, so I am keen to test more and report back. As always, analytics could be ebtter.\n\nSo, LinkedIn: does the boost duration start at request or at approval? And is there anything I can do to speed up the review for time-sensitive content?\nAny fellow creators who have been down this road, I am listening. 👇\n\nThis is Episode 1 - I want to deep dive on this feature...\n\nTom Richardson Mike Ligon Rusty Mitchell",
+   "text_chars": 1926,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
+   "series": [],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 6,
+   "activity_id": 7524438294491934720,
+   "activity_urn": "urn:li:activity:7524438294491934720",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524438294491934720/",
+   "posted_at_utc": "2026-11-06T11:51:26+00:00",
+   "posted_date": "2026-11-06",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7524438293980307456",
+   "impressions": 1000,
+   "reactions": 10,
+   "comments": 5,
+   "reposts": 2,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "5d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "⚽ Ronaldo hands back the No.7.\nHow he and the other top players use YouTube 📺\nJust to be clear, this is not a post about Cristiano Ronaldo's announcement. Or is it? It is about what he and the other top players actually do with YouTube, beyond the headlines you are all reading this week.\n\n19 player channels, 119 million subscribers and a posting habit that looks like an events calendar, with numbers from my YouTube Football Tracker platform.\n\nWhat the data says, as of 6 November 2026:\n📊 The median player channel has 1.1M subscribers and published 6 videos in the last twelve months. The median club channel has 202k subscribers and published 560.\n🔴 10 of the 19 player channels have published nothing this season. Messi's last upload was 1,110 days ago, Benzema's 1,449, Vini Jr's 894.\n📈 Messi still gained 580k subscribers in six months with zero uploads. The subscriber count measures fame, and says very little about the channel.\n🎬 UR · Cristiano is also posting scarcely, and even his channel runs on moments: launch day was 19 videos at once, autumn 2024 was a weekly show with MrBeast at 70.5M, then long silences filled with MMA promos.\n🏆 The World Cup fortnight alone produced a third of all the views the channel has ever had. Two shorts, 196M and 255M, equal 29% of lifetime views in 74 seconds of footage.\n⚡ Top five videos: 626M views, 40% of the total, from 3% of the uploads. Launch, MrBeast, World Cup, farewell.\n🙏 \"OBRIGADO, PORTUGAL\", published yesterday, was at 3.1M views after 20 hours.\n\n😎 My take: the difference between Ronaldo and Messi on YouTube is the size of the moments and a production company on call for them. The habit is the same, and the habit is the point. None of these players, Ronaldo included, uses YouTube as a weekly or daily fan engagement engine, the way clubs do with 560 uploads a year. For them it is a venue they open for a launch, a tournament or a farewell, and lock again in between. I am sure the strategy teams around these players are smarter than me and have good reasons, from image rights to what Instagram and TikTok already deliver with far less effort. I would still like to hear them, because from the outside, millions of subscribers waiting in front of a closed door looks like value nobody is counting.\n\n🔎 Every number above comes from the YouTube Football Tracker, the platform I built to follow what football does on YouTube: 110 clubs across the top five leagues, 57 federations, 19 players, plus World Cup, NFL and F1 sections, refreshed every day. It is free. You register with an email and you are in.\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2826,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "Ronaldo hands back the No.7. How he and the other top players use YouTube",
+     "url": "https://www.linkedin.com/pulse/ronaldo-hands-back-no7-how-he-other-top-players-use-carlo-de-marchis-fs1ef/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 7,
+   "activity_id": 7524071949749153792,
+   "activity_urn": "urn:li:activity:7524071949749153792",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7524071949749153792/",
+   "posted_at_utc": "2026-11-05T11:35:43+00:00",
+   "posted_date": "2026-11-05",
+   "boost_label": "Boost again",
+   "was_boosted": true,
+   "content_urn": "urn:li:ugcPost:7524071949237563392",
+   "impressions": 8353,
+   "reactions": 25,
+   "comments": 8,
+   "reposts": 3,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "6d",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "10 Things To Consider",
+     "type": "showcase",
+     "url": "https://www.linkedin.com/showcase/10-things-to-consider/"
+    },
+    {
+     "name": "Swiss Olympic",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/swiss-olympic/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [
+    "sportstech",
+    "switzerland",
+    "sportsbusiness",
+    "streaming"
+   ],
+   "external_links": [],
+   "text": "10 Things To Consider about the Swiss SportsTech Report 🇨🇭\n🚗 I have driven from Turin to Switzerland hundreds of times. For some years most of my clients sat on the other side of that border, reached through the Mont Blanc or the Great St Bernard tunnel on trips of three to five hours, so Nyon, Lausanne, Lucerne and Zurich became my usual destinations, even if the very first trip was to Bern with my friend Attilio, who had just been hired by FIS.\n\n📡 So when Swiss Olympic published the first Swiss SportsTech Report, 402 companies, CHF 8bn in revenue, 17,000 jobs, my radar started turning.\n\nHere are the ten 👇\n 1️⃣ Half of the CHF 8bn comes from two companies, On and Sportradar\n 2️⃣ Federation access arrives after commercial traction, and the report calls access to sport \"largely members only\"\n 3️⃣ Swiss football still buys its performance data abroad, in a country with 45 sports analytics companies\n 4️⃣ Media and streaming barely register, with 15 companies in streaming and OTT and zero in remote production\n 5️⃣ The paying customer is moving from the user to the rights holder, sponsor and broadcaster\n 6️⃣ Exporting starts on day one: 43% already earn most of their sport revenue outside Switzerland\n 7️⃣ The hidden sportstech companies, Kistler, Schweiter, Storz Medical, may not want the label\n 8️⃣ Capital is short, and the report calls it a symptom rather than the disease\n 9️⃣ The 2038 Winter Games bid is a procurement window with dates on it now\n 🔟 A national sportstech body is proposed, and the open question is whose needs it serves first\n\n🎯 My take is that the first output of a national body should be a demand map, what the federations, the leagues, the broadcasters and the 2038 organisers plan to buy over the next five years, written in terms a developer can build against.\n\n📖 Full article on below and on A Guy With A Scarf Substack, with sources. Paid members also get the directory I built along the way: 155 entries covering the Swiss sportstech companies, every international federation in Switzerland with address and website, and the national bodies, leagues, broadcasters and agencies around them.\n\n😎  This is the work I do. I advise federations, leagues, broadcasters and the technology companies that sell to them on strategy, product and go-to-market. If you want to write down what you plan to buy in a form suppliers can act on, or you run a Swiss sportstech company and need a sharper route to those buyers, send me a message.\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.\n\n#sportstech #Switzerland #sportsbusiness #streaming",
+   "text_chars": 2774,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "10 things to consider about the Swiss SportsTech Report",
+     "url": "https://www.linkedin.com/pulse/10-things-consider-swiss-sportstech-report-carlo-de-marchis-kpaof/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 8,
+   "activity_id": 7523463334214397953,
+   "activity_urn": "urn:li:activity:7523463334214397953",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7523463334214397953/",
+   "posted_at_utc": "2026-11-03T19:17:18+00:00",
+   "posted_date": "2026-11-03",
+   "boost_label": null,
+   "was_boosted": false,
+   "impressions": 137,
+   "reactions": 0,
+   "comments": 1,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "1w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Stuart Crowley",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/stuart-crowley-b2b561104/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "Great to be included in a long list by Stuart Crowley, focused on elections data tools, and data viz.",
+   "text_chars": 101,
+   "lnkd_links": [],
+   "quoted_post": {
+    "author": "Stuart Crowley",
+    "author_url": "https://www.linkedin.com/in/stuart-crowley-b2b561104/",
+    "age_label": "1w",
+    "url": "https://www.linkedin.com/feed/update/urn:li:share:7523438659665170432/",
+    "text": "It's US midterm election day, and I've been reading everything from an $8 trade on one House seat to a $294,000 bet spanning seven Senate races.\n\n• Marshall Cohen: Shares Dan Zimmermann's discovery of a $294,000 bet on seven Senate races, with a potential $1.2m payout.\n\n• Datadash: Spots a $940,000 House-control position at 94¢ and a very different $176,000 bet on a Republican sweep at around 6¢.\n\n• Jim Swigart: Buys $8 of Kalshi contracts on North Carolina's 14th district at 79¢. He reckons they should be nearer 95¢.\n\n• Qelso: Finds Polymarket's 435 House district prices implied 189.7 Republican seats, versus 192.6 in its own seat-count market.\n\n• Michelle Kendler-Kretsch: ACDC research finds 96% of live congressional order books could be shifted five points for $3,500 or less.\n\n• David Szakonyi: Flags 591 round-trip trades in fringe election markets: $618,395 in turnover, with a combined profit of just $34.\n\n• Bart Czernicki: Combines individual Kalshi Senate odds in Monte Carlo simulations. His models put Democratic control at 76–86%, versus 71% for the overall contract.\n\n• Yevgeny Shevchenko: Calculates that US midterms represented only 1.1% of October's $123.3bn prediction-market volume.\n\n• Eric I. Mendelsohn: Asks whether a $25,000 loss on an election hedge should be added back to earnings when selling a business.\n\n• Carlo De Marchis: Turns his live-sports experience into an election-night visualisation covering House, Senate and governor races.\n\n• Jack Maddox: Builds a Newsquawk dashboard combining Senate odds, automatic market-move headlines and AP/DDHQ race calls.\n\n• Kyle Volpi Hiebert: Questions the confidence being placed in election odds after recent overseas election surprises.\n\n• Matthew I. D. Choi, Chris H. and Jeremy B. Merrill: Trace nearly $1.9bn wagered on more than 7,000 midterm outcomes for the Washington Post.\n\n• Nathan Scherner: Tests a committee of 12 AI agents forecasting Senate control, with plans to publish how the model performs against the market.\n\n• Eric Zitzewitz: Studies election betting from 1880 to 2025 and finds no systematic left- or right-wing pricing bias.\n\n• Adam Morley: Builds a midterms tracker at 4C, bringing live order books and historical prices together across individual races.\n\n• Michael McDonough: Expands Bloomberg's election dashboard with Senate contests, 40+ House seats, governor races and live market pricing.\n\n• Dustin Gouker: Notes that elections account for just 0.5% of Kalshi's year-to-date volume according to Puck/TickerTracker, and warns against calling races too early.\n\n• Dan Bernstein: Explores the political awkwardness of prediction-market firms needing Trump's support while their election odds point towards Republican losses.\n\n• Maddisen Murrelll and Geoffrey Skelley: Their Decision Desk HQ model put a Democratic sweep at 63% on 2 November, below market prices.\n\nA lot more going on here than the headline odds. Who else should I be following tonight?"
+   },
+   "kind": "quote",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 9,
+   "activity_id": 7523280326417182720,
+   "activity_urn": "urn:li:activity:7523280326417182720",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7523280326417182720/",
+   "posted_at_utc": "2026-11-03T07:10:05+00:00",
+   "posted_date": "2026-11-03",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7523280323217141760",
+   "impressions": 349,
+   "reactions": 6,
+   "comments": 2,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "1w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Kalshi",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/kalshi/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [
+    "usmidterms",
+    "elections",
+    "uselections",
+    "midterms"
+   ],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/dFxJSN9e",
+     "url": "https://lnkd.in/dFxJSN9e"
+    }
+   ],
+   "text": "🏟️ If you work in live sports you ask yourself this sooner or later: we're doing very cool stuff, where else can we point it?\n🗳️ Elections keep coming up. Lots of data, arriving live from several sources, to be visualised and updated while people watch. Same shape as a match night. 📊\n\n📺 We once did an Italian election night for a broadcaster and it ran like a big live sports event. There was a famous row between a top journalist and one of our tech guys, and it ended with a written letter of apology to us. No names 🤐 It tells you what an election night means for a newsroom. ✉️\nThat's partly why I built a viz for the US midterms on 3 November 🇺🇸 Every House seat, Senate race and governorship, sorted from safest Democratic to safest Republican, filling in as results arrive.\n\n🔀 You can switch the forecast between civicAPI, Kalshi and Fox News, and they're three different animals. 🧮 civicAPI is a blend with published weights. 💰 Kalshi is a prediction market, so it's money on the outcome and has nothing to do with polls. 📰 Fox publishes ratings only, no probabilities.\nI put all three on the same nine-step scale and added a section with the races where they disagree most. On 30 October that was 4 Senate races, 6 governorships and 61 House seats.\n\n🧊 Last night I froze all the pre-election numbers in a folder nothing touches. After the count I'll check who called more races right: hit rate for all three, Brier score for civicAPI and Kalshi only, since Fox gives no odds. It won't be a clean fight ⚖️ Kalshi and Fox reach me through civicAPI as snapshots dated 27 October, not live prices, and Kalshi is missing 9 House seats.\n\nIf you build for live sport, which other live-data business would you point your stack at? 👇\n\n🔗 https://lnkd.in/dFxJSN9e\n\n#usmidterms #elections #uselections #midterms\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2060,
+   "lnkd_links": [
+    "https://lnkd.in/dFxJSN9e"
+   ],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 3,
+   "media_type": "images",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 10,
+   "activity_id": 7522982388763713538,
+   "activity_urn": "urn:li:activity:7522982388763713538",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7522982388763713538/",
+   "posted_at_utc": "2026-11-02T11:26:11+00:00",
+   "posted_date": "2026-11-02",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7522982388058963969",
+   "impressions": 1377,
+   "reactions": 12,
+   "comments": 3,
+   "reposts": 1,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "1w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Torino Football Club",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/torino-football-club/"
+    },
+    {
+     "name": "Modena F.C.",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/modena-football-club/"
+    },
+    {
+     "name": "Paola Marinone",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/paolamarinone/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "Following Belotti to Modena ⚽: What Torino fans tell us about knowing the fan, and why nobody owns one\nThis post is about football fandom and it carries two stories, one about a striker and one about how our industry thinks about fans, so hear me out 👇\n\n🐓 The first story is about Andrea Belotti, who left Torino Football Club on a free transfer in 2022, was booed by the Curva Maratona when he came back with Roma, went through Fiorentina, Como, Benfica and was dismissed (not with great class) for a knee injury at Cagliari, and now plays in Serie B for Modena F.C., where he has scored 7 goals in 6 games in a row.\nWe Torino FC fans are I guess the only ones who still cheer for players when they leave the club wherever they go, if they entered our hearts. To the extent a small group of fans traveled from Torino to Modena to watch him play.\nThis is not captured by any fan strategy report I guess.\nthis is beyond the traditional types of fandom loyalty: 1️⃣ To the club, 2️⃣ To the star player.\n\n🛋️ The second story starts with a YouTube slide that Paola Marinone shared, splitting sports fans into four personas, and in the picture all four of them sit on the same sofa watching one game.\nAlso referencing a previous artice I wrote about \"Football through their eyes\" about a group of now 11yrs old footballers.\n\n🎯 The two stories meet in the advice I give clubs, leagues and broadcasters on fan strategy. Map fan behaviour through 360 degrees, including everything that happens beyond your control and influence, and accept from the start that owning every moment is unrealistic, because fans who feel fenced in go and create other spaces. Then use that intelligence to support and enable more of the experiences fans already create for themselves, because nobody owns a fan.\n📖 The full story, with the research and the counter-arguments, is here below.\n\n🤝 This is the work I do with federations, leagues and broadcasters: mapping how fans move, inside and outside your own channels, and turning it into experiences they choose to come back to. If that is a conversation you want to have, send me a DM 📩\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2361,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "Following Belotti to Modena: what Torino fans tell us about knowing and owning the fan",
+     "url": "https://www.linkedin.com/pulse/following-belotti-modena-what-torino-fans-tell-us-fan-de-marchis-tilgf/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 11,
+   "activity_id": 7522921928744103936,
+   "activity_urn": "urn:li:activity:7522921928744103936",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7522921928744103936/",
+   "posted_at_utc": "2026-11-02T07:25:56+00:00",
+   "posted_date": "2026-11-02",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7522921840718188544",
+   "impressions": 535,
+   "reactions": 8,
+   "comments": 0,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "1w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "Mercedes-AMG PETRONAS Formula One Team",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercedes-amg-petronas-formula-one-team/"
+    },
+    {
+     "name": "Formula 1",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/formula-one-management-ltd/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/dFhzSejb",
+     "url": "https://lnkd.in/dFhzSejb"
+    }
+   ],
+   "text": "Let me indulge for once as an Italian wins... Kimi Antonelli, Mercedes-AMG PETRONAS Formula One Team and Toto Wolff.\nBut also showcase my dataviz work for Formula 1\nhttps://lnkd.in/dFhzSejb",
+   "text_chars": 189,
+   "lnkd_links": [
+    "https://lnkd.in/dFhzSejb"
+   ],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
+   "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
+   "series": [
+    "Dataviz"
+   ],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 12,
+   "activity_id": 7521960787305836544,
+   "activity_urn": "urn:li:activity:7521960787305836544",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7521960787305836544/",
+   "posted_at_utc": "2026-10-30T15:46:42+00:00",
+   "posted_date": "2026-10-30",
+   "boost_label": null,
+   "was_boosted": false,
+   "impressions": 119,
+   "reactions": 1,
+   "comments": 0,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "1w",
+   "edited": false,
+   "mentions": [],
+   "hashtags": [],
+   "external_links": [],
+   "text": "Quite a content dense session on Nov. 11.\nWorking hard these days to collect all my experiences and thoughts and come up with some interesting content for the session.\nLooking forward to the chat and learning from others as always. Register to join if you are into streaming.",
+   "text_chars": 275,
+   "lnkd_links": [],
+   "quoted_post": {
+    "author": "Matt Stagg",
+    "author_url": "https://www.linkedin.com/in/mattstagg/",
+    "age_label": "1w",
+    "url": "https://www.linkedin.com/feed/update/urn:li:share:7521913401032454144/",
+    "text": "The best way to judge sports streaming is to look at the experience of the fans watching it.\n\nCould they find the match easily? Did the stream hold up at the crucial moment? Did their phone tell them about a goal before they saw it?\n\nI’m looking forward to moderating “Global Sports Streaming Industry Lessons From the 2026 World Cup” at Streaming Media Magazine Connect on 11 November.\n\nJoining me are Jon Giegengack, Carlo De Marchis, Tony Marlow and Tim Westcott, bringing perspectives across audience research, sports technology, advertising and rights.\nWe’ll explore what worked, where the experience still needs to improve, and what those lessons mean for the next generation of live sports coverage. Plenty to discuss, particularly around how we turn technical and commercial progress into something fans actually value.\n\nHere’s a preview of the conversation, with a link to register:\nhttps://lnkd.in/e5t4jyTP\n\n#SportsStreaming #SportsMedia #StreamingMediaConnect"
+   },
+   "kind": "quote",
+   "attachments": [],
+   "has_article": false,
+   "image_count": 1,
+   "media_type": "images",
+   "series": [],
+   "sponsors": [],
+   "disclosures": [],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 13,
+   "activity_id": 7520436582504656896,
+   "activity_urn": "urn:li:activity:7520436582504656896",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7520436582504656896/",
+   "posted_at_utc": "2026-10-26T10:50:04+00:00",
+   "posted_date": "2026-10-26",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:share:7520436581560705024",
+   "impressions": 26450,
+   "reactions": 29,
+   "comments": 3,
+   "reposts": 5,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "2w",
+   "edited": true,
+   "mentions": [
+    {
+     "name": "The Football Association",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/the-football-association/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [
+    {
+     "text": "https://lnkd.in/dtbfXY3v",
+     "url": "https://lnkd.in/dtbfXY3v"
+    }
+   ],
+   "text": "😪 Yet another job opportunity that I will not be selected for... but that could be great from some in my network, so I decided to share for all of you\n\nThe FA is looking for a Chief Technology Officer, reporting to the CEO and sitting on the executive team at Wembley, with a remit that covers technology strategy, data, AI, infrastructure, enterprise systems and cybersecurity across an organisation that runs Wembley Stadium, St. George’s Park, the England teams and the FA Cup.\nThe role works closely with the Chief Digital Officer on the fan-facing product roadmap, and with EURO 2028 coming to the UK and Ireland it’s a big moment to take it on.\nFootball experience isn’t required, and the search is being run by Ivy Street, with applications closing on 13 November.\n\nThe Football Association\n\nhttps://lnkd.in/dtbfXY3v\n\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 1074,
+   "lnkd_links": [
+    "https://lnkd.in/dtbfXY3v"
+   ],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "link",
+     "title": "The FA Careers The FA Careers careers.thefa.com",
+     "url": "https://careers.thefa.com/jobs/vacancy/chief-technology-officer-wnsl1152-wembley-stadium/3275/description?_channelid=23",
+     "domain": "careers.thefa.com"
+    }
+   ],
+   "has_article": false,
+   "image_count": 0,
+   "media_type": "link",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 14,
+   "activity_id": 7519380362020679682,
+   "activity_urn": "urn:li:activity:7519380362020679682",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7519380362020679682/",
+   "posted_at_utc": "2026-10-23T12:53:01+00:00",
+   "posted_date": "2026-10-23",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7519380361538260992",
+   "impressions": 1021,
+   "reactions": 13,
+   "comments": 2,
+   "reposts": 2,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "2w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "YouTube Football Tracker",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/youtube-football-tracker/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "💻 🛑 After the PHP flaw, who in football is running PHP?\nI scanned the official websites of all 96 clubs in Europe’s top five leagues, from the front door only. Here is the map.\n\nOn Wednesday a PHP vulnerability was in the news worldwide, two flaws in the language that runs most of the web, found this summer by research teams working with AI models. Everyone covered the flaw. I wanted to know whether it touches our corner of the world, so I pointed my YouTube Football Tracker at the 96 club sites it already stores and read what each home page tells any visitor: headers, cookies, the fingerprints a CMS leaves behind. One passive request per club, no probing, and a lot of reading page source by hand where the script fell short. This tells you the stack, never whether a site is patched. Hold that distinction.\n\nWhat the scan found, 23 October 2026:\n🔴 35 of 96 club sites run PHP, 36%. Three of those are inferred, so the declared figure is 32.\n🟢 61 run a non-PHP stack I could name. No site was left unknown.\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League: 0 of 20 on PHP, and 12 of 20 sit on two shared platforms.\n🇮🇹 Serie A: 10 of 20.\n🇫🇷 Ligue 1: 13 of 18.\n🇪🇸 La Liga and 🇩🇪 Bundesliga: 6 each.\n🛡️ 63 of 96 sit behind a CDN or WAF.\n🌐 33 expose their origin directly.\n📝 WordPress is the most common CMS, 16 of 96.\n⚙️ Next.js is the most common framework, 28 of 96.\n⚠️ The sharp end: 21 clubs run PHP with nothing in front of the origin. I am not naming them.\n\n🤖 My take: probably no major drama this time.\nThe patch is out, the big hosts and CDNs moved before most of us read the headline, and for a club the job is the boring one, update your versions and keep them updated.\nThe exposure in European club football sits in Italy and France, while the Premier League has a different risk, a dozen clubs on two vendors, so one bad day at a vendor is a bad day for half the league. And a bug that sat in PHP for ten years was pulled out by people pointing AI models at the source, and those tools are now in everyone’s hands, including people who will never file a responsible disclosure.\nIf this is the first of many AI-discovered vulnerabilities, how long can a club site stay one version behind?\n\nFull method, charts and the caveats in the article below.\n\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2489,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "After the PHP flaw, who in football is running PHP?",
+     "url": "https://www.linkedin.com/pulse/after-php-flaw-who-football-running-carlo-de-marchis-viu4f/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "YouTube Football Tracker"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 15,
+   "activity_id": 7518972280912175104,
+   "activity_urn": "urn:li:activity:7518972280912175104",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7518972280912175104/",
+   "posted_at_utc": "2026-10-22T09:51:27+00:00",
+   "posted_date": "2026-10-22",
+   "boost_label": "Boost again",
+   "was_boosted": true,
+   "content_urn": "urn:li:ugcPost:7518972221936148480",
+   "impressions": 10688,
+   "reactions": 3,
+   "comments": 0,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "3w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Stephen Tallent",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/stallent/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    },
+    {
+     "name": "Tom Richardson",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/tomrichardson01/"
+    },
+    {
+     "name": "Mike Ligon",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/mikeligon/"
+    },
+    {
+     "name": "Rusty Mitchell",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/rustymitchell/"
+    },
+    {
+     "name": "William J. (Bill) Tallent",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/wtallent/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "A guy with a scarf - Ep. 60: Stephen Tallent\n“That integration layer is basically everything. That is the duct tape that’s holding up these apps.”\nThis is the second clip from my conversation with Stephen Tallent, CEO of Mercury Intermedia and the architect of Quicksilver Stream, and it’s the bit of the episode I keep coming back to, because it describes the part of a streaming service that eats time and budget long after launch day.\n\nStephen’s team kept building the same thing for customer after customer, the layer that sits between the apps on Roku, Apple TV, connected TV, mobile and web and all the systems running behind them. He doesn’t blame the platforms those customers picked, and Mercury is fully in favour of buying a platform instead of building one from scratch, but every platform hits a wall somewhere and someone has to write the code that gets around it. After enough projects the approach started to look the same every time, one back end that every device talks to, orchestrating a lot of different systems underneath, and Quicksilver Stream came out of those repeated patterns.\n\nI like products that are born this way, from work done over and over on real client projects, because the problem they solve has already been paid for by somebody. I advise Mercury on Quicksilver Stream, so read this as an interestied view.\n\nIf your apps are held together by integrations that have been rewritten more than once, have a look at Quicksilver Stream, or send me a message and I’ll put you in touch with Stephen and the team.\n\nTom Richardson Mike Ligon Rusty Mitchell William J. (Bill) Tallent",
+   "text_chars": 1612,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
+   "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
+   "series": [
+    "Episode"
+   ],
+   "sponsors": [
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
+   "disclosures": [
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
+    "Mercury Intermedia"
+   ],
+   "date_is_approx": false
+  },
+  {
+   "idx": 16,
+   "activity_id": 7518579344240250880,
+   "activity_urn": "urn:li:activity:7518579344240250880",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7518579344240250880/",
+   "posted_at_utc": "2026-10-21T07:50:04+00:00",
+   "posted_date": "2026-10-21",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7518579343791689728",
+   "impressions": 1013,
+   "reactions": 10,
+   "comments": 4,
+   "reposts": 3,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "3w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "10 Things To Consider",
+     "type": "showcase",
+     "url": "https://www.linkedin.com/showcase/10-things-to-consider/"
+    },
+    {
+     "name": "Two Circles",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/two-circles/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "🔟 10 Things To Consider about the Two Circles Fan Economy 2026 report\nWhat the report says, where I agree, and why five ten-year-olds in Turin make me doubt the word \"ownership\"\n\nTwo Circles have put a number on fandom, $1.94tn in 2025. I worked with them on NFL Game Pass International, under the same investor, so I read it with respect and with a fair idea of what it is designed to do.\n\n💰 1. The size. $1.94tn, close to 2% of global output. Sports and entertainment together, no split for sport.\n📈 2. The growth. About 6% a year since 2010 against 3.8% for global GDP, on 5.8bn fans.\n🙋 3. Fandom as the higher choice. Trust in institutions falls since 2005, identity shaped by fandom passes 90%.\n📺 4. Media, advertisers and capital follow. 96 of the 100 most watched US broadcasts in 2025 were live sport, $570bn a year of marketing spend, the $55bn EA take-private.\n🧩 5. Three layers around the fan. Interfaces and infrastructure, attention aggregators, IP owners. Sports IP revenue at a record $174bn in 2025.\n🤝 6. Positive-sum economics. Consuming fandom creates more demand: Apple and Netflix sharing F1, ESPN and FOX One, the BBC and Sidemen watchalong.\n🔁 7. Fan marketing runs on existing fans. 80% of value from existing customers, half of it in fewer than 5% of operating days. Loyalty ahead of penetration.\n🎯 8. Moments and inside-out creative. Plan around fixtures and drops, join conversations fans already have, build from their rituals.\n🏢 9. Four case studies. EA Advertising, Google in product partnerships, PL+ in Singapore, Disney moving to lifetime value per fan.\n📘 10. The playbook. Seven imperatives under \"know fans best\", which is also the Two Circles tagline, mapped onto their own services on the last page.\n\n😎 My take.\nNobody owns a fan.\nThe first half draws a market where value comes from collaboration across layers, and by page fourteen the Premier League is \"taking ownership of the fan value chain\". Companies own rights, data, billing relationships and access points. The attachment belongs to the fan, who can cancel, switch, pirate or simply stop caring on a Tuesday.\nEarlier this year I interviewed five ten-year-old teammates of my son for \"Football Through Their Eyes\". Their football lives on the pitch, on live TV, on the PlayStation, in the Panini album and in arguments with friends, and the memory that mattered most to all five was a match they played themselves.\nA designed journey beats disconnected touchpoints, and I have built both. Fans still pick their own path through whatever you designed, and the companies that grow know which role they play in that ecosystem.\nTwo Circles drew the ecosystem well. I would like the second half of the report to trust the first.\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 2968,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "10 things to consider about the Two Circles Fan Economy 2026 report",
+     "url": "https://www.linkedin.com/pulse/10-things-consider-two-circles-fan-economy-2026-carlo-de-marchis-yd3df/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "10 Things To Consider"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  },
+  {
+   "idx": 17,
+   "activity_id": 7518244551468314625,
+   "activity_urn": "urn:li:activity:7518244551468314625",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7518244551468314625/",
+   "posted_at_utc": "2026-10-20T09:39:43+00:00",
+   "posted_date": "2026-10-20",
+   "boost_label": "Boost again",
+   "was_boosted": true,
+   "content_urn": "urn:li:ugcPost:7518244550776086528",
+   "impressions": 4215,
+   "reactions": 36,
+   "comments": 2,
+   "reposts": 1,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "3w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "SPORTEL",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/sportel/"
+    },
+    {
+     "name": "Sarah Butler",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/sarah-butler-67a5841b/"
+    },
+    {
+     "name": "Paola Marinone",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/paolamarinone/"
+    },
+    {
+     "name": "BuzzMyVideos",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/buzzmyvideos/"
+    },
+    {
+     "name": "Danny Townsend",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/danny-townsend-1206297/"
+    },
+    {
+     "name": "Prashant Khanna",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/khannaprashant/"
+    },
+    {
+     "name": "Kish Patel",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/kishpatel55/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "Scott Melvin",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/scott-melvin-331071a7/"
+    },
+    {
+     "name": "The Overlap",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/the-overlap/"
+    },
+    {
+     "name": "Hillary Mandel",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/hillarymandel/"
+    },
+    {
+     "name": "Jeffrey Roth",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/jeffrey-roth-6516a818/"
+    },
+    {
+     "name": "Cyprien Castanedo",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/cyprien-castanedo-588741178/"
+    },
+    {
+     "name": "Srinath Sripath",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/srinathsripath/"
+    },
+    {
+     "name": "Christiano Coraglia",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/ccoraglia/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "🏟️ SPORTEL Monaco 2026, Day 1 One day, eight sessions and a lot of familiar faces\n🚗 Out of Torino at 5am, breakfast on the beach with Sarah Butler, and a full day on the Speakers Stage Ravel before driving back home to a rainy Torino. There were fewer booths than in the past and fewer tech vendors, but the stands were really well designed and the floor was crowded all day. The thread running through every session for me: live is still what people pay for, and the money now gets made around it.\n\nHere's what I followed 👇\n🤖 AI strategy and governance: my friend Paola Marinone (BuzzMyVideos) on turning the archive into new sponsorable assets, plus Danny Townsend (SURJ) and Prashant Khanna (JioStar)\n🎯 Personalization in live sport: Kish Patel (Dolby OptiView) and two brothers watching the same race in two different ways\n📺 Owning the conversation when you can't own the rights: Scott Melvin (The Overlap) with YouTube\n🔄 A new chapter for Mediapro\n💰 Where the money is going, and the squeeze in the middle: Hillary Mandel (IMG) and Jeffrey Roth (Bruin Capital)\n⚽ Ligue 1+, one year in, and the 30 minutes before kick-off: Cyprien Castanedo (LFP Media)\n🏅 The road to LA28 and athletes known before day 10: Srinath Sripath (IOC) with YouTube\n🏃 The Ultimate Championship, the clock in the middle of the screen and \"you win or nothing\": Christiano Coraglia (World Athletics)\n\n📝 The full summary with quotes, photos and my recap video with Paola is below 👇\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nA guy with a scarf is collaborating with Mercury Intermedia - Quicksilver Stream, the in-house streaming platform.",
+   "text_chars": 1706,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "SPORTEL Monaco 2026 Day 1: A summary",
+     "url": "https://www.linkedin.com/pulse/sportel-monaco-2026-day-1-summary-carlo-de-marchis-rtljf/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
+    "Dolby OptiView"
+   ],
+   "date_is_approx": false
+  },
+  {
+   "idx": 18,
+   "activity_id": 7517846358607986689,
+   "activity_urn": "urn:li:activity:7517846358607986689",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7517846358607986689/",
+   "posted_at_utc": "2026-10-19T07:17:26+00:00",
+   "posted_date": "2026-10-19",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7517846192756584448",
+   "impressions": 1276,
+   "reactions": 29,
+   "comments": 4,
+   "reposts": 0,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": "A guy with a scarf",
+   "age_label": "3w",
+   "edited": false,
+   "mentions": [
+    {
+     "name": "SPORTEL",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/sportel/"
+    },
+    {
+     "name": "Paola Marinone",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/paolamarinone/"
+    },
+    {
+     "name": "BuzzMyVideos",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/buzzmyvideos/"
+    },
+    {
+     "name": "Kish Patel",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/kishpatel55/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "An Dang Duy",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/an-dangduy/"
+    },
+    {
+     "name": "World Athletics",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/world-athletics/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    },
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Dolby OptiView",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/dolbyoptiview/"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/mercury-intermedia/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "🏎️ Left Torino by car at 5am, clouds over the beach, and here I am at SPORTEL Monaco again 🌊\n\nEvery year I try to read the mood of an event whose market has changed so much that it now pulls in a very different crowd from the one I first met here, so I follow the conference stage first and then walk the booths and catch up with people.\nToday on the Speakers Stage Ravel I'll be following the AI strategy panel with my friend Paola Marinone of BuzzMyVideos, then Kish Patel of Dolby OptiView on personalization in live sports, and in the afternoon An Dang Duy, CIO of World Athletics, talking broadcast graphics, data and digital for athletics, which is one of my many sport passions and a federation that lives right here in Monaco.\nI'm also here for Mercury Intermedia (Nashville and New York) and their Quicksilver Stream platform, an in-house approach that matches what I keep hearing from big clients who want more control over what they build, aggregating best of breed partners on a foundational architecture they own and can grow with for years. It's one approach and it won't suit everybody, so I'm curious to test it on the floor today.\nIf you're in Monaco, ping me and let's grab a coffee ☕\n\nMore from the stage later.\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nRepresenting Mercury Intermedia and Quicksilver Stream",
+   "text_chars": 1420,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "video"
+    }
+   ],
+   "has_article": false,
+   "image_count": 0,
+   "media_type": "video",
+   "series": [],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "body"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "body"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "date_is_approx": false
+  },
+  {
+   "idx": 19,
+   "activity_id": 7516763986965667840,
+   "activity_urn": "urn:li:activity:7516763986965667840",
+   "post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7516763986965667840/",
+   "posted_at_utc": "2026-10-16T07:36:29+00:00",
+   "posted_date": "2026-10-16",
+   "boost_label": "Boost",
+   "was_boosted": false,
+   "content_urn": "urn:li:ugcPost:7516763986231726080",
+   "impressions": 896,
+   "reactions": 11,
+   "comments": 1,
+   "reposts": 1,
+   "reposted_by_me": false,
+   "author": "Carlo De Marchis",
+   "author_url": "https://www.linkedin.com/in/carlodemarchis/",
+   "posted_with": null,
+   "age_label": "3w",
+   "edited": true,
+   "mentions": [
+    {
+     "name": "A guy with a scarf",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/a-guy-with-a-scarf/"
+    },
+    {
+     "name": "Julie Neenan Souza",
+     "type": "person",
+     "url": "https://www.linkedin.com/in/julieneenansouza/"
+    },
+    {
+     "name": "Amazon Web Services (AWS)",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/amazon-web-services/"
+    },
+    {
+     "name": "PwC",
+     "type": "company",
+     "url": "https://www.linkedin.com/company/pwc/"
+    }
+   ],
+   "hashtags": [],
+   "external_links": [],
+   "text": "🎙️ Ep. 61 of A guy with a scarf is out, with Julie Neenan Souza Souza, six years Global Head of Sports at Amazon Web Services (AWS) and now Executive in Residence at PwC.\nJulie is someone I wanted on the show for a long time. While she carried the AWS badge it was never the right moment, and it got easier once she stepped away, which turned out to be the better version anyway, because the conversation went where it wanted to go, from a scrappy college sports startup to whether AI is making the next generation duller. We crossed paths at a lot of events over those years and I always admired the energy, and that on stage she brought her whole self, humour and opinions included, which is rare for someone carrying a badge that size.\n\nKey points and quotes:\n🪣 The three-bucket test for any technology project: the business problem, the solution deployed, and the outcome with a number on it. \"If we can't explain it in three big buckets, then there's not a story there.\"\n🕶️ The metaverse locker room a team asked AWS to build, and her first question: \"Why do you want to do that?\" She is seeing \"we want an AI strategy\" land in exactly the same shape now.\n⏳ On measuring too early: \"If you're looking for quick wins, you might have a few of those, but I don't think then you're using it to its full power either.\" The NFL kickoff rule was run through 10,000 simulated seasons before it changed.\n🏈 \"When I was at AWS, I wanted the big thorny problems.\"\n🤝 On who should hold a multi-vendor solution together: \"You want somebody you trust quarterbacking that.\" And on doing it all in-house: \"If anybody's telling you they can do it all, that's probably not true.\"\n🏁 On the argument that regulation means falling behind in the global race: \"What are we racing toward? Like human extinction? Because I'm fine falling behind on that.\"\n🧠 On AI and junior jobs: \"How you know to make high judgment decisions is through experience.\" Stanford's August 2026 data has 22 to 25 year olds in AI-exposed jobs 19% behind their peers, with no gap for experienced workers.\n🥱 On offloading your thinking to an agent: \"I think you're going to be a more boring person.\"\n🏟️ \"I don't think live sports can be disintermediated.\"\nAnd boy do I agree with that!!!\n\nFull conversation in the video, companion article below.\n-----\nA guy with a scarf is collaborating with Dolby OptiView - Enabling live sports experiences that engage and captivate fans.\n-----\nRepresenting Mercury Intermedia and Quicksilver Stream",
+   "text_chars": 2489,
+   "lnkd_links": [],
+   "quoted_post": null,
+   "kind": "post",
+   "attachments": [
+    {
+     "type": "article",
+     "title": "Ep. 61: What six years running sport at AWS taught Julie Souza",
+     "url": "https://www.linkedin.com/pulse/ep-61-what-six-years-running-sport-aws-taught-julie-souza-de-marchis-a34xf/"
+    }
+   ],
+   "has_article": true,
+   "image_count": 0,
+   "media_type": "article",
+   "series": [
+    "Episode"
+   ],
+   "sponsors": [
+    {
+     "name": "Dolby OptiView",
+     "where": "footer"
+    },
+    {
+     "name": "Mercury Intermedia",
+     "where": "footer"
+    }
+   ],
+   "disclosures": [
+    "Dolby OptiView",
+    "Mercury Intermedia"
+   ],
+   "sponsor_subject": [],
+   "date_is_approx": false
+  }
+ ]
+}
